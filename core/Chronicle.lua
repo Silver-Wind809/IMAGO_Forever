@@ -52,16 +52,16 @@ local SLUG_ERA = {
 
 -- Category → alignment crest shown in the NPC detail header
 local FACTION_ICONS = {
-    CAT_STORMWIND    = "Interface\\Timer\\Alliance-Logo",
-    CAT_IRONFORGE    = "Interface\\Timer\\Alliance-Logo",
-    CAT_GNOMEREGAN   = "Interface\\Timer\\Alliance-Logo",
-    CAT_DARNASSUS    = "Interface\\Timer\\Alliance-Logo",
+    CAT_KINGDOM_STORMWIND    = "Interface\\Timer\\Alliance-Logo",
+    CAT_DWARVES_IRONFORGE    = "Interface\\Timer\\Alliance-Logo",
+    CAT_GNOMEREGAN_EXILES   = "Interface\\Timer\\Alliance-Logo",
+    CAT_NIGHT_ELVES_DARNASSUS    = "Interface\\Timer\\Alliance-Logo",
     CAT_THERAMORE    = "Interface\\Timer\\Alliance-Logo",
-    CAT_WILDHAMMER   = "Interface\\Timer\\Alliance-Logo",
-    CAT_ORCS         = "Interface\\Timer\\Horde-Logo",
-    CAT_DARKSPEAR    = "Interface\\Timer\\Horde-Logo",
+    CAT_WILDHAMMER_CLAN   = "Interface\\Timer\\Alliance-Logo",
+    CAT_ORCS_HORDE         = "Interface\\Timer\\Horde-Logo",
+    CAT_DARKSPEAR_TROLLS   = "Interface\\Timer\\Horde-Logo",
     CAT_FORSAKEN     = "Interface\\Timer\\Horde-Logo",
-    CAT_THUNDERBLUFF = "Interface\\Timer\\Horde-Logo",
+    CAT_TAUREN_THUNDER_BLUFF = "Interface\\Timer\\Horde-Logo",
 }
 
 -- Shared left edge of the Fates detail column (detail-pane x): the stage

@@ -52,30 +52,30 @@ L["CMD_HELP_SETTINGS_DESC"]         = "Öffnet die Addon-Einstellungen"
 L["CMD_HELP_HELP_DESC"]             = "Zeigt diese Hilfe an"
 
 -- Categories (Alliance)
-L["CAT_STORMWIND"]                  = "Königreich Sturmwind"
-L["CAT_IRONFORGE"]                  = "Zwerge von Eisenschmiede"
-L["CAT_GNOMEREGAN"]                 = "Gnomeregan-Exilanten"
-L["CAT_DARNASSUS"]                  = "Nachtelfen von Darnassus"
+L["CAT_KINGDOM_STORMWIND"]                  = "Königreich Sturmwind"
+L["CAT_DWARVES_IRONFORGE"]                  = "Zwerge von Eisenschmiede"
+L["CAT_GNOMEREGAN_EXILES"]                 = "Gnomeregan-Exilanten"
+L["CAT_NIGHT_ELVES_DARNASSUS"]                  = "Nachtelfen von Darnassus"
 L["CAT_THERAMORE"]                  = "Theramore"
-L["CAT_WILDHAMMER"]                 = "Wildhammerklan"
+L["CAT_WILDHAMMER_CLAN"]                 = "Wildhammerklan"
 
 -- Categories (Horde)
-L["CAT_ORCS"]                       = "Orcs der Horde"
-L["CAT_DARKSPEAR"]                  = "Dunkelspeertrolle"
+L["CAT_ORCS_HORDE"]                       = "Orcs der Horde"
+L["CAT_DARKSPEAR_TROLLS"]                  = "Dunkelspeertrolle"
 L["CAT_FORSAKEN"]                   = "Die Verlassenen"
-L["CAT_THUNDERBLUFF"]               = "Tauren von Donnerfels"
+L["CAT_TAUREN_THUNDER_BLUFF"]               = "Tauren von Donnerfels"
 
 -- Categories (Others)
 L["CAT_SKYBORNE"]                   = "Skyborne"
-L["CAT_CENARION"]                   = "Zirkel des Cenarius"
+L["CAT_CENARION_CIRCLE_FOREVER"]                   = "Zirkel des Cenarius"
 L["CAT_ARGENT"]                     = "Argentumdämmerung & Silberne Hand"
 L["CAT_DALARAN"]                    = "Dalaran & die Kirin Tor"
-L["CAT_GOBLIN"]                     = "Goblinkartelle"
+L["CAT_GOBLIN_CARTELS_FOREVER"]                     = "Goblinkartelle"
 L["CAT_SHENDRALAR"]                 = "Die Shen'dralar"
 L["CAT_DRAGONFLIGHTS"]              = "Drachenschwärme"
 L["CAT_ELEMENTALS"]                 = "Elementare"
 L["CAT_CENTAUR"]                    = "Zentaurenklans"
-L["CAT_NEUTRAL"]                    = "Neutral/Unabhängig"
+L["CAT_NEUTRAL_INDEPENDENT"]                    = "Neutral/Unabhängig"
 L["CAT_CUSTOM"]                     = "Eigene"
 
 -- ============================================================
