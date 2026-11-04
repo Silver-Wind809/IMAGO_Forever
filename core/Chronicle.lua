@@ -3387,7 +3387,7 @@ local function RefItems(refs)
     local muted = "|cff" .. HexOf(IMAGO_COLORS.TEXT_MUTED)
     for _, ref in ipairs(refs or {}) do
         if IsRefDiscovered(ref) then
-            local name = RefName(ref)
+            local name = RefName(ref) or tostring(ref.id)
             known[#known + 1] = {
                 text = "|Himago-" .. ref.kind .. ":" .. tostring(ref.id) .. "|h|c"
                     .. IMAGO_HEX[REF_HEX[ref.kind]] .. name .. "|r|h",

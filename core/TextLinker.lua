@@ -413,17 +413,6 @@ function IMAGO.TextLinker.BuildBacklinkIndex()
         end
     end
 
-    -- Per-NPC era stories (IMAGOdb.timelines plural)
-    if IMAGOdb and IMAGOdb.timelines then
-        for slug, eras in pairs(IMAGOdb.timelines) do
-            local texts = {}
-            for _, era in ipairs(eras) do
-                if type(era) == "table" then texts[#texts + 1] = era.text end
-            end
-            if #texts > 0 then scan("npc", slug, 0, texts) end
-        end
-    end
-
     -- Race dossiers: every localized field contributes, so mentions of
     -- codex terms / zones / NPCs inside race lore backlink to the race
     if IMAGOdb and IMAGOdb.races then
