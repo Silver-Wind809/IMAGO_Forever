@@ -31,7 +31,7 @@ local e = IMAGOdb.codex.entries
 if e["cosmic_forces"] then
     e["cosmic_forces"].title = "Cosmic Forces"
     e["cosmic_forces"].body = [[
-Six forces of magic are known to battle for dominance in the Great Datk Beyond. There is the Light and the Void, who stand in constant opposition to another, and there are Life and Death holding sway over every being.
+Six forces of magic are known to battle for dominance in the Great Dark Beyond. There is the Light and the Void, who stand in constant opposition to another, and there are Life and Death holding sway over every being.
 
 The forces of Order and Disorder, opposing one another as the Titans and the Burning Legion, have come closest to total dominance in the past.
 ]]
@@ -77,7 +77,9 @@ end
 if e["great_dark_beyond"] then
     e["great_dark_beyond"].title = "Great Dark Beyond"
     e["great_dark_beyond"].body = [[
-It is the name given to the physical universe consisting of endless planets, stars and civilizations. According to the Titans, the Great Dark Beyond came into existence after a clash between the Light and the Void ruptured the fabric of creation.
+It is the name given to the physical universe consisting of endless planets, stars and civilizations.
+
+According to the Titans, the Great Dark Beyond came into existence after a clash between the Light and the Void ruptured the fabric of creation.
 ]]
 end
 
@@ -94,7 +96,11 @@ if e["world_souls"] then
     e["world_souls"].title = "World-Souls"
     e["world_souls"].aliases = { "World-Soul" }
     e["world_souls"].body = [[
-World-souls are the spirits of titans. They formed deep within the fiery core of a small number of worlds and slumbered there for ages while their energies suffused the celestial bodies. When they finally awoke, they did so as living worlds. The Pantheon searched endlessly for them and hoped that ordering new worlds would call forth the world-souls and bring them to maturity. Azeroth too harbors such a slumbering world-soul.
+World-souls are the spirits of titans. They formed deep within the fiery core of a small number of worlds and slumbered there for ages while their energies suffused the celestial bodies.
+
+When they finally awoke, they did so as living worlds. The Pantheon searched endlessly for them and hoped that ordering new worlds would call forth the world-souls and bring them to maturity.
+
+Azeroth too harbors such a slumbering world-soul.
 ]]
 end
 
@@ -131,7 +137,9 @@ end
 if e["void_lords"] then
     e["void_lords"].title = "Void Lords"
     e["void_lords"].body = [[
-The Void Lords are monstrous entities of pure shadow energy. They are more cruel and merciless than any mortal can comprehend. Driven by an insatiable hunger, they seek to devour all matter and energy in the physical universe. In their natural state, they exist outside reality. Only the most powerful among them can manifest in the physical universe, and even then only for a limited time. To maintain their presence in reality, they must consume untold amounts of matter and energy.
+The Void Lords are monstrous entities of pure shadow energy. They are more cruel and merciless than any mortal can comprehend. Driven by an insatiable hunger, they seek to devour all matter and energy in the physical universe.
+
+In their natural state, they exist outside reality. Only the most powerful among them can manifest in the physical universe, and even then only for a limited time. To maintain their presence in reality, they must consume untold amounts of matter and energy.
 ]]
 end
 
@@ -165,7 +173,9 @@ end
 if e["shadowlands"] then
     e["shadowlands"].title = "Shadowlands"
     e["shadowlands"].body = [[
-Like the Emerald Dream, the Shadowlands are indirectly bound to Azeroth. But where the Dream represents life, the Shadowlands stand for death. They are nightmarish realms of decay, labyrinthine spiritual planes populated by the souls of all who have left the world of the living behind. Little is known of their origins, yet they have existed since the first mortal life stirred in the physical universe. Many believe the souls of the dying are drawn to this grim place, where they linger for all eternity.
+Like the Emerald Dream, the Shadowlands are indirectly bound to Azeroth. But where the Dream represents life, the Shadowlands stand for death. They are nightmarish realms of decay, labyrinthine spiritual planes populated by the souls of all who have left the world of the living behind.
+
+Little is known of their origins, yet they have existed since the first mortal life stirred in the physical universe. Many believe the souls of the dying are drawn to this grim place, where they linger for all eternity.
 ]]
 end
 
@@ -228,7 +238,9 @@ end
 if e["druids"] then
     e["druids"].title = "Druids"
     e["druids"].body = [[
-Druidism is a school of nature magic. It enables its practitioners to channel natural energies and transform into animals. The first druid on Azeroth was Malfurion Stormrage, who was taught by Cenarius, a demigod of nature. Druids possess a deep connection to nature through the Emerald Dream, a primordial realm uniting all aspects of nature.
+Druidism is a school of nature magic. It enables its practitioners to channel natural energies and transform into animals.
+
+The first druid on Azeroth was Malfurion Stormrage, who was taught by Cenarius, a demigod of nature. Druids possess a deep connection to nature through the Emerald Dream, a primordial realm uniting all aspects of nature.
 ]]
 end
 
@@ -244,7 +256,11 @@ end
 if e["necromancy"] then
     e["necromancy"].title = "Necromancy"
     e["necromancy"].body = [[
-Few things are as vile and reprehensible as the use of magic to raise and master the dead. Necromancers are the enemies of life itself. They are reviled and feared everywhere. Some of the most gruesome deeds in Azeroth's history were committed by them. Their foul reputation is well earned. Necromancers and death knights forcefully raise the bodies of the fallen as mindless servants, doing great harm to the soul.
+Few things are as vile and reprehensible as the use of magic to raise and master the dead. Necromancers are the enemies of life itself. They are reviled and feared everywhere.
+
+Some of the most gruesome deeds in Azeroth's history were committed by them. Their foul reputation is well earned.
+
+Necromancers and death knights forcefully raise the bodies of the fallen as mindless servants, doing great harm to the soul.
 ]]
 end
 
@@ -270,7 +286,9 @@ end
 if e["plague_of_undeath"] then
     e["plague_of_undeath"].title = "Plague of Undeath"
     e["plague_of_undeath"].body = [[
-The Plague of Undeath is a magical affliction that the Lich King brought upon Lordaeron after his creation by Kil'jaeden. Spread through contaminated grain shipments smuggled into the kingdom by the archmage Kel'Thuzad, it turns the living into undead servants of the Scourge. Thus arose the undead army with which the Burning Legion began its renewed assault on Azeroth.
+The Plague of Undeath is a magical affliction that the Lich King brought upon Lordaeron after his creation by Kil'jaeden. Spread through contaminated grain shipments smuggled into the kingdom by the archmage Kel'Thuzad, it turns the living into undead servants of the Scourge.
+
+Thus arose the undead army with which the Burning Legion began its renewed assault on Azeroth.
 ]]
 end
 
@@ -345,7 +363,9 @@ end
 if e["argus"] then
     e["argus"].title = "Argus"
     e["argus"].body = [[
-Argus was the home world to the eredar, an intelligent species who sought to improve the universe through their thirst for knowledge. The planet was ruled by the powerful Archimonde, the genius Kil'jaeden and the spiritual leader Velen. Unfortunately for them all, Sargeras needed some powerful servants to lead his Burning Legion, so he convinced the eredar to become his demonic generals. Only Velen and his loyal followers managed to escape on the Genedar. They became known as draenei (the exiled).
+Argus was the home world to the eredar, an intelligent species who sought to improve the universe through their thirst for knowledge. The planet was ruled by the powerful Archimonde, the genius Kil'jaeden and the spiritual leader Velen.
+
+Unfortunately for them all, Sargeras needed some powerful servants to lead his Burning Legion, so he convinced the eredar to become his demonic generals. Only Velen and his loyal followers managed to escape on the Genedar. They became known as draenei (the exiled).
 ]]
 end
 
@@ -433,21 +453,35 @@ end
 if e["earthen"] then
     e["earthen"].title = "Earthen"
     e["earthen"].body = [[
-The earthen emerged from the Forge of Wills as the second generation, after the keepers' first design had produced the savage troggs. The craggy, kindhearted earthen shaped mountains and carved out the deep places of the world. When the curse of flesh broke out among them, many asked for sleep within Uldaman. More followed during the Sundering, feeling the pain of the broken world as their own. Those who stayed awake or awoke ages later degenerated into beings of flesh. From them came the dwarves.
+The earthen emerged from the Forge of Wills as the second generation, after the keepers' first design had produced the savage troggs. The craggy, kindhearted earthen shaped mountains and carved out the deep places of the world.
+
+When the curse of flesh broke out among them, many asked for sleep within Uldaman. More followed during the Sundering, feeling the pain of the broken world as their own. Those who stayed awake or awoke ages later degenerated into beings of flesh.
+
+From them came the dwarves.
 ]]
 end
 
 if e["vrykul"] then
     e["vrykul"].title = "Vrykul"
     e["vrykul"].body = [[
-The vrykul are an iron-skinned race of the titan-forged, once charged with guarding the keepers' holdings. After Loken's betrayal they lived in the north of Kalimdor in small clans, some as nomads, others in settlements. Warlike tribes like the Winterskorn believed they would ascend to the Halls of Valor after a glorious death. The vrykul were the first to show the curse of flesh. Millennia later they gave birth to stunted children of flesh. King Ymiron ordered them killed, but some parents carried the children south. From them came the humans.
+The vrykul are an iron-skinned race of the titan-forged, once charged with guarding the keepers' holdings. After Loken's betrayal they lived in the north of Kalimdor in small clans, some as nomads, others in settlements.
+
+Warlike tribes like the Winterskorn believed they would ascend to the Halls of Valor after a glorious death. The vrykul were the first to show the curse of flesh.
+
+Millennia later they gave birth to stunted children of flesh. King Ymiron ordered them killed, but some parents carried the children south.
+
+From them came the humans.
 ]]
 end
 
 if e["mechagnomes"] then
     e["mechagnomes"].title = "Mechagnomes"
     e["mechagnomes"].body = [[
-The mechagnomes are small clockwork beings designed by Keeper Mimiron to build and maintain the keepers' extraordinary machineries. When Mimiron was slain through Loken's sabotage, his faithful mechagnomes saved him by building a mechanical body for his soul. Later a group of them followed the keepers Tyr, Archaedas and Ironaya to Uldaman. There they stayed awake to maintain the fortress while the earthen slept, until the curse of flesh overcame them as well. From them came the gnomes.
+The mechagnomes are small clockwork beings designed by Keeper Mimiron to build and maintain the keepers' extraordinary machineries. When Mimiron was slain through Loken's sabotage, his faithful mechagnomes saved him by building a mechanical body for his soul.
+
+Later a group of them followed the keepers Tyr, Archaedas and Ironaya to Uldaman. There they stayed awake to maintain the fortress while the earthen slept, until the curse of flesh overcame them as well.
+
+From them came the gnomes.
 ]]
 end
 
@@ -468,77 +502,113 @@ end
 if e["naga"] then
     e["naga"].title = "Naga"
     e["naga"].body = [[
-The serpentine naga are among the most notorious villains of Azeroth. These masters of sorcery were once night elves who served at the court of Queen Azshara during the War of the Ancients. When the Well of Eternity shattered in the Sundering, the Maelstrom dragged them into the depths of the sea. Transformed by the Old Gods, they have haunted the oceans of Azeroth ever since. In the darkness of the ocean floor, Azshara and her loyal followers built the capital city of Nazjatar.
+The serpentine naga are among the most notorious villains of Azeroth. These masters of sorcery were once night elves who served at the court of Queen Azshara during the War of the Ancients.
+
+When the Well of Eternity shattered in the Sundering, the Maelstrom dragged them into the depths of the sea. Transformed by the Old Gods, they have haunted the oceans of Azeroth ever since.
+
+In the darkness of the ocean floor, Azshara and her loyal followers built the capital city of Nazjatar.
 ]]
 end
 
 if e["murlocs"] then
     e["murlocs"].title = "Murlocs"
     e["murlocs"].body = [[
-The murlocs remain a peculiar encounter for adventurers in Azeroth. They are known for their gurgling battle cry and tend to attack and overwhelm the unsuspecting with primitive spears, slimy limbs, fishy breath, and elemental magic. They live along coasts, rivers, and lakes and always appear in swarms. Yet they are social creatures who, when attacked, usually retreat from the fight into the safety of the larger group of their kin. There are cases of peaceful interaction between murlocs and other peoples, but they are rare.
+The murlocs remain a peculiar encounter for adventurers in Azeroth. They are known for their gurgling battle cry and tend to attack and overwhelm the unsuspecting with primitive spears, slimy limbs, fishy breath, and elemental magic.
+
+They live along coasts, rivers, and lakes and always appear in swarms. Yet they are social creatures who, when attacked, usually retreat from the fight into the safety of the larger group of their kin.
+
+There are cases of peaceful interaction between murlocs and other peoples, but they are rare.
 ]]
 end
 
 if e["makrura"] then
     e["makrura"].title = "Makrura"
     e["makrura"].body = [[
-The makrura, sometimes called lobstrok, are a primitive people of water dwellers who can also survive on land for short periods. These crab-like creatures exist in colonies along the coasts of Azeroth and in the depths of the oceans. The unusually mighty among them are feared as especially dangerous opponents.
+The makrura, sometimes called lobstrok, are a primitive people of water dwellers who can also survive on land for short periods. These crab-like creatures exist in colonies along the coasts of Azeroth and in the depths of the oceans.
+
+The unusually mighty among them are feared as especially dangerous opponents.
 ]]
 end
 
 if e["kobolds"] then
     e["kobolds"].title = "Kobolds"
     e["kobolds"].body = [[
-The rat-like kobolds are rumored to be descendants of the troggs. Although they live underground, kobolds have rather poor night vision and rely on candles when wandering through their ancestral mines. Kobolds fear other peoples and are therefore found in mines or near the surface. Strangely, the kobold clans have nonetheless managed to maintain connections with two other peoples not exactly known for peaceful relations: the vicious harpies and the magnataurs of Northrend.
+The rat-like kobolds are rumored to be descendants of the troggs. Although they live underground, kobolds have rather poor night vision and rely on candles when wandering through their ancestral mines.
+
+Kobolds fear other peoples and are therefore found in mines or near the surface. Strangely, the kobold clans have nonetheless managed to maintain connections with two other peoples not exactly known for peaceful relations: the vicious harpies and the magnataurs of Northrend.
 ]]
 end
 
 if e["gnolls"] then
     e["gnolls"].title = "Gnolls"
     e["gnolls"].body = [[
-The brutal and warlike gnolls value strength above all else. Although they are savage and feared fighters, gnolls are by no means among the most intelligent peoples. Gnolls have often been enlisted as mercenaries, yet their penchant for cruelty and their limited intelligence make constant supervision necessary. One particularly grim gnoll known as Hogger terrorizes Elwynn Forest.
+The brutal and warlike gnolls value strength above all else. Although they are savage and feared fighters, gnolls are by no means among the most intelligent peoples.
+
+Gnolls have often been enlisted as mercenaries, yet their penchant for cruelty and their limited intelligence make constant supervision necessary.
+
+One particularly grim gnoll known as Hogger terrorizes Elwynn Forest.
 ]]
 end
 
 if e["troggs"] then
     e["troggs"].title = "Troggs"
     e["troggs"].body = [[
-The troggs arose as the first, flawed design of the Forge of Wills — misshapen, brutal, and dangerous beings. For millennia they rested undisturbed deep beneath the earth, until the dwarves excavated the titan fortresses, such as Uldaman. Once awakened, the troggs surged from the earth, eager to unleash their aggression on their distant dwarven kin. Although cunning in battle, troggs can generally not be called particularly intelligent. Instead they rely on their savagery and thick hides to protect them. Most of them are dangerous fighters, yet some slightly cleverer troggs can also cast spells.
+The troggs arose as the first, flawed design of the Forge of Wills — misshapen, brutal, and dangerous beings. For millennia they rested undisturbed deep beneath the earth, until the dwarves excavated the titan fortresses, such as Uldaman.
+
+Once awakened, the troggs surged from the earth, eager to unleash their aggression on their distant dwarven kin. Although cunning in battle, troggs can generally not be called particularly intelligent. Instead they rely on their savagery and thick hides to protect them.
+
+Most of them are dangerous fighters, yet some slightly cleverer troggs can also cast spells.
 ]]
 end
 
 if e["ogres"] then
     e["ogres"].title = "Ogres"
     e["ogres"].body = [[
-These brutal humanoids originally hail from Draenor and now inhabit various regions within and beyond Azeroth. Ogres are feared opponents, known for their strength and toughness. Their society is based on clans, and every clan is independent. Within a clan, victory over one's rival is the only path to advancement. Although they are usually indifferent or hostile toward other peoples, several ogre clans have become reliable allies of the Horde. Ogres are generally not famous for their intelligence, yet mages were not entirely unknown among them on Draenor. Through the efforts of the orc warlock Gul'dan, many ogres received a sharper mind and the ability to cast spells. These ogre magi often enjoy great prestige within the clans.
+These brutal humanoids originally hail from Draenor and now inhabit various regions within and beyond Azeroth. Ogres are feared opponents, known for their strength and toughness.
+
+Their society is based on clans, and every clan is independent. Within a clan, victory over one's rival is the only path to advancement.
+
+Although they are usually indifferent or hostile toward other peoples, several ogre clans have become reliable allies of the Horde. Ogres are generally not famous for their intelligence, yet mages were not entirely unknown among them on Draenor.
+
+Through the efforts of the orc warlock Gul'dan, many ogres received a sharper mind and the ability to cast spells. These ogre magi often enjoy great prestige within the clans.
 ]]
 end
 
 if e["furbolgs"] then
     e["furbolgs"].title = "Furbolgs"
     e["furbolgs"].body = [[
-According to the furbolgs' oral traditions, their people have a far-reaching history. They reluctantly took part in the War of the Ancients against the Burning Legion and afterward forged friendly alliances with the night elves and the tauren. They lived in peaceful isolation until the Third War and the corruption of the Burning Legion destroyed the furbolgs' ancestral forests. Some tribes succumbed to the corruption, turned more violent, and followed warlike leaders who called for raids on neighboring settlements. The uncorrupted tribes withdrew even further, fearing that contact with the outside world might bring the corruption into their homeland.
+According to the furbolgs' oral traditions, their people have a far-reaching history. They reluctantly took part in the War of the Ancients against the Burning Legion and afterward forged friendly alliances with the night elves and the tauren.
+
+They lived in peaceful isolation until the Third War and the corruption of the Burning Legion destroyed the furbolgs' ancestral forests. Some tribes succumbed to the corruption, turned more violent, and followed warlike leaders who called for raids on neighboring settlements. The uncorrupted tribes withdrew even further, fearing that contact with the outside world might bring the corruption into their homeland.
 ]]
 end
 
 if e["harpies"] then
     e["harpies"].title = "Harpies"
     e["harpies"].body = [[
-Although some tales claim the harpies are the offspring of night elves cursed by Queen Azshara, it is now known that they are in truth the progeny of the demigoddess Aviana. Despite their physical resemblance to the night elves, these aggressive beings have little in common with that people. Like the night elves, harpies use nature-based magic, but they also destroy the environment in which they settle, kill every living being they encounter, and plunder the land to build nests notorious for their dreadful stench. The harpies were first discovered in the Stonetalon Mountains, but have since spread as far as the Storm Peaks in Northrend.
+Although some tales claim the harpies are the offspring of night elves cursed by Queen Azshara, it is now known that they are in truth the progeny of the demigoddess Aviana. Despite their physical resemblance to the night elves, these aggressive beings have little in common with that people.
+
+Like the night elves, harpies use nature-based magic, but they also destroy the environment in which they settle, kill every living being they encounter, and plunder the land to build nests notorious for their dreadful stench. The harpies were first discovered in the Stonetalon Mountains, but have since spread as far as the Storm Peaks in Northrend.
 ]]
 end
 
 if e["centaurs"] then
     e["centaurs"].title = "Centaurs"
     e["centaurs"].body = [[
-The centaur combine numerous traits: a passion for battle, hatred of their ancestors and the tauren, and an overwhelming contempt for centaurs of other tribes. Legend has it they descend from the union of Zaetar, son of the Ancient Cenarius, with Theradras, daughter of Therazane, the elemental ruler of earth. The centaur later turned vicious, brutal, and cruel, and killed their father Zaetar.
+The centaur combine numerous traits: a passion for battle, hatred of their ancestors and the tauren, and an overwhelming contempt for centaurs of other tribes. Legend has it they descend from the union of Zaetar, son of the Ancient Cenarius, with Theradras, daughter of Therazane, the elemental ruler of earth.
+
+The centaur later turned vicious, brutal, and cruel, and killed their father Zaetar.
 ]]
 end
 
 if e["quilboar"] then
     e["quilboar"].title = "Quilboar"
     e["quilboar"].body = [[
-The quilboar are aggressive, boar-like humanoids known for their fearlessness and cruelty. They believe themselves to be the mortal descendants of the demigod Ancient Agamaggan, and they have long waged wars over land and food with other peoples, such as the centaur and the tauren. They built their dwellings within vast thorny tangles they believe grew from Agamaggan's blood, and there they founded their colonies. The most famous of these are Razorfen Downs and Razorfen Kraul in Kalimdor, the home of the Razorfen and Death's Head tribes. The quilboar are loyal to their tribe and defend their territory with reckless savagery.
+The quilboar are aggressive, boar-like humanoids known for their fearlessness and cruelty. They believe themselves to be the mortal descendants of the demigod Ancient Agamaggan, and they have long waged wars over land and food with other peoples, such as the centaur and the tauren.
+
+They built their dwellings within vast thorny tangles they believe grew from Agamaggan's blood, and there they founded their colonies. The most famous of these are Razorfen Downs and Razorfen Kraul in Kalimdor, the home of the Razorfen and Death's Head tribes.
+
+The quilboar are loyal to their tribe and defend their territory with reckless savagery.
 ]]
 end
 
@@ -588,7 +658,13 @@ if e["high_elves"] then
     e["high_elves"].title = "High Elves"
     e["high_elves"].aliases = { "Quel'dorei", "Quel'dorei" }
     e["high_elves"].body = [[
-The Highborne broke with the other night elves, as they did not want to give up arcane magic. The price was exile from Hyjal. Under the leadership of Dath'Remar Sunstrider, the banished people put to sea in a fleet and crossed the Maelstrom. In the Eastern Kingdoms his scouts discovered a place in the north where mighty ley lines converged. Dath'Remar poured a secretly taken vial of water from the Well of Eternity into a lake and thereby called the Sunwell into being – named after him and his boldness. The elves called the land Quel'Thalas, the High Home. Since it had been built upon the ruins of ancient Amani holy places, the high elves fought the trolls there for centuries. Within its borders civilization flourished; their capital Silvermoon became a shining monument to the elves' ancient empire. In the Third War the Scourge brought down Quel'Thalas's defenses and the survivors took the name Sin'dorei, the blood elves.
+The Highborne broke with the other night elves, as they did not want to give up arcane magic. The price was exile from Hyjal.
+
+Under the leadership of Dath'Remar Sunstrider, the banished people put to sea in a fleet and crossed the Maelstrom. In the Eastern Kingdoms his scouts discovered a place in the north where mighty ley lines converged. Dath'Remar poured a secretly taken vial of water from the Well of Eternity into a lake and thereby called the Sunwell into being – named after him and his boldness.
+
+The elves called the land Quel'Thalas, the High Home. Since it had been built upon the ruins of ancient Amani holy places, the high elves fought the trolls there for centuries. Within its borders civilization flourished; their capital Silvermoon became a shining monument to the elves' ancient empire.
+
+In the Third War the Scourge brought down Quel'Thalas's defenses and the survivors took the name Sin'dorei, the blood elves.
 ]]
 end
 
@@ -714,7 +790,11 @@ end
 if e["satyrs"] then
     e["satyrs"].title = "Satyrs"
     e["satyrs"].body = [[
-The cunning and deceitful satyrs are corrupted servants of the Burning Legion who delight in inflicting physical and emotional pain on their foes. The first satyr was Xavius, the chief advisor of the former night elf queen Azshara. When Xavius was slain by Malfurion Stormrage, his failure and death enraged Sargeras, the ruler of the Burning Legion. After torturing Xavius' bodiless spirit, he twisted and disfigured the night elf into the first satyr. Sargeras also granted him the power to transform others into satyrs. Although the satyrs are splintered into many different factions, each pursuing its own goals, all these corrupted beings still heed the Burning Legion.
+The cunning and deceitful satyrs are corrupted servants of the Burning Legion who delight in inflicting physical and emotional pain on their foes. The first satyr was Xavius, the chief advisor of the former night elf queen Azshara.
+
+When Xavius was slain by Malfurion Stormrage, his failure and death enraged Sargeras, the ruler of the Burning Legion. After torturing Xavius' bodiless spirit, he twisted and disfigured the night elf into the first satyr. Sargeras also granted him the power to transform others into satyrs.
+
+Although the satyrs are splintered into many different factions, each pursuing its own goals, all these corrupted beings still heed the Burning Legion.
 ]]
 end
 
@@ -837,14 +917,20 @@ if e["dryads"] then
     e["dryads"].title = "Dryads and Keepers of the Grove"
     e["dryads"].aliases = { "Keepers of the Grove" }
     e["dryads"].body = [[
-Both the keepers of the grove and the dryads descend from the demigod Cenarius. The dryads are daughters of Cenarius, while the keepers are apparently descendants of Cenarius' sons Remulos and Zaetar. Dryads have the upper body of female night elves and the lower bodies of fauns. The keepers appear to be a combination of a mighty stag and a male night elf with a tree-trunk-like arm. Both species prefer peace, yet when necessary they do not shy away from violence. The dryads are curious, but few of them ever leave the forest. The keepers of the grove are revered for their abilities as healers on the one hand, yet feared for their nature-based magic on the other.
+Both the keepers of the grove and the dryads descend from the demigod Cenarius. The dryads are daughters of Cenarius, while the keepers are apparently descendants of Cenarius' sons Remulos and Zaetar.
+
+Dryads have the upper body of female night elves and the lower bodies of fauns. The keepers appear to be a combination of a mighty stag and a male night elf with a tree-trunk-like arm.
+
+Both species prefer peace, yet when necessary they do not shy away from violence. The dryads are curious, but few of them ever leave the forest. The keepers of the grove are revered for their abilities as healers on the one hand, yet feared for their nature-based magic on the other.
 ]]
 end
 
 if e["wildkin"] then
     e["wildkin"].title = "Wildkin"
     e["wildkin"].body = [[
-The wildkin are serene and mighty creatures whom the night elves believe were created by the moon goddess Elune. They resemble a cross between a bear and a horned owl, which explains both their wisdom and their ferocity. Wildkin have long been allies of the night elves and aid them in protecting their sacred places. Although they are contemplative creatures, the wildkin hold an especially strong grudge against the Burning Legion and the Scourge, for they recognize the danger both pose. While the wildkin are not hostile to Azeroth's other inhabitants by nature, some have been corrupted or otherwise driven to aggression and now assault travelers and even their allies, the night elves.
+The wildkin are serene and mighty creatures whom the night elves believe were created by the moon goddess Elune. They resemble a cross between a bear and a horned owl, which explains both their wisdom and their ferocity.
+
+Wildkin have long been allies of the night elves and aid them in protecting their sacred places. Although they are contemplative creatures, the wildkin hold an especially strong grudge against the Burning Legion and the Scourge, for they recognize the danger both pose. While the wildkin are not hostile to Azeroth's other inhabitants by nature, some have been corrupted or otherwise driven to aggression and now assault travelers and even their allies, the night elves.
 ]]
 end
 
@@ -884,21 +970,33 @@ end
 if e["qiraji"] then
     e["qiraji"].title = "Qiraji"
     e["qiraji"].body = [[
-The qiraji once ruled an empire stretching across all of Silithus in southwestern Kalimdor. Hundreds of years ago, these aggressive and intelligent insectoids waged a brutal war against the night elves. With the support of the bronze dragonflight they were eventually driven back into their former city of Ahn'Qiraj and sealed inside, which banished the threat they posed for centuries. Years later, the qiraji stirred again behind the walls of Ahn'Qiraj under the influence of the Old God C'Thun.
+The qiraji once ruled an empire stretching across all of Silithus in southwestern Kalimdor.
+
+Hundreds of years ago, these aggressive and intelligent insectoids waged a brutal war against the night elves. With the support of the bronze dragonflight they were eventually driven back into their former city of Ahn'Qiraj and sealed inside, which banished the threat they posed for centuries.
+
+Years later, the qiraji stirred again behind the walls of Ahn'Qiraj under the influence of the Old God C'Thun.
 ]]
 end
 
 if e["nerubians"] then
     e["nerubians"].title = "Nerubians"
     e["nerubians"].body = [[
-The nerubians are an ancient people of highly intelligent spider-like beings whose known settlements centered on the once-mighty underground kingdom of Azjol-Nerub. They are cruel by nature and usually attack other species on sight — unless a possible cooperation offers them advantages. Each of the nerubians' various subspecies bears unique physical traits and holds a distinct place in nerubian society. Although their realm once stretched across most of Northrend, the long, grueling war against the Scourge reduced the former conquerors to a fraction of their earlier might. Even so, individual groups of nerubian warriors still pose a threat.
+The nerubians are an ancient people of highly intelligent spider-like beings whose known settlements centered on the once-mighty underground kingdom of Azjol-Nerub. They are cruel by nature and usually attack other species on sight — unless a possible cooperation offers them advantages.
+
+Each of the nerubians' various subspecies bears unique physical traits and holds a distinct place in nerubian society.
+
+Although their realm once stretched across most of Northrend, the long, grueling war against the Scourge reduced the former conquerors to a fraction of their earlier might. Even so, individual groups of nerubian warriors still pose a threat.
 ]]
 end
 
 if e["silithid"] then
     e["silithid"].title = "Silithid"
     e["silithid"].body = [[
-The silithid are an insectoid species found mainly in Kalimdor. Unlike the qiraji, silithid are not an intelligent race, yet they remain dangerous opponents. Their swarms consist of various species. Each species has a unique body form ranging from small wasps to giant colossi, and a specific function within the hive. The vast underground hives are made up of far-reaching tunnels that serve both as dwelling places and as protection for their delicate eggs and larvae. Although not all silithid are hostile by nature, they defend their hives with utmost determination.
+The silithid are an insectoid species found mainly in Kalimdor. Unlike the qiraji, silithid are not an intelligent race, yet they remain dangerous opponents.
+
+Their swarms consist of various species. Each species has a unique body form ranging from small wasps to giant colossi, and a specific function within the hive.
+
+The vast underground hives are made up of far-reaching tunnels that serve both as dwelling places and as protection for their delicate eggs and larvae. Although not all silithid are hostile by nature, they defend their hives with utmost determination.
 ]]
 end
 
@@ -1226,7 +1324,9 @@ end
 if e["skull_of_guldan"] then
     e["skull_of_guldan"].title = "Skull of Gul'dan"
     e["skull_of_guldan"].body = [[
-Gul'dan's skull was a source of unimaginable power. Whoever possessed it heard a fragment of Gul'dan's soul whispering to them. Ner'zhul used the skull to open the portals that destroyed Draenor. The human mage Khadgar employed it to destroy the Dark Portal. And finally, the skull transformed the night elf Illidan Stormrage into a demon.
+Gul'dan's skull was a source of unimaginable power. Whoever possessed it heard a fragment of Gul'dan's soul whispering to them.
+
+Ner'zhul used the skull to open the portals that destroyed Draenor. The human mage Khadgar employed it to destroy the Dark Portal. And finally, the skull transformed the night elf Illidan Stormrage into a demon.
 ]]
 end
 

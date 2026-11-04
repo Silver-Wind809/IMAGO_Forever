@@ -100,7 +100,11 @@ if e["world_souls"] then
     e["world_souls"].title = "Weltenseelen"
     e["world_souls"].aliases = { "World-Souls", "World-Soul" }
     e["world_souls"].body = [[
-Weltenseelen sind die Geister der Titanen. Sie entstanden tief im feurigen Kern einiger weniger Welten und schlummerten dort Äonen lang, während ihre Energien die Himmelskörper durchdrangen. Wenn sie erwachten, taten sie es als lebende Welten. Das Pantheon suchte unablässig nach ihnen und hoffte, durch die Ordnung neuer Welten die Seelen hervorzurufen und zur Reife zu bringen. Auch Azeroth beherbergt eine solche schlummernde Weltenseele.
+Weltenseelen sind die Geister der Titanen. Sie entstanden tief im feurigen Kern einiger weniger Welten und schlummerten dort Äonen lang, während ihre Energien die Himmelskörper durchdrangen.
+
+Wenn sie erwachten, taten sie es als lebende Welten. Das Pantheon suchte unablässig nach ihnen und hoffte, durch die Ordnung neuer Welten die Seelen hervorzurufen und zur Reife zu bringen.
+
+Auch Azeroth beherbergt eine solche schlummernde Weltenseele.
 ]]
 end
 
@@ -139,7 +143,9 @@ if e["void_lords"] then
     e["void_lords"].title = "Leerenfürsten"
     e["void_lords"].aliases = { "Void Lords" }
     e["void_lords"].body = [[
-Die Leerenfürsten sind monströse Wesenheiten aus purer Schattenenergie. Sie sind grausamer und gnadenloser, als ein Sterblicher begreifen kann. Getrieben von unstillbarem Hunger verschlingen sie alle Substanz und Energie des materiellen Universums. In ihrem natürlichen Zustand existieren sie außerhalb der Realität. Nur die mächtigsten von ihnen können im materiellen Universum Gestalt annehmen, und selbst das nur für begrenzte Zeit. Um ihre Präsenz in der Realität aufrechtzuerhalten, müssen sie unvorstellbare Mengen an Materie und Energie konsumieren.
+Die Leerenfürsten sind monströse Wesenheiten aus purer Schattenenergie. Sie sind grausamer und gnadenloser, als ein Sterblicher begreifen kann. Getrieben von unstillbarem Hunger verschlingen sie alle Substanz und Energie des materiellen Universums.
+
+In ihrem natürlichen Zustand existieren sie außerhalb der Realität. Nur die mächtigsten von ihnen können im materiellen Universum Gestalt annehmen, und selbst das nur für begrenzte Zeit. Um ihre Präsenz in der Realität aufrechtzuerhalten, müssen sie unvorstellbare Mengen an Materie und Energie konsumieren.
 ]]
 end
 
@@ -176,7 +182,9 @@ end
 if e["shadowlands"] then
     e["shadowlands"].title = "Schattenlande"
     e["shadowlands"].body = [[
-Wie der Smaragdgrüne Traum sind die Schattenlande indirekt mit Azeroth verbunden. Doch während der Traum das Leben repräsentiert, stehen die Schattenlande für den Tod. Sie sind albtraumhafte Reiche des Niedergangs, labyrinthische spirituelle Ebenen, bevölkert von den Seelen all jener, die die Welt der Lebenden hinter sich gelassen haben. Über ihren Ursprung ist wenig bekannt. Doch sie existieren, seit sich das erste sterbliche Leben im physischen Universum regte. Viele glauben, dass die Seelen der Sterblichen im Augenblick des Todes zu diesem finsteren Ort gezogen werden, wo sie bis in alle Ewigkeit verweilen.
+Wie der Smaragdgrüne Traum sind die Schattenlande indirekt mit Azeroth verbunden. Doch während der Traum das Leben repräsentiert, stehen die Schattenlande für den Tod. Sie sind albtraumhafte Reiche des Niedergangs, labyrinthische spirituelle Ebenen, bevölkert von den Seelen all jener, die die Welt der Lebenden hinter sich gelassen haben.
+
+Über ihren Ursprung ist wenig bekannt. Doch sie existieren, seit sich das erste sterbliche Leben im physischen Universum regte. Viele glauben, dass die Seelen der Sterblichen im Augenblick des Todes zu diesem finsteren Ort gezogen werden, wo sie bis in alle Ewigkeit verweilen.
 ]]
 end
 
@@ -243,7 +251,9 @@ end
 if e["druids"] then
     e["druids"].title = "Druidentum"
     e["druids"].body = [[
-Das Druidentum ist eine Schule der Naturmagie. Sie befähigt die Druiden dazu, natürliche Energien zu kanalisieren und sich in Tiere zu verwandeln. Der erste Druide auf Azeroth war Malfurion Sturmgrimm, der von Cenarius, einem Halbgott der Natur, unterrichtet wurde. Druiden verfügen über eine tiefe Verbindung zur Natur, und zwar durch den Smaragdgrünen Traum, ein ursprüngliches Reich, das alle Aspekte der Natur vereint.
+Das Druidentum ist eine Schule der Naturmagie. Sie befähigt die Druiden dazu, natürliche Energien zu kanalisieren und sich in Tiere zu verwandeln.
+
+Der erste Druide auf Azeroth war Malfurion Sturmgrimm, der von Cenarius, einem Halbgott der Natur, unterrichtet wurde. Druiden verfügen über eine tiefe Verbindung zur Natur, und zwar durch den Smaragdgrünen Traum, ein ursprüngliches Reich, das alle Aspekte der Natur vereint.
 ]]
 end
 
@@ -259,7 +269,11 @@ end
 if e["necromancy"] then
     e["necromancy"].title = "Nekromantie"
     e["necromancy"].body = [[
-Kaum etwas ist so abscheulich und verwerflich wie der Gebrauch von Magie, um die Toten zu erwecken und zu beherrschen. Nekromanten sind die Feinde des Lebens selbst. Sie werden allseits verachtet und gefürchtet. Einige der grässlichsten Taten in Azeroths Geschichte wurden von ihnen verübt. Ihren üblen Ruf haben sie sich redlich verdient. Nekromanten und Todesritter erwecken die Körper der Gefallenen gewaltsam zu willenlosen Dienern. Die Seele des Leichnams nimmt dabei großen Schaden.
+Kaum etwas ist so abscheulich und verwerflich wie der Gebrauch von Magie, um die Toten zu erwecken und zu beherrschen. Nekromanten sind die Feinde des Lebens selbst. Sie werden allseits verachtet und gefürchtet.
+
+Einige der grässlichsten Taten in Azeroths Geschichte wurden von ihnen verübt. Ihren üblen Ruf haben sie sich redlich verdient.
+
+Nekromanten und Todesritter erwecken die Körper der Gefallenen gewaltsam zu willenlosen Dienern. Die Seele des Leichnams nimmt dabei großen Schaden.
 ]]
 end
 
@@ -287,7 +301,9 @@ if e["plague_of_undeath"] then
     e["plague_of_undeath"].title = "Seuche des Untodes"
     e["plague_of_undeath"].aliases = { "Plague of Undeath" }
     e["plague_of_undeath"].body = [[
-Die Seuche des Untodes ist eine magische Plage, die der Lichkönig nach seiner Erschaffung durch Kil'jaeden über Lordaeron brachte. Durch kontaminierte Kornlieferungen, die der Erzmagier Kel'Thuzad ins Königreich schmuggelte, verwandelt sie die Lebenden in untote Diener der Geißel. So entstand die untote Armee, mit der die Brennende Legion ihren erneuten Angriff auf Azeroth begann.
+Die Seuche des Untodes ist eine magische Plage, die der Lichkönig nach seiner Erschaffung durch Kil'jaeden über Lordaeron brachte. Durch kontaminierte Kornlieferungen, die der Erzmagier Kel'Thuzad ins Königreich schmuggelte, verwandelt sie die Lebenden in untote Diener der Geißel.
+
+So entstand die untote Armee, mit der die Brennende Legion ihren erneuten Angriff auf Azeroth begann.
 ]]
 end
 
@@ -365,7 +381,9 @@ end
 if e["argus"] then
     e["argus"].title = "Argus"
     e["argus"].body = [[
-Argus war die Heimatwelt der Eredar, eines intelligenten Volkes, das aus seinem Wissensdurst das Universum verbessern wollte. Der Planet wurde regiert vom mächtigen Archimonde, dem genialen Kil'jaeden und dem spirituellen Anführer Velen. Zu ihrem aller Unglück brauchte Sargeras mächtige Diener, die seine Brennende Legion anführten, also brachte er die Eredar dazu, zu seinen dämonischen Generälen zu werden. Nur Velen und seinen loyalen Anhängern gelang die Flucht auf der Genedar. Sie wurden als Draenei bekannt, die Verbannten.
+Argus war die Heimatwelt der Eredar, eines intelligenten Volkes, das aus seinem Wissensdurst das Universum verbessern wollte. Der Planet wurde regiert vom mächtigen Archimonde, dem genialen Kil'jaeden und dem spirituellen Anführer Velen.
+
+Zu ihrem aller Unglück brauchte Sargeras mächtige Diener, die seine Brennende Legion anführten, also brachte er die Eredar dazu, zu seinen dämonischen Generälen zu werden. Nur Velen und seinen loyalen Anhängern gelang die Flucht auf der Genedar. Sie wurden als Draenei bekannt, die Verbannten.
 ]]
 end
 
@@ -460,14 +478,24 @@ if e["earthen"] then
     e["earthen"].title = "Irdenen"
     e["earthen"].aliases = { "Earthen" }
     e["earthen"].body = [[
-Die Irdenen kamen als zweite Generation aus der Schmiede des Willens, nachdem der erste Entwurf der Hüter die wilden Troggs hervorgebracht hatte. Die felsigen, gutherzigen Irdenen formten Berge und trieben die tiefen Stellen der Welt aus. Als der Fluch des Fleisches unter ihnen ausbrach, baten viele um den Schlaf in Uldaman. Bei der Großen Teilung folgten ihnen weitere, weil sie den Schmerz der gebrochenen Welt als den ihren fühlten. Jene, die wach blieben oder Äonen später erwachten, degenerierten zu Wesen aus Fleisch. Aus ihnen wurden die Zwerge.
+Die Irdenen kamen als zweite Generation aus der Schmiede des Willens, nachdem der erste Entwurf der Hüter die wilden Troggs hervorgebracht hatte. Die felsigen, gutherzigen Irdenen formten Berge und trieben die tiefen Stellen der Welt aus.
+
+Als der Fluch des Fleisches unter ihnen ausbrach, baten viele um den Schlaf in Uldaman. Bei der Großen Teilung folgten ihnen weitere, weil sie den Schmerz der gebrochenen Welt als den ihren fühlten. Jene, die wach blieben oder Äonen später erwachten, degenerierten zu Wesen aus Fleisch.
+
+Aus ihnen wurden die Zwerge.
 ]]
 end
 
 if e["vrykul"] then
     e["vrykul"].title = "Vrykul"
     e["vrykul"].body = [[
-Die Vrykul sind ein eisenhäutiges Volk der Titanengeschmiedeten, einst damit beauftragt, den Besitz der Hüter zu bewachen. Nach Lokens Verrat lebten sie im Norden Kalimdors in kleinen Clans, manche als Nomaden, andere in Siedlungen. Kriegerische Stämme wie die Winterkorn glaubten daran, nach einem glorreichen Tod in die Hallen der Tapferkeit aufzusteigen. Die Vrykul waren die Ersten, die den Fluch des Fleisches zeigten. Jahrtausende später gebaren sie verkümmerte Kinder aus Fleisch. König Ymiron befahl, sie zu töten, doch manche Eltern brachten die Kinder in den Süden. Aus ihnen wurden die Menschen.
+Die Vrykul sind ein eisenhäutiges Volk der Titanengeschmiedeten, einst damit beauftragt, den Besitz der Hüter zu bewachen. Nach Lokens Verrat lebten sie im Norden Kalimdors in kleinen Clans, manche als Nomaden, andere in Siedlungen.
+
+Kriegerische Stämme wie die Winterkorn glaubten daran, nach einem glorreichen Tod in die Hallen der Tapferkeit aufzusteigen. Die Vrykul waren die Ersten, die den Fluch des Fleisches zeigten.
+
+Jahrtausende später gebaren sie verkümmerte Kinder aus Fleisch. König Ymiron befahl, sie zu töten, doch manche Eltern brachten die Kinder in den Süden.
+
+Aus ihnen wurden die Menschen.
 ]]
 end
 
@@ -475,7 +503,11 @@ if e["mechagnomes"] then
     e["mechagnomes"].title = "Mechagnome"
     e["mechagnomes"].aliases = { "Mechagnomes" }
     e["mechagnomes"].body = [[
-Die Mechagnome sind kleine Uhrwerkwesen, die Hüter Mimiron entworfen hatte, um die außergewöhnlichen Maschinen der Hüter zu bauen und zu warten. Als Mimiron durch Lokens Sabotage starb, retteten ihm seine treuen Mechagnome das Leben, indem sie einen mechanischen Körper für seine Seele bauten. Später folgte eine Gruppe von ihnen den Hütern Tyr, Archaedas und Ironaya nach Uldaman. Dort blieben sie wach, um die Festung zu warten, während die Irdenen schliefen, bis auch sie dem Fluch des Fleisches erlagen. Aus ihnen wurden die Gnome.
+Die Mechagnome sind kleine Uhrwerkwesen, die Hüter Mimiron entworfen hatte, um die außergewöhnlichen Maschinen der Hüter zu bauen und zu warten. Als Mimiron durch Lokens Sabotage starb, retteten ihm seine treuen Mechagnome das Leben, indem sie einen mechanischen Körper für seine Seele bauten.
+
+Später folgte eine Gruppe von ihnen den Hütern Tyr, Archaedas und Ironaya nach Uldaman. Dort blieben sie wach, um die Festung zu warten, während die Irdenen schliefen, bis auch sie dem Fluch des Fleisches erlagen.
+
+Aus ihnen wurden die Gnome.
 ]]
 end
 
@@ -497,21 +529,31 @@ end
 if e["naga"] then
     e["naga"].title = "Naga"
     e["naga"].body = [[
-Die schlangenartigen Naga gehören zu den berüchtigsten Schurken von Azeroth. Diese Meister der Zauberei waren einst Nachtelfen, die im Krieg der Ahnen am Hof von Königin Azshara dienten. Als der Brunnen der Ewigkeit bei der Großen Teilung zerbrach, riss der Mahlstrom sie in die Tiefen des Meeres. Von den Alten Göttern verwandelt, suchen sie seither die Meere Azeroths heim. In der Finsternis des Meeresgrunds errichteten Azshara und ihre Getreue die Hauptstadt Nazjatar.
+Die schlangenartigen Naga gehören zu den berüchtigsten Schurken von Azeroth. Diese Meister der Zauberei waren einst Nachtelfen, die im Krieg der Ahnen am Hof von Königin Azshara dienten.
+
+Als der Brunnen der Ewigkeit bei der Großen Teilung zerbrach, riss der Mahlstrom sie in die Tiefen des Meeres. Von den Alten Göttern verwandelt, suchen sie seither die Meere Azeroths heim.
+
+In der Finsternis des Meeresgrunds errichteten Azshara und ihre Getreue die Hauptstadt Nazjatar.
 ]]
 end
 
 if e["murlocs"] then
     e["murlocs"].title = "Murlocs"
     e["murlocs"].body = [[
-Die Murlocs sind für Abenteurer in Azeroth nach wie vor eine besondere Begegnung. Sie sind für ihren gurgelnden Schlachtruf bekannt und neigen dazu, Ahnungslose mit primitiven Speeren, schleimigen Gliedmaßen, fischigem Atem und Elementarmagie anzugreifen und zu überwältigen. Sie leben entlang von Küsten, Flüssen und Seen und treten stets in Scharen auf. Dabei sind sie soziale Wesen und ziehen sich, wenn sie angegriffen werden, meist vom Kampf zurück in die Sicherheit der größeren Gruppe ihrer Artgenossen. Zwar gibt es Fälle friedlicher Interaktion zwischen Murlocs und anderen Völkern, doch diese sind selten.
+Die Murlocs sind für Abenteurer in Azeroth nach wie vor eine besondere Begegnung. Sie sind für ihren gurgelnden Schlachtruf bekannt und neigen dazu, Ahnungslose mit primitiven Speeren, schleimigen Gliedmaßen, fischigem Atem und Elementarmagie anzugreifen und zu überwältigen.
+
+Sie leben entlang von Küsten, Flüssen und Seen und treten stets in Scharen auf. Dabei sind sie soziale Wesen und ziehen sich, wenn sie angegriffen werden, meist vom Kampf zurück in die Sicherheit der größeren Gruppe ihrer Artgenossen.
+
+Zwar gibt es Fälle friedlicher Interaktion zwischen Murlocs und anderen Völkern, doch diese sind selten.
 ]]
 end
 
 if e["makrura"] then
     e["makrura"].title = "Makrura"
     e["makrura"].body = [[
-Die Makrura, manchmal auch Lobstrok genannt, sind ein primitives Volk von Wasserbewohnern, die auch kurze Zeit an Land überleben können. Diese Krabbenwesen existieren in Kolonien entlang der Küsten von Azeroth und in den Tiefen der Ozeane. Besonders die ungewöhnlich mächtigen unter ihnen sind gefürchtete Gegner.
+Die Makrura, manchmal auch Lobstrok genannt, sind ein primitives Volk von Wasserbewohnern, die auch kurze Zeit an Land überleben können. Diese Krabbenwesen existieren in Kolonien entlang der Küsten von Azeroth und in den Tiefen der Ozeane.
+
+Besonders die ungewöhnlich mächtigen unter ihnen sind gefürchtete Gegner.
 ]]
 end
 
@@ -519,7 +561,9 @@ if e["kobolds"] then
     e["kobolds"].title = "Kobolde"
     e["kobolds"].aliases = { "Kobolds" }
     e["kobolds"].body = [[
-Die rattenartigen Kobolde sind Gerüchten zufolge Abkömmlinge der Troggs. Obwohl sie unter der Erde leben, haben die Kobolde keine besonders guten Nachtsichtfähigkeiten und verlassen sich beim Wandern durch ihre heimatlichen Minen auf Kerzen. Die Kobolde fürchten sich vor anderen Völkern und sind daher in Minen oder an der Oberfläche in der Nähe zu finden. Seltsamerweise ist es den Klans der Kobolde trotzdem gelungen, Verbindungen zu zwei anderen Völkern zu unterhalten, die nicht unbedingt für ihre friedlichen Beziehungen zu anderen bekannt sind: zu den bösartigen Harpyien und den Magnatauren aus Nordend.
+Die rattenartigen Kobolde sind Gerüchten zufolge Abkömmlinge der Troggs. Obwohl sie unter der Erde leben, haben die Kobolde keine besonders guten Nachtsichtfähigkeiten und verlassen sich beim Wandern durch ihre heimatlichen Minen auf Kerzen.
+
+Die Kobolde fürchten sich vor anderen Völkern und sind daher in Minen oder an der Oberfläche in der Nähe zu finden. Seltsamerweise ist es den Klans der Kobolde trotzdem gelungen, Verbindungen zu zwei anderen Völkern zu unterhalten, die nicht unbedingt für ihre friedlichen Beziehungen zu anderen bekannt sind: zu den bösartigen Harpyien und den Magnatauren aus Nordend.
 ]]
 end
 
@@ -527,14 +571,22 @@ if e["gnolls"] then
     e["gnolls"].title = "Gnolle"
     e["gnolls"].aliases = { "Gnolls" }
     e["gnolls"].body = [[
-Die brutalen und kriegerischen Gnolle schätzen Stärke mehr als alles andere. Auch wenn sie wilde und gefürchtete Kämpfer sind, gehören die Gnolle keineswegs zu den intelligentesten Völkern. Gnolle wurden oft als Söldner verpflichtet, doch ihr Hang zur Grausamkeit und ihre beschränkte Intelligenz machen dauerhafte Beaufsichtigung nötig. Ein besonders grimmiger Gnoll namens Hogger terrorisiert den Wald von Elwynn.
+Die brutalen und kriegerischen Gnolle schätzen Stärke mehr als alles andere. Auch wenn sie wilde und gefürchtete Kämpfer sind, gehören die Gnolle keineswegs zu den intelligentesten Völkern.
+
+Gnolle wurden oft als Söldner verpflichtet, doch ihr Hang zur Grausamkeit und ihre beschränkte Intelligenz machen dauerhafte Beaufsichtigung nötig.
+
+Ein besonders grimmiger Gnoll namens Hogger terrorisiert den Wald von Elwynn.
 ]]
 end
 
 if e["troggs"] then
     e["troggs"].title = "Troggs"
     e["troggs"].body = [[
-Die Troggs entstanden als erster, misslungener Entwurf der Schmiede des Willens — missgestaltete, brutale und gefährliche Wesen. Jahrtausendelang ruhten sie ungestört tief unter der Erde, bis die Zwerge die Festungen der Titanen, so etwa Uldaman, ausgruben. Sobald sie erwacht waren, strömten die Troggs aus der Erde, begierig darauf, ihre Aggressionen an ihren entfernten zwergischen Verwandten auszulassen. Auch wenn sie im Kampf recht gerissen sind, kann man die Troggs allgemein nicht als sonderlich intelligent bezeichnen. Stattdessen verlassen sie sich darauf, dass ihre Wildheit und ihre dicke Haut sie schützen. Die meisten von ihnen sind gefährliche Kämpfer, doch einige etwas klügere Troggs können auch Zauber wirken.
+Die Troggs entstanden als erster, misslungener Entwurf der Schmiede des Willens — missgestaltete, brutale und gefährliche Wesen. Jahrtausendelang ruhten sie ungestört tief unter der Erde, bis die Zwerge die Festungen der Titanen, so etwa Uldaman, ausgruben.
+
+Sobald sie erwacht waren, strömten die Troggs aus der Erde, begierig darauf, ihre Aggressionen an ihren entfernten zwergischen Verwandten auszulassen. Auch wenn sie im Kampf recht gerissen sind, kann man die Troggs allgemein nicht als sonderlich intelligent bezeichnen. Stattdessen verlassen sie sich darauf, dass ihre Wildheit und ihre dicke Haut sie schützen.
+
+Die meisten von ihnen sind gefährliche Kämpfer, doch einige etwas klügere Troggs können auch Zauber wirken.
 ]]
 end
 
@@ -542,14 +594,22 @@ if e["ogres"] then
     e["ogres"].title = "Oger"
     e["ogres"].aliases = { "Ogres" }
     e["ogres"].body = [[
-Diese brutalen Humanoiden stammen ursprünglich von Draenor und bewohnen inzwischen verschiedene Regionen in und außerhalb Azeroths. Oger sind gefürchtete Gegner, die für ihre Kraft und Zähigkeit bekannt sind. Ihre Gesellschaft basiert auf Klans, und jeder Klan ist selbstständig. Innerhalb des Klans ist der Sieg über den Rivalen der einzige Weg zum Aufstieg. Obwohl sie anderen Völkern normalerweise gleichgültig oder feindlich gegenüberstehen, sind verschiedene Ogerklans zuverlässige Verbündete der Horde geworden. Im Allgemeinen sind Oger nicht für ihre Intelligenz berühmt, doch Magier waren unter ihnen auf Draenor nicht vollkommen unbekannt. Durch die Bemühungen des Ork-Hexenmeisters Gul'dan wurde vielen Ogern ein schärferer Verstand und die Fähigkeit, Zauber zu wirken, zuteil. Diese Oger-Magier genießen innerhalb der Klans oft großes Ansehen.
+Diese brutalen Humanoiden stammen ursprünglich von Draenor und bewohnen inzwischen verschiedene Regionen in und außerhalb Azeroths. Oger sind gefürchtete Gegner, die für ihre Kraft und Zähigkeit bekannt sind.
+
+Ihre Gesellschaft basiert auf Klans, und jeder Klan ist selbstständig. Innerhalb des Klans ist der Sieg über den Rivalen der einzige Weg zum Aufstieg.
+
+Obwohl sie anderen Völkern normalerweise gleichgültig oder feindlich gegenüberstehen, sind verschiedene Ogerklans zuverlässige Verbündete der Horde geworden. Im Allgemeinen sind Oger nicht für ihre Intelligenz berühmt, doch Magier waren unter ihnen auf Draenor nicht vollkommen unbekannt.
+
+Durch die Bemühungen des Ork-Hexenmeisters Gul'dan wurde vielen Ogern ein schärferer Verstand und die Fähigkeit, Zauber zu wirken, zuteil. Diese Oger-Magier genießen innerhalb der Klans oft großes Ansehen.
 ]]
 end
 
 if e["furbolgs"] then
     e["furbolgs"].title = "Furbolgs"
     e["furbolgs"].body = [[
-Nach den mündlichen Traditionen der Furbolgs hat ihr Volk eine weit zurückreichende Geschichte. Sie nahmen widerwillig am Krieg der Ahnen gegen die Brennende Legion teil und schmiedeten danach freundschaftliche Bündnisse mit den Nachtelfen und den Tauren. Sie lebten in friedlicher Isolation, bis der Dritte Krieg und die Verderbnis der Brennenden Legion die heimatlichen Wälder der Furbolgs vernichteten. Einige Stämme verfielen der Verderbnis, wurden damit gewalttätiger und folgten kriegerischen Anführern, die zu Überfällen auf benachbarte Siedlungen aufriefen. Die unverdorbenen Stämme zogen sich noch weiter zurück, da sie befürchteten, der Kontakt zur Außenwelt könne die Verderbnis in ihre Heimat einschleppen.
+Nach den mündlichen Traditionen der Furbolgs hat ihr Volk eine weit zurückreichende Geschichte. Sie nahmen widerwillig am Krieg der Ahnen gegen die Brennende Legion teil und schmiedeten danach freundschaftliche Bündnisse mit den Nachtelfen und den Tauren.
+
+Sie lebten in friedlicher Isolation, bis der Dritte Krieg und die Verderbnis der Brennenden Legion die heimatlichen Wälder der Furbolgs vernichteten. Einige Stämme verfielen der Verderbnis, wurden damit gewalttätiger und folgten kriegerischen Anführern, die zu Überfällen auf benachbarte Siedlungen aufriefen. Die unverdorbenen Stämme zogen sich noch weiter zurück, da sie befürchteten, der Kontakt zur Außenwelt könne die Verderbnis in ihre Heimat einschleppen.
 ]]
 end
 
@@ -557,7 +617,9 @@ if e["harpies"] then
     e["harpies"].title = "Harpyien"
     e["harpies"].aliases = { "Harpies" }
     e["harpies"].body = [[
-Obwohl manche Geschichten behaupten, die Harpyien seien die Nachkommen von Nachtelfen, die von Königin Azshara verflucht wurden, ist mittlerweile bekannt, dass sie in Wahrheit die Sprößlinge der Halbgöttin Aviana sind. Trotz ihrer körperlichen Ähnlichkeit zu den Nachtelfen haben diese angriffslustigen Wesen wenig mit jenem Volk gemein. Wie die Nachtelfen nutzen die Harpyien naturbasierte Magie, aber sie zerstören auch die Umgebung, in der sie sich niederlassen, töten alle Lebewesen, auf die sie stoßen, und plündern das Land, um Nester zu bauen, die für ihren schrecklichen Gestank berüchtigt sind. Die Harpyien wurden zuerst im Steinkrallengebirge entdeckt, haben sich mittlerweile jedoch bis in die Sturmgipfel in Nordend ausgebreitet.
+Obwohl manche Geschichten behaupten, die Harpyien seien die Nachkommen von Nachtelfen, die von Königin Azshara verflucht wurden, ist mittlerweile bekannt, dass sie in Wahrheit die Sprößlinge der Halbgöttin Aviana sind. Trotz ihrer körperlichen Ähnlichkeit zu den Nachtelfen haben diese angriffslustigen Wesen wenig mit jenem Volk gemein.
+
+Wie die Nachtelfen nutzen die Harpyien naturbasierte Magie, aber sie zerstören auch die Umgebung, in der sie sich niederlassen, töten alle Lebewesen, auf die sie stoßen, und plündern das Land, um Nester zu bauen, die für ihren schrecklichen Gestank berüchtigt sind. Die Harpyien wurden zuerst im Steinkrallengebirge entdeckt, haben sich mittlerweile jedoch bis in die Sturmgipfel in Nordend ausgebreitet.
 ]]
 end
 
@@ -565,7 +627,9 @@ if e["centaurs"] then
     e["centaurs"].title = "Zentauren"
     e["centaurs"].aliases = { "Centaurs" }
     e["centaurs"].body = [[
-Die Zentauren vereinen zahlreiche Eigenschaften in sich: Leidenschaft für den Kampf, Hass auf ihre Ahnen und die Tauren sowie eine überwältigende Verachtung für die Zentauren anderer Stämme. Der Legende nach entstammen sie der Verbindung von Zaetar, dem Sohn des Uralten Cenarius, mit Theradras, der Tochter von Therazane, der elementaren Herrscherin der Erde. Später wurden die Zentauren bösartig, brutal und grausam und töteten ihren Vater Zaetar.
+Die Zentauren vereinen zahlreiche Eigenschaften in sich: Leidenschaft für den Kampf, Hass auf ihre Ahnen und die Tauren sowie eine überwältigende Verachtung für die Zentauren anderer Stämme. Der Legende nach entstammen sie der Verbindung von Zaetar, dem Sohn des Uralten Cenarius, mit Theradras, der Tochter von Therazane, der elementaren Herrscherin der Erde.
+
+Später wurden die Zentauren bösartig, brutal und grausam und töteten ihren Vater Zaetar.
 ]]
 end
 
@@ -573,7 +637,11 @@ if e["quilboar"] then
     e["quilboar"].title = "Stacheleber"
     e["quilboar"].aliases = { "Quilboar" }
     e["quilboar"].body = [[
-Die Stacheleber sind aggressive, eberähnliche Humanoide, die für ihre Furchtlosigkeit und ihre Grausamkeit bekannt sind. Sie glauben, die sterblichen Nachfahren des halbgöttlichen Uralten Agamaggan zu sein, und führten lange mit anderen Völkern, wie den Zentauren und den Tauren, Kriege um Land und Nahrungsmittel. Ihre Behausungen errichteten sie in den riesigen dornigen Schlingen, von denen sie glauben, sie seien aus dem Blute Agamaggans erwachsen, und gründeten dort ihre Kolonien. Die berühmtesten davon sind der Hügel der Klingenhauer und der Kral der Klingenhauer in Kalimdor, die Heimat der Stämme der Klingenhauer und der Totenköpfe. Die Stacheleber stehen treu zu ihrem Stamm und verteidigen ihr Territorium mit waghalsiger Wildheit.
+Die Stacheleber sind aggressive, eberähnliche Humanoide, die für ihre Furchtlosigkeit und ihre Grausamkeit bekannt sind. Sie glauben, die sterblichen Nachfahren des halbgöttlichen Uralten Agamaggan zu sein, und führten lange mit anderen Völkern, wie den Zentauren und den Tauren, Kriege um Land und Nahrungsmittel.
+
+Ihre Behausungen errichteten sie in den riesigen dornigen Schlingen, von denen sie glauben, sie seien aus dem Blute Agamaggans erwachsen, und gründeten dort ihre Kolonien. Die berühmtesten davon sind der Hügel der Klingenhauer und der Kral der Klingenhauer in Kalimdor, die Heimat der Stämme der Klingenhauer und der Totenköpfe.
+
+Die Stacheleber stehen treu zu ihrem Stamm und verteidigen ihr Territorium mit waghalsiger Wildheit.
 ]]
 end
 
@@ -625,7 +693,13 @@ if e["high_elves"] then
     e["high_elves"].title = "Hochelfen / Quel'dorei"
     e["high_elves"].aliases = { "High Elves", "Quel'dorei" }
     e["high_elves"].body = [[
-Die Hochgeborenen brachen mit den anderen Nachtelfen, da sie die arkane Magie nicht aufgeben wollten. Der Preis dafür war die Verbannung vom Hyjal. Unter der Führung von Dath'remar Sonnenwanderer stach das verbannte Volk mit einer Flotte in See und überquerte den Mahlstrom. In den Östlichen Königreichen entdeckten seine Späher im Norden einen Ort, an dem sich mächtige Leylinien trafen. Dath'remar goss eine heimlich entwendete Phiole mit Wasser des Brunnens der Ewigkeit in einen See und rief damit den Sonnenbrunnen ins Leben – benannt nach ihm und seiner Verwegenheit. Das Land nannten die Elfen Quel'Thalas, das Hohe Heim. Da es auf den Ruinen uralter Amani-Heiligtümer errichtet worden war, kämpften die Hochelfen dort jahrhundertelang gegen die Trolle. Innerhalb seiner Grenzen blühte die Zivilisation auf; ihre Hauptstadt Silbermond wurde zum leuchtenden Denkmal für das alte Reich der Elfen. Im Dritten Krieg riss die Geißel die Verteidigung von Quel'Thalas nieder und die Überlebenden nannten sich fortan Sin'dorei, die Blutelfen.
+Die Hochgeborenen brachen mit den anderen Nachtelfen, da sie die arkane Magie nicht aufgeben wollten. Der Preis dafür war die Verbannung vom Hyjal.
+
+Unter der Führung von Dath'remar Sonnenwanderer stach das verbannte Volk mit einer Flotte in See und überquerte den Mahlstrom. In den Östlichen Königreichen entdeckten seine Späher im Norden einen Ort, an dem sich mächtige Leylinien trafen. Dath'remar goss eine heimlich entwendete Phiole mit Wasser des Brunnens der Ewigkeit in einen See und rief damit den Sonnenbrunnen ins Leben – benannt nach ihm und seiner Verwegenheit.
+
+Das Land nannten die Elfen Quel'Thalas, das Hohe Heim. Da es auf den Ruinen uralter Amani-Heiligtümer errichtet worden war, kämpften die Hochelfen dort jahrhundertelang gegen die Trolle. Innerhalb seiner Grenzen blühte die Zivilisation auf; ihre Hauptstadt Silbermond wurde zum leuchtenden Denkmal für das alte Reich der Elfen.
+
+Im Dritten Krieg riss die Geißel die Verteidigung von Quel'Thalas nieder und die Überlebenden nannten sich fortan Sin'dorei, die Blutelfen.
 ]]
 end
 
@@ -759,7 +833,11 @@ if e["satyrs"] then
     e["satyrs"].title = "Satyrn"
     e["satyrs"].aliases = { "Satyrs" }
     e["satyrs"].body = [[
-Die gerissenen und listigen Satyrn sind verdorbene Diener der Brennenden Legion, die sich daran erfreuen, ihren Gegnern körperliche und emotionale Schmerzen zuzufügen. Zum ersten Satyr wurde Xavius, der oberste Ratgeber der früheren Nachtelfenkönigin Azshara. Als Xavius von Malfurion Sturmgrimm getötet wurde, erzürnten sein Versagen und sein Tod Sargeras, den Herrscher der Brennenden Legion. Nachdem er Xavius' körperlosen Geist gefoltert hatte, veränderte und entstellte er den Nachtelfen und machte aus ihm den ersten Satyr. Zudem verlieh Sargeras ihm die Macht, auch andere in Satyrn zu verwandeln. Auch wenn die Satyrn in viele verschiedene Fraktionen zersplittert sind und jede dieser Gruppen ihre eigenen Ziele verfolgt, hören alle diese verdorbenen Wesen noch immer auf die Brennende Legion.
+Die gerissenen und listigen Satyrn sind verdorbene Diener der Brennenden Legion, die sich daran erfreuen, ihren Gegnern körperliche und emotionale Schmerzen zuzufügen. Zum ersten Satyr wurde Xavius, der oberste Ratgeber der früheren Nachtelfenkönigin Azshara.
+
+Als Xavius von Malfurion Sturmgrimm getötet wurde, erzürnten sein Versagen und sein Tod Sargeras, den Herrscher der Brennenden Legion. Nachdem er Xavius' körperlosen Geist gefoltert hatte, veränderte und entstellte er den Nachtelfen und machte aus ihm den ersten Satyr. Zudem verlieh Sargeras ihm die Macht, auch andere in Satyrn zu verwandeln.
+
+Auch wenn die Satyrn in viele verschiedene Fraktionen zersplittert sind und jede dieser Gruppen ihre eigenen Ziele verfolgt, hören alle diese verdorbenen Wesen noch immer auf die Brennende Legion.
 ]]
 end
 
@@ -894,7 +972,11 @@ if e["dryads"] then
     e["dryads"].title = "Dryaden und Hüter des Hains"
     e["dryads"].aliases = { "Dryads and Keepers of the Grove", "Keepers of the Grove" }
     e["dryads"].body = [[
-Sowohl die Hüter des Hains als auch die Dryaden stammen vom Halbgott Cenarius ab. Die Dryaden sind Töchter des Cenarius, die Hüter des Hains hingegen augenscheinlich Nachfahren von Cenarius' Söhnen Remulos und Zaetar. Dryaden haben den Oberkörper weiblicher Nachtelfen und die Unterleiber von Faunen. Die Hüter scheinen eine Kombination aus einem mächtigen Hirsch und einem männlichen Nachtelf mit einem baumstammähnlichen Arm zu sein. Beide Arten bevorzugen den Frieden, doch wenn nötig, schrecken sie nicht vor Gewalt zurück. Die Dryaden sind neugierig, aber nur wenige von ihnen verlassen jemals den Wald. Die Hüter des Hains werden einerseits für ihre Fähigkeiten als Heiler verehrt, andererseits jedoch für ihre naturbasierte Magie gefürchtet.
+Sowohl die Hüter des Hains als auch die Dryaden stammen vom Halbgott Cenarius ab. Die Dryaden sind Töchter des Cenarius, die Hüter des Hains hingegen augenscheinlich Nachfahren von Cenarius' Söhnen Remulos und Zaetar.
+
+Dryaden haben den Oberkörper weiblicher Nachtelfen und die Unterleiber von Faunen. Die Hüter scheinen eine Kombination aus einem mächtigen Hirsch und einem männlichen Nachtelf mit einem baumstammähnlichen Arm zu sein.
+
+Beide Arten bevorzugen den Frieden, doch wenn nötig, schrecken sie nicht vor Gewalt zurück. Die Dryaden sind neugierig, aber nur wenige von ihnen verlassen jemals den Wald. Die Hüter des Hains werden einerseits für ihre Fähigkeiten als Heiler verehrt, andererseits jedoch für ihre naturbasierte Magie gefürchtet.
 ]]
 end
 
@@ -902,7 +984,9 @@ if e["wildkin"] then
     e["wildkin"].title = "Wildekin"
     e["wildkin"].aliases = { "Wildkin" }
     e["wildkin"].body = [[
-Die Wildekin sind gelassene und mächtige Geschöpfe, von denen die Nachtelfen glauben, sie seien von der Mondgöttin Elune geschaffen worden. Sie erinnern an eine Kreuzung aus einem Bären und einer gehörnten Eule, was sowohl ihre Weisheit als auch ihre Grausamkeit erklärt. Wildekin sind schon lange Verbündete der Nachtelfen und unterstützen sie dabei, ihre heiligen Orte zu schützen. Auch wenn sie eher nachdenkliche Geschöpfe sind, hegen die Wildekin einen besonders starken Groll gegen die Brennende Legion und die Geißel, denn sie erkennen die Gefahr, die von beiden ausgeht. Obwohl die Wildekin anderen Bewohnern Azeroths gegenüber nicht von Natur aus feindlich gesinnt sind, wurden doch einige verdorben oder auf andere Weise zur Aggression getrieben und fallen nun Reisende und sogar ihre Verbündeten, die Nachtelfen, an.
+Die Wildekin sind gelassene und mächtige Geschöpfe, von denen die Nachtelfen glauben, sie seien von der Mondgöttin Elune geschaffen worden. Sie erinnern an eine Kreuzung aus einem Bären und einer gehörnten Eule, was sowohl ihre Weisheit als auch ihre Grausamkeit erklärt.
+
+Wildekin sind schon lange Verbündete der Nachtelfen und unterstützen sie dabei, ihre heiligen Orte zu schützen. Auch wenn sie eher nachdenkliche Geschöpfe sind, hegen die Wildekin einen besonders starken Groll gegen die Brennende Legion und die Geißel, denn sie erkennen die Gefahr, die von beiden ausgeht. Obwohl die Wildekin anderen Bewohnern Azeroths gegenüber nicht von Natur aus feindlich gesinnt sind, wurden doch einige verdorben oder auf andere Weise zur Aggression getrieben und fallen nun Reisende und sogar ihre Verbündeten, die Nachtelfen, an.
 ]]
 end
 
@@ -944,7 +1028,11 @@ end
 if e["qiraji"] then
     e["qiraji"].title = "Qiraji"
     e["qiraji"].body = [[
-Die Qiraji herrschten einst über ein Reich, das sich über ganz Silithus im Südwesten Kalimdors erstreckte. Vor Hunderten von Jahren führten diese aggressiven und intelligenten Insektoiden einen brutalen Krieg gegen die Nachtelfen. Mit Unterstützung des Bronzenen Drachenschwarms wurden sie schließlich in ihre einstige Stadt Ahn'Qiraj zurückgedrängt und eingeschlossen, was die von ihnen ausgehende Bedrohung über Jahrhunderte hinweg bannte. Jahre später regten sich die Qiraji unter dem Einfluss des Alten Gottes C'Thun erneut hinter den Mauern von Ahn'Qiraj.
+Die Qiraji herrschten einst über ein Reich, das sich über ganz Silithus im Südwesten Kalimdors erstreckte.
+
+Vor Hunderten von Jahren führten diese aggressiven und intelligenten Insektoiden einen brutalen Krieg gegen die Nachtelfen. Mit Unterstützung des Bronzenen Drachenschwarms wurden sie schließlich in ihre einstige Stadt Ahn'Qiraj zurückgedrängt und eingeschlossen, was die von ihnen ausgehende Bedrohung über Jahrhunderte hinweg bannte.
+
+Jahre später regten sich die Qiraji unter dem Einfluss des Alten Gottes C'Thun erneut hinter den Mauern von Ahn'Qiraj.
 ]]
 end
 
@@ -952,7 +1040,11 @@ if e["nerubians"] then
     e["nerubians"].title = "Neruber"
     e["nerubians"].aliases = { "Nerubians" }
     e["nerubians"].body = [[
-Die Neruber sind ein uraltes Volk hochintelligenter spinnenartiger Wesen, deren bekannte Siedlungsgebiete sich auf das einst mächtige unterirdische Königreich Azjol-Nerub konzentrierten. Sie sind von Natur aus grausam und greifen andere Spezies meist an, sobald sie sie sehen — es sei denn, eine mögliche Kooperation birgt für sie Vorteile. Jede der verschiedenen Unterarten der Neruber hat einzigartige körperliche Merkmale und nimmt einen bestimmten Platz in der nerubischen Gesellschaft ein. Obwohl sich ihr Reich einst über einen Großteil von Nordend erstreckte, hat der lange, zermürbende Krieg gegen die Geißel die einstigen Eroberer auf einen Bruchteil ihrer früheren Macht reduziert. Trotz allem stellen einzelne Gruppen nerubischer Krieger noch immer eine Gefahr dar.
+Die Neruber sind ein uraltes Volk hochintelligenter spinnenartiger Wesen, deren bekannte Siedlungsgebiete sich auf das einst mächtige unterirdische Königreich Azjol-Nerub konzentrierten. Sie sind von Natur aus grausam und greifen andere Spezies meist an, sobald sie sie sehen — es sei denn, eine mögliche Kooperation birgt für sie Vorteile.
+
+Jede der verschiedenen Unterarten der Neruber hat einzigartige körperliche Merkmale und nimmt einen bestimmten Platz in der nerubischen Gesellschaft ein.
+
+Obwohl sich ihr Reich einst über einen Großteil von Nordend erstreckte, hat der lange, zermürbende Krieg gegen die Geißel die einstigen Eroberer auf einen Bruchteil ihrer früheren Macht reduziert. Trotz allem stellen einzelne Gruppen nerubischer Krieger noch immer eine Gefahr dar.
 ]]
 end
 
@@ -960,7 +1052,11 @@ if e["silithid"] then
     e["silithid"].title = "Silithiden"
     e["silithid"].aliases = { "Silithid" }
     e["silithid"].body = [[
-Die Silithiden sind eine insektoide Spezies, die man vor allem in Kalimdor findet. Anders als die Qiraji sind die Silithiden zwar keine intelligente Rasse, bleiben aber dennoch gefährliche Gegner. Die Schwärme der Silithiden bestehen aus verschiedenen Arten. Jede Art hat eine einzigartige Körperform, die von kleinen Wespen bis zu riesigen Kolossen reicht, und innerhalb des Stocks eine bestimmte Funktion inne. Die riesigen unterirdischen Stöcke bestehen vornehmlich aus weitreichenden Tunneln, die sowohl als Wohnstätte als auch als Schutz für ihre empfindlichen Eier und Larven dienen. Obwohl nicht alle Silithiden von Natur aus feindlich sind, verteidigen sie ihre Stöcke mit äußerster Entschlossenheit.
+Die Silithiden sind eine insektoide Spezies, die man vor allem in Kalimdor findet. Anders als die Qiraji sind die Silithiden zwar keine intelligente Rasse, bleiben aber dennoch gefährliche Gegner.
+
+Die Schwärme der Silithiden bestehen aus verschiedenen Arten. Jede Art hat eine einzigartige Körperform, die von kleinen Wespen bis zu riesigen Kolossen reicht, und innerhalb des Stocks eine bestimmte Funktion inne.
+
+Die riesigen unterirdischen Stöcke bestehen vornehmlich aus weitreichenden Tunneln, die sowohl als Wohnstätte als auch als Schutz für ihre empfindlichen Eier und Larven dienen. Obwohl nicht alle Silithiden von Natur aus feindlich sind, verteidigen sie ihre Stöcke mit äußerster Entschlossenheit.
 ]]
 end
 
@@ -1324,7 +1420,9 @@ if e["skull_of_guldan"] then
     e["skull_of_guldan"].title = "Schädel des Gul'dan"
     e["skull_of_guldan"].aliases = { "Skull of Gul'dan" }
     e["skull_of_guldan"].body = [[
-Gul'dans Schädel war eine Quelle unvorstellbarer Macht. Wer ihn in seinem Besitz hatte, dem flüsterte ein Fragment von Gul'dans Seele Dinge zu. Ner'zhul benutzte den Schädel, um das Portal zu öffnen, das Draenor zerstörte. Der menschliche Magier Khadgar setzte ihn ein, um das Dunkle Portal zu vernichten. Und schließlich verwandelte der Schädel den Nachtelfen Illidan Sturmgrimm in einen Dämon.
+Gul'dans Schädel war eine Quelle unvorstellbarer Macht. Wer ihn in seinem Besitz hatte, dem flüsterte ein Fragment von Gul'dans Seele Dinge zu.
+
+Ner'zhul benutzte den Schädel, um das Portal zu öffnen, das Draenor zerstörte. Der menschliche Magier Khadgar setzte ihn ein, um das Dunkle Portal zu vernichten. Und schließlich verwandelte der Schädel den Nachtelfen Illidan Sturmgrimm in einen Dämon.
 ]]
 end
 

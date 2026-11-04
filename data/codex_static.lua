@@ -123,11 +123,11 @@ IMAGOdb.codex.entries = {
     -- ============ MAGIC ============
 
     ["arcane"] = {
-        category = "magic", order = 10, linkable = false,
+        category = "cosmos", order = 52, linkable = false,
     },
 
     ["fel"] = {
-        category = "magic", order = 20, linkable = true,
+        category = "cosmos", order = 54, linkable = true,
     },
 
     ["church_holy_light"] = {
