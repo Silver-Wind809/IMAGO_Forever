@@ -1,4 +1,4 @@
-## Interface: 16001
+## Interface: 120500
 ## Title: IMAGO Forever
 ## Notes: The world has a story. IMAGO preserves it.
 ## Notes-deDE: Die Welt hat eine Geschichte. IMAGO bewahrt sie.
