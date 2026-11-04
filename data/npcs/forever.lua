@@ -12,7 +12,7 @@ IMAGOdb.npcs = IMAGOdb.npcs or {}
 -- Alliance
 IMAGOdb.npcs.CAT_KINGDOM_STORMWIND      = IMAGOdb.npcs.CAT_KINGDOM_STORMWIND   or {}
 IMAGOdb.npcs.CAT_DWARVES_IRONFORGE      = IMAGOdb.npcs.CAT_DWARVES_IRONFORGE   or {}
-IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES      = IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES  or {}
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES      = IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES or {}
 IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS  = IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS   or {}
 IMAGOdb.npcs.CAT_THERAMORE              = IMAGOdb.npcs.CAT_THERAMORE   or {}
 IMAGOdb.npcs.CAT_WILDHAMMER_CLAN        = IMAGOdb.npcs.CAT_WILDHAMMER_CLAN  or {}
@@ -38,7 +38,7 @@ IMAGOdb.npcs.CAT_CUSTOM        = IMAGOdb.npcs.CAT_CUSTOM        or {}
 -- ALLIANCE
 -- ============================================================
 
--- CAT_STORMWIND — Kingdom of Stormwind
+-- CAT_KINGDOM_STORMWIND — Kingdom of Stormwind
 IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"] = {
     displayID = 1748,
     ids = {1748},
@@ -71,7 +71,7 @@ IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"] = {
     category = "CAT_KINGDOM_STORMWIND",
 }
 
--- CAT_IRONFORGE — Dwarves of Ironforge
+-- CAT_DWARVES_IRONFORGE — Dwarves of Ironforge
 IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"] = {
     displayID = 2784,
     ids = {2784},
@@ -80,7 +80,7 @@ IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"] = {
     category = "CAT_DWARVES_IRONFORGE",
 }
 
--- CAT_GNOMEREGAN — Gnomeregan Exiles
+-- CAT_GNOMEREGAN_EXILES — Gnomeregan Exiles
 IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"] = {
     displayID = 7937,
     ids = {7937, 219659},
@@ -89,7 +89,7 @@ IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"] = {
     category = "CAT_GNOMEREGAN_EXILES",
 }
 
--- CAT_DARNASSUS — Night Elves of Darnassus
+-- CAT_NIGHT_ELVES_DARNASSUS — Night Elves of Darnassus
 IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"] = {
     displayID = 7999,
     ids = {7999, 15633},
@@ -101,7 +101,7 @@ IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"] = {
 IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"] = {
     ids = {3936},
     zones = {},
-    category = "CAT_DARNASSUS",
+    category = "CAT_NIGHT_ELVES_DARNASSUS",
     raceKey = "night_elf",
 }
 
@@ -113,7 +113,7 @@ IMAGOdb.npcs.CAT_THERAMORE["jaina_proudmoore"] = {
     raceKey = "human",
 }
 
--- CAT_WILDHAMMER — Wildhammer Clan
+-- CAT_WILDHAMMER_CLAN — Wildhammer Clan
 IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"] = {
     displayID = 5635,
     ids = {5635},
@@ -126,7 +126,7 @@ IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"] = {
 -- HORDE
 -- ============================================================
 
--- CAT_ORCS — Orcs of the Horde
+-- CAT_ORCS_HORDE — Orcs of the Horde
 IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"] = {
     displayID = 4949,
     ids = {4949},
@@ -167,7 +167,7 @@ IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"] = {
     category = "CAT_ORCS_HORDE",
 }
 
--- CAT_DARKSPEAR — Darkspear Trolls
+-- CAT_DARKSPEAR_TROLLS— Darkspear Trolls
 IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"] = {
     displayID = 10540,
     ids = {10540},
@@ -193,7 +193,7 @@ IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"] = {
     category = "CAT_FORSAKEN",
 }
 
--- CAT_THUNDERBLUFF — Tauren of Thunder Bluff
+-- CAT_TAUREN_THUNDER_BLUFF — Tauren of Thunder Bluff
 IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"] = {
     displayID = 3057,
     ids = {3057},

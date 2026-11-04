@@ -3,7 +3,7 @@
 -- ============================================================
 
 -- =================================== --
--- CAT_STORMWIND — Kingdom of Stormwind
+-- CAT_KINGDOM_STORMWIND — Kingdom of Stormwind
 -- =================================== --
 -- BOLVAR FORDRAGON --
 IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].name = "Highlord Bolvar Fordragon"
@@ -58,7 +58,7 @@ IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].source = "Cadash"
 IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].timeline = IMAGOdb.timelines.ANDUIN_WRYNN
 
 -- =================================== --
--- CAT_IRONFORGE — Dwarves of Ironforge
+-- CAT_DWARVES_IRONFORGE — Dwarves of Ironforge
 -- =================================== --
 -- KING MAGNI BRONZEBEARD --
 IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].name = "King Magni Bronzebeard"
@@ -72,7 +72,7 @@ IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].source = "C
 IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].timeline = IMAGOdb.timelines.KING_MAGNI_BRONZEBEARD
 
 -- =================================== --
--- CAT_GNOMEREGAN — Gnomeregan Exiles
+-- CAT_GNOMEREGAN_EXILES — Gnomeregan Exiles
 -- =================================== --
 -- HIGH TINKER MEKKATORQUE --
 IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].name = "High Tinker Mekkatorque"
@@ -90,7 +90,7 @@ IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].source = "
 IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].timeline = IMAGOdb.timelines.HIGH_TINKER_MEKKATORQUE
 
 -- =================================== --
--- CAT_DARNASSUS — Night Elves of Darnassus
+-- CAT_NIGHT_ELVES_DARNASSUS — Night Elves of Darnassus
 -- =================================== --
 -- TYRANDE WHISPERWIND --
 IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].name = "Tyrande Whisperwind"
@@ -121,7 +121,7 @@ IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"].timeline = {
 }
 
 -- =================================== --
--- CAT_WILDHAMMER — Wildhammer Clan
+-- CAT_WILDHAMMER_CLAN — Wildhammer Clan
 -- =================================== --
 -- FALSTAD WILDHAMMER --
 IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].name = "Falstad Wildhammer"
@@ -153,7 +153,7 @@ IMAGOdb.npcs.CAT_THERAMORE["jaina_proudmoore"].timeline = {
 }
 
 -- =================================== --
--- CAT_ORCS — Orcs of the Horde
+-- CAT_ORCS_HORDE — Orcs of the Horde
 -- =================================== --
 -- THRALL --
 IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].name = "Thrall"
@@ -216,7 +216,7 @@ IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].timeline = IMAGOdb.timelines.DR
 
 
 -- =================================== --
--- CAT_DARKSPEAR — Darkspear Trolls
+-- CAT_DARKSPEAR_TROLLS— Darkspear Trolls
 -- =================================== --
 -- VOL'JIN --
 IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].name = "Vol'jin"
@@ -260,7 +260,7 @@ IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].source = "Cadash"
 IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].timeline = IMAGOdb.timelines.VARIMATHRAS
 
 -- =================================== --
--- CAT_THUNDERBLUFF — Tauren of Thunder Bluff
+-- CAT_TAUREN_THUNDER_BLUFF — Tauren of Thunder Bluff
 -- =================================== --
 -- CAIRNE BLOODHOOF --
 IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].name = "Cairne Bloodhoof"
