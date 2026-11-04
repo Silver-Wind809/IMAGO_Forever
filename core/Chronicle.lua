@@ -6783,13 +6783,16 @@ function IMAGO.Chronicle.RenderRaceTab(tabKey)
                     .. math.floor(coords[3] * 256) .. ":" .. math.ceil(coords[4] * 256) .. "|t "
             end
             -- discovered classes link straight to their dossier page;
-            -- the Forever combo note stays outside the link span
+            -- notes and the new-combo star stay outside the link span
             local name = "|c" .. chex .. cname .. "|r"
             if discovered then
                 name = "|Himago-class:" .. slug .. "|h" .. name .. "|h"
             end
             if discovered and cl.note then
                 name = name .. " (" .. cl.note .. ")"
+            end
+            if cl.isNew then
+                name = name .. " |TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcon_1:13:13|t"
             end
             parts[#parts + 1] = icon .. name
         end
