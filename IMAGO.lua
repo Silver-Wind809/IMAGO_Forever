@@ -16,11 +16,22 @@ local defaults = {
     seenZones     = {},
     seenNPCs      = {},
     seenRaces     = {},
+    seenClasses   = {},
     viewedNPCs    = {},
     viewedRaces   = {},
+    viewedClasses = {},
     manualRaceUnlocks = {},
+    manualClassUnlocks = {},
     favorites     = {},
     history       = {},
+    discoveredAt  = {},
+    zoneDiscoveredAt = {},
+    viewCounts    = {},
+    notes         = {},
+    achievementsDone = {},
+    trackedGoal    = nil,
+    lastViewed     = {},
+    socialBroadcast = true,
     migratedSlugSuffix = false,
     showOnceOnlyNPC = false,
     showOnceOnlyZone = true,
@@ -28,7 +39,9 @@ local defaults = {
     enableIdleFlashcards = true,
     keepSnippetOpen = false,
     enableMotD = true,
-    opaqueUI = false,
+    opaqueUI = true,
+    uiTheme = "obsidian",
+    titleFont = "frizqt",
     minimapPos    = 220,
     hideMinimap   = false,
     -- Combat & Break Contact
@@ -114,6 +127,36 @@ function IMAGO.GetNPCIDFromGUID(guid)
     return nil, nil
 end
 
+--- Stamps when and where a fate was uncovered (used by the detail view's
+--- RECORD cell). Only real discoveries stamp; manual unlocks do not.
+function IMAGO.StampDiscovery(slug)
+    if not slug then return end
+    IMAGOSaved.discoveredAt = IMAGOSaved.discoveredAt or {}
+    if IMAGOSaved.discoveredAt[slug] then return end
+    local zone = nil
+    if GetRealZoneText then zone = GetRealZoneText() end
+    if (not zone or zone == "") and GetZoneText then zone = GetZoneText() end
+    local mapID, x, y
+    if C_Map and C_Map.GetBestMapForUnit then
+        local ok, mid = pcall(C_Map.GetBestMapForUnit, "player")
+        if ok and mid then
+            mapID = mid
+            local ok2, pos = pcall(C_Map.GetPlayerMapPosition, mid, "player")
+            if ok2 and pos then x, y = pos.x, pos.y end
+        end
+    end
+    IMAGOSaved.discoveredAt[slug] = { t = time(), zone = zone, mapID = mapID, x = x, y = y }
+end
+
+--- Stamps when a zone was first discovered (zone side panel's RECORD).
+--- Only real discoveries stamp; manual unlocks and the unlock-all command do not.
+function IMAGO.StampZoneDiscovery(mapID)
+    if not mapID then return end
+    IMAGOSaved.zoneDiscoveredAt = IMAGOSaved.zoneDiscoveredAt or {}
+    if IMAGOSaved.zoneDiscoveredAt[mapID] then return end
+    IMAGOSaved.zoneDiscoveredAt[mapID] = { t = time() }
+end
+
 --- Adds an entry to the history (max 50 entries).
 function IMAGO.AddToHistory(entry)
     IMAGOSaved.history = IMAGOSaved.history or {}
@@ -143,6 +186,7 @@ function IMAGO.Scanner.DiscoverNPC(npcID, questName)
 
         if not IMAGOSaved.seenNPCs[slug] then
             IMAGOSaved.seenNPCs[slug] = true
+            IMAGO.StampDiscovery(slug)
             IMAGO.AddToHistory(slug)
             
             local msg
@@ -196,6 +240,7 @@ function IMAGO.Scanner.DiscoverRace(raceSlug)
     if IMAGOSaved.seenRaces[raceSlug] then return true end
 
     IMAGOSaved.seenRaces[raceSlug] = true
+    IMAGO.StampDiscovery(raceSlug)
 
     local name = data.name or raceSlug
     local msg = IMAGO.L["CHAT_RACE_DISCOVERY"] and string.format(IMAGO.L["CHAT_RACE_DISCOVERY"], name)
@@ -212,6 +257,110 @@ function IMAGO.Scanner.DiscoverRace(raceSlug)
     end
 
     return true
+end
+
+--- Unlocks a class record (Classes tab). Triggered by targeting any unit
+--- of that class — UnitClass works on NPCs and players alike, so simply
+--- clicking a guard, trainer or adventurer counts as meeting the class.
+function IMAGO.Scanner.DiscoverClass(classFile)
+    if not IMAGOSaved or not IMAGOSaved.enabled then return false end
+    if not IMAGOdb or not IMAGOdb.classes then return false end
+    local slug = classFile and string.lower(classFile)
+    local data = slug and IMAGOdb.classes[slug]
+    if not data then return false end
+
+    IMAGOSaved.seenClasses = IMAGOSaved.seenClasses or {}
+    if IMAGOSaved.seenClasses[slug] then return true end
+
+    IMAGOSaved.seenClasses[slug] = true
+    IMAGO.StampDiscovery(slug)
+
+    local name = data.name or slug
+    local msg = IMAGO.L["CHAT_CLASS_DISCOVERY"] and string.format(IMAGO.L["CHAT_CLASS_DISCOVERY"], name)
+        or ("|cFF9370DB[IMAGO]|r New class documented: |cFFFFD700" .. name .. "|r")
+    print(msg)
+    PlaySound(3175, "Master")
+
+    if IMAGO.Display and IMAGO.Display.Show then
+        IMAGO.Display.Show(name, data.history, "class", true, slug)
+    end
+
+    if IMAGO.Chronicle and IMAGO.Chronicle.frame and IMAGO.Chronicle.frame:IsShown() then
+        IMAGO.Chronicle.UpdateList()
+    end
+
+    return true
+end
+
+--- Silently unlocks the player's own class (no popup — you have obviously
+--- met yourself). Called once on entering the world.
+function IMAGO.Scanner.SeedPlayerClass()
+    if not IMAGOSaved or not IMAGOSaved.enabled then return end
+    local ok, _, classFile = pcall(UnitClass, "player")
+    if not ok or not classFile then return end
+    local slug = string.lower(classFile)
+    if not (IMAGOdb.classes or {})[slug] then return end
+    IMAGOSaved.seenClasses = IMAGOSaved.seenClasses or {}
+    if IMAGOSaved.seenClasses[slug] then return end
+    IMAGOSaved.seenClasses[slug] = true
+    IMAGO.StampDiscovery(slug)
+end
+
+-- Class-trainer title keywords across client locales: "<Class> Trainer",
+-- "<Klasse>lehrer(in)", "Instructor", "Maestro", "Instructeur" ...
+local CLASS_TRAINER_HINTS = {
+    "trainer", "lehrer", "instructor", "instructeur", "maestr", "maître",
+    "istruttore", "trenér", "mentor", "настав", "тренер", "训练", "訓練", "훈련",
+}
+
+--- Class discovery by contact: targeting a player of that class, or an NPC
+--- class trainer (their tooltip's title line reads "<Class> Trainer").
+--- Ordinary NPCs — guards, vendors — no longer count.
+function IMAGO.Scanner.CheckTargetClass(unit)
+    if UnitIsPlayer(unit) then
+        local ok, _, classFile = pcall(UnitClass, unit)
+        if ok and classFile then
+            IMAGO.Scanner.DiscoverClass(classFile)
+        end
+        return
+    end
+
+    -- hidden tooltip to read the unit's title line
+    local tip = IMAGO.Scanner._classTip
+    if not tip then
+        tip = CreateFrame("GameTooltip", "IMAGOClassScanTip", nil, "GameTooltipTemplate")
+        IMAGO.Scanner._classTip = tip
+    end
+    tip:SetOwner(WorldFrame, "ANCHOR_NONE")
+    tip:SetUnit(unit)
+
+    local slug
+    local lastLine = math.min(tip:NumLines() or 0, 5)
+    for i = 2, lastLine do
+        local fs = _G[tip:GetName() .. "TextLeft" .. i]
+        local text = fs and fs:GetText()
+        if type(text) == "string" and text ~= "" then
+            local lc = text:lower()
+            local isTrainer = false
+            for _, kw in ipairs(CLASS_TRAINER_HINTS) do
+                if lc:find(kw, 1, true) then isTrainer = true break end
+            end
+            if isTrainer then
+                -- only a "<ClassName> Trainer" title unlocks — a generic
+                -- "Riding Trainer" / profession trainer names no class and
+                -- must not fall back to the NPC's own class
+                for s, data in pairs(IMAGOdb.classes or {}) do
+                    local nm = (data.name or ""):lower()
+                    if nm ~= "" and lc:find(nm, 1, true) then slug = s break end
+                end
+                break
+            end
+        end
+    end
+    tip:Hide()
+    if slug then
+        IMAGO.Scanner.DiscoverClass(slug)
+    end
 end
 
 --- Scans all quest_ids with an NPC they unlock and reveal those whose quest is completed.
@@ -318,6 +467,10 @@ function IMAGO.Scanner.CheckNPC()
         return
     end
 
+    -- Meeting a player or a class trainer documents that class — this runs
+    -- before the NPC-id check so unlisted units still unlock their class.
+    IMAGO.Scanner.CheckTargetClass("target")
+
     local okGuid, guid = pcall(UnitGUID, "target")
     if not okGuid or not guid then return end
 
@@ -419,6 +572,7 @@ function IMAGO.Scanner.DiscoverZone(mapID)
     IMAGOSaved.discoveredZones = IMAGOSaved.seenZones
 
     if isNew then
+        IMAGO.StampZoneDiscovery(trackedID)
         IMAGO.AddToHistory({type="zone", id=trackedID, time=time()})
         print("|cFF9370DB[IMAGO]|r Neue Region betreten: |cFFFFD700" .. name .. "|r")
     end
@@ -426,7 +580,7 @@ function IMAGO.Scanner.DiscoverZone(mapID)
     local showOnceOnly = IMAGO.Scanner.IsShowOnceOnlyEnabled("zone")
     if IMAGO.Display and IMAGO.Display.Show then
         if isNew or not showOnceOnly then
-            IMAGO.Display.Show(name, lore, "zone", isNew)
+            IMAGO.Display.Show(name, lore, "zone", isNew, trackedID)
         end
     end
 
@@ -751,6 +905,7 @@ initFrame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "PLAYER_ENTERING_WORLD" then
         local isInitialLogin, isReloadingUi = ...
         IMAGO.Scanner.EnsureZoneProgressTables()
+        IMAGO.Scanner.SeedPlayerClass()
         if isInitialLogin then
             C_Timer.After(2, function()
                 IMAGO.Scanner.SweepQuestUnlocks()
@@ -811,7 +966,19 @@ function IMAGO.Init()
     for key, value in pairs(defaults) do
         if IMAGOSaved[key] == nil then IMAGOSaved[key] = value end
     end
+
+    -- Forever defaults: opaque windows + Frizz Quadrata titles. Migrate
+    -- installs that still carry the old Retail defaults once.
+    if not IMAGOSaved.foreverUIDefaults then
+        IMAGOSaved.opaqueUI = true
+        if IMAGOSaved.titleFont == "morpheus" then IMAGOSaved.titleFont = "frizqt" end
+        IMAGOSaved.foreverUIDefaults = true
+    end
+
     IMAGOSaved.viewedNPCs = IMAGOSaved.viewedNPCs or {}
+
+    -- Re-apply the saved theme (saved vars are guaranteed loaded here).
+    if IMAGO.ApplyTheme then IMAGO.ApplyTheme(IMAGOSaved.uiTheme) end
     
     -- Normalize the booleans
     IMAGOSaved.enabled = (IMAGOSaved.enabled == true or IMAGOSaved.enabled == 1)
@@ -883,6 +1050,7 @@ function IMAGO.Init()
     if IMAGO.TextLinker and IMAGO.TextLinker.BuildZoneLookup then IMAGO.TextLinker.BuildZoneLookup() end
     if IMAGO.TextLinker and IMAGO.TextLinker.BuildCodexLookup then IMAGO.TextLinker.BuildCodexLookup() end
     if IMAGO.TextLinker and IMAGO.TextLinker.BuildTimelineLookup then IMAGO.TextLinker.BuildTimelineLookup() end
+    if IMAGO.TextLinker and IMAGO.TextLinker.BuildBacklinkIndex then IMAGO.TextLinker.BuildBacklinkIndex() end
     IMAGO.CreateMinimapButton()
 
     if TooltipDataProcessor and TooltipDataProcessor.AddTooltipPostCall then
@@ -931,6 +1099,10 @@ function IMAGO.Init()
             if Settings and Settings.OpenToCategory and IMAGO.settingsCategory then
                 Settings.OpenToCategory(IMAGO.settingsCategory:GetID())
             end
+        elseif msg == "score" then
+            if IMAGO.Social and IMAGO.Social.PostScore then
+                IMAGO.Social.PostScore()
+            end
         elseif msg == "idle" then
             if IMAGO.Snippets and IMAGO.Snippets.ShowRandom then
                 IMAGO.Snippets.ShowRandom(true)
@@ -963,11 +1135,15 @@ function IMAGO.Init()
             IMAGOSaved.discoveredZones = IMAGOSaved.seenZones
             IMAGOSaved.seenNPCs      = {}
             IMAGOSaved.seenRaces     = {}
+            IMAGOSaved.seenClasses   = {}
             IMAGOSaved.viewedNPCs    = {}
             IMAGOSaved.viewedRaces   = {}
+            IMAGOSaved.viewedClasses = {}
             IMAGOSaved.manualRaceUnlocks = {}
+            IMAGOSaved.manualClassUnlocks = {}
             IMAGOSaved.favorites     = {}
             IMAGOSaved.history       = {}
+            IMAGOSaved.lastViewed    = {}
             print("|cFFFFD700IMAGO:|r " .. (IMAGO.L["RESET_DONE"] or "Historie zurückgesetzt."))
             if IMAGO.Chronicle and IMAGO.Chronicle.frame and IMAGO.Chronicle.frame:IsShown() then
                 IMAGO.Chronicle.UpdateList()
@@ -1038,6 +1214,14 @@ function IMAGO.Init()
                 end
             end
 
+            -- 4. Unlock classes
+            for slug, _ in pairs(IMAGOdb.classes or {}) do
+                if not IMAGOSaved.seenClasses[slug] then
+                    IMAGOSaved.seenClasses[slug] = true
+                    count = count + 1
+                end
+            end
+
             -- Output in chat
             local successMsg = IMAGO.L["CMD_UNLOCKALL_SUCCESS"] and string.format(IMAGO.L["CMD_UNLOCKALL_SUCCESS"], count) or string.format("|cFF9370DB[IMAGO]|r Alle Archive geöffnet. %d neue Einträge entschlüsselt.", count)
             print(successMsg)
@@ -1060,7 +1244,7 @@ function IMAGO.Init()
                 IMAGOSaved.viewedNPCs[slug] = nil
                 print("|cFFFFD700[IMAGO DEV]|r Removed NPC from seenNPCs: " .. slug)
             else
-                print("|cFFFFD700[IMAGO DEV]|r NPC not in seenNPCs: " .. slug)
+                print("|cFFFFD700[IMAGO DEV]|r NPC not in seenNPCs: " .. (slug or "?"))
             end
             if IMAGO.Chronicle and IMAGO.Chronicle.frame and IMAGO.Chronicle.frame:IsShown() then
                 IMAGO.Chronicle.UpdateList()
@@ -1068,11 +1252,12 @@ function IMAGO.Init()
         elseif msg:match("^unsee zone %d+") then
             --if not isDev then return end
             local mapID = tonumber(msg:match("^unsee zone (%d+)"))
-            if IMAGOSaved.seenZones and IMAGOSaved.seenZones[mapID] then
+            if mapID and IMAGOSaved.seenZones and IMAGOSaved.seenZones[mapID] then
                 IMAGOSaved.seenZones[mapID] = nil
+                if IMAGOSaved.zoneDiscoveredAt then IMAGOSaved.zoneDiscoveredAt[mapID] = nil end
                 print("|cFFFFD700[IMAGO DEV]|r Removed zone from seenZones: " .. mapID)
             else
-                print("|cFFFFD700[IMAGO DEV]|r Zone not in seenZones: " .. mapID)
+                print("|cFFFFD700[IMAGO DEV]|r Zone not in seenZones: " .. tostring(mapID))
             end
             if IMAGO.Chronicle and IMAGO.Chronicle.frame and IMAGO.Chronicle.frame:IsShown() then
                 IMAGO.Chronicle.UpdateList()

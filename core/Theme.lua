@@ -3,51 +3,46 @@
 -- Obsidian & Antique Gold Design System
 -- ============================================================
 
-IMAGO_COLORS = {
-    -- Backgrounds
-    BG_MAIN     = { 0.043, 0.039, 0.031, 0.96 }, -- #0B0A08  Obsidian
-    BG_PANEL    = { 0.071, 0.063, 0.051, 0.96 }, -- #12100D  Black Walnut
-    BG_RAISED   = { 0.102, 0.090, 0.067, 1.00 }, -- #1A1711  Dark Bronze
-    BG_HOVER    = { 0.141, 0.122, 0.086, 1.00 }, -- #241F16  Warm Shadow
-    BG_SELECTED = { 0.173, 0.145, 0.090, 1.00 }, -- #2C2517  Bronze Shadow
+-- Live palettes. IMAGO_COLORS/IMAGO_HEX are filled by IMAGO.ApplyTheme();
+-- color sub-tables are mutated in place so existing references stay valid.
+IMAGO_COLORS = IMAGO_COLORS or {}
+IMAGO_HEX = IMAGO_HEX or {}
 
-    -- Structure
-    BORDER      = { 0.357, 0.286, 0.133, 1.00 }, -- #5B4922  Aged Bronze
-    DIVIDER     = { 0.231, 0.192, 0.114, 1.00 }, -- #3B311D  Dark Bronze
-
-    -- Gold hierarchy
-    GOLD        = { 0.816, 0.678, 0.302, 1.00 }, -- #D0AD4D  Antique Gold
-    GOLD_BRIGHT = { 0.902, 0.780, 0.400, 1.00 }, -- #E6C766  Bright Gold
-    GOLD_MUTED  = { 0.620, 0.506, 0.208, 1.00 }, -- #9E8135  Old Gold
-
-    -- Text
-    TEXT_PRIMARY   = { 0.914, 0.886, 0.827, 1.00 }, -- #E9E2D3  Warm Parchment
-    TEXT_SECONDARY = { 0.722, 0.682, 0.604, 1.00 }, -- #B8AE9A  Dusty Parchment
-    TEXT_MUTED     = { 0.494, 0.463, 0.412, 1.00 }, -- #7E7669  Ash
-
-    -- Semantic
-    SUCCESS = { 0.561, 0.702, 0.408, 1.00 }, -- #8FB368  Muted Moss
-    WARNING = { 0.839, 0.604, 0.290, 1.00 }, -- #D69A4A  Amber
-    DANGER  = { 0.784, 0.416, 0.353, 1.00 }, -- #C86A5A  Faded Crimson
-    VOID    = { 0.659, 0.545, 0.847, 1.00 }, -- #A88BD8  Muted Violet
+-- Complete UI themes: colors, hex text colors, optional font overrides and
+-- optional popup background-texture settings (stoneTex + stoneTint).
+IMAGO.THEMES = {
+    obsidian = {
+        labelKey = "OPT_THEME_OBSIDIAN",
+        colors = {
+            BG_MAIN     = { 0.043, 0.039, 0.031, 0.96 },
+            BG_PANEL    = { 0.071, 0.063, 0.051, 0.96 },
+            BG_RAISED   = { 0.102, 0.090, 0.067, 1.00 },
+            BG_HOVER    = { 0.141, 0.122, 0.086, 1.00 },
+            BG_SELECTED = { 0.173, 0.145, 0.090, 1.00 },
+            BORDER      = { 0.357, 0.286, 0.133, 1.00 },
+            DIVIDER     = { 0.231, 0.192, 0.114, 1.00 },
+            GOLD        = { 0.816, 0.678, 0.302, 1.00 },
+            GOLD_BRIGHT = { 0.902, 0.780, 0.400, 1.00 },
+            GOLD_MUTED  = { 0.620, 0.506, 0.208, 1.00 },
+            TEXT_PRIMARY   = { 0.914, 0.886, 0.827, 1.00 },
+            TEXT_SECONDARY = { 0.722, 0.682, 0.604, 1.00 },
+            TEXT_MUTED     = { 0.494, 0.463, 0.412, 1.00 },
+            SUCCESS = { 0.561, 0.702, 0.408, 1.00 },
+            WARNING = { 0.839, 0.604, 0.290, 1.00 },
+            DANGER  = { 0.784, 0.416, 0.353, 1.00 },
+            VOID    = { 0.659, 0.545, 0.847, 1.00 },
+        },
+        hex = {
+            GOLD = "FFD0AD4D", GOLD_BRIGHT = "FFE6C766", GOLD_MUTED = "FF9E8135",
+            TEXT_PRIMARY = "FFE9E2D3", TEXT_SECONDARY = "FFB8AE9A", TEXT_MUTED = "FF7E7669",
+            SUCCESS = "FF8FB368", WARNING = "FFD69A4A", DANGER = "FFC86A5A",
+            VOID = "FFA88BD8", CODEX = "FF66C5E0", TIMELINE = "FFC98B5E",
+        },
+        stoneTint = { 0.62, 0.62, 0.67, 0.85 },
+    },
 }
 
-IMAGO_HEX = {
-    GOLD           = "FFD0AD4D",
-    GOLD_BRIGHT    = "FFE6C766", -- Used for Character Links
-    GOLD_MUTED     = "FF9E8135",
-
-    TEXT_PRIMARY   = "FFE9E2D3",
-    TEXT_SECONDARY = "FFB8AE9A",
-    TEXT_MUTED     = "FF7E7669",
-
-    SUCCESS = "FF8FB368",
-    WARNING = "FFD69A4A",
-    DANGER  = "FFC86A5A",
-    VOID    = "FFA88BD8", -- Used for Zone Links
-    CODEX   = "FF66C5E0", -- Used for Codex Links
-    TIMELINE = "FFC98B5E", -- Used for Timeline Links
-}
+IMAGO.THEME_ORDER = { "obsidian" }
 
 -- Shared geometry for Fates and Zones.
 IMAGO.LAYOUT = {
@@ -62,6 +57,11 @@ IMAGO.LAYOUT = {
     SIDEBAR_OFFSET_LEFT = 10,
     SIDEBAR_WIDTH = 230,
     SIDEBAR_HEADER_HEIGHT = 30,
+    -- header pushed down so its 30 px centre lands on the detail title's
+    -- centre (title top at -15, 32 px font -> centre ~-31)
+    SIDEBAR_HEADER_TOP = 16,
+    -- list begins below the title's divider line (~-55) with ~8 px air
+    SIDEBAR_LIST_TOP = 63,
 
     SCROLLBAR_WIDTH = 4,
     SCROLLBAR_GUTTER = 8,
@@ -97,8 +97,33 @@ elseif locale == "zhTW" then
     IMAGO.FONT_BODY  = "Fonts\\blei00d.TTF"
 else
     -- Default Latin (deDE, enUS, frFR, esES, etc.)
-    IMAGO.FONT_TITLE = "Fonts\\MORPHEUS.TTF"
+    IMAGO.IS_LATIN_LOCALE = true
+    IMAGO.FONT_TITLE = "Fonts\\FRIZQT__.TTF"
     IMAGO.FONT_BODY  = "Fonts\\FRIZQT__.TTF"
+end
+
+-- Locale-default fonts; themes may override via fontTitle/fontBody.
+IMAGO.DEFAULT_FONT_TITLE = IMAGO.FONT_TITLE
+IMAGO.DEFAULT_FONT_BODY  = IMAGO.FONT_BODY
+
+-- Selectable header fonts (Latin locales only; other scripts keep their
+-- required fonts).
+IMAGO.TITLE_FONTS = {
+    morpheus = { file = "Fonts\\MORPHEUS.TTF", labelKey = "OPT_TITLEFONT_MORPHEUS" },
+    frizqt   = { file = "Fonts\\FRIZQT__.TTF", labelKey = "OPT_TITLEFONT_FRIZQT" },
+    arialn   = { file = "Fonts\\ARIALN.TTF",   labelKey = "OPT_TITLEFONT_ARIALN" },
+}
+IMAGO.TITLE_FONT_ORDER = { "frizqt", "morpheus", "arialn" }
+
+-- True if the font file exists in this client. SetFont throws a script
+-- error on missing assets in some clients, so it runs inside pcall.
+function IMAGO.IsFontAvailable(path)
+    if not IMAGO_FONT_PROBE then
+        IMAGO_FONT_PROBE = UIParent:CreateFontString(nil, "ARTWORK")
+        IMAGO_FONT_PROBE:Hide()
+    end
+    local ok = pcall(IMAGO_FONT_PROBE.SetFont, IMAGO_FONT_PROBE, path, 12, "")
+    return ok == true
 end
 
 -- Centralized typography roles for Fates and Zones navigation.
@@ -179,6 +204,12 @@ function IMAGO.IsTextTruncated(fontString)
     local text = fontString:GetText() or ""
     if text == "" then return false end
 
+    -- native check honors word wrap + max lines (dossier values wrap twice)
+    if fontString.IsTruncated then
+        local ok, res = pcall(fontString.IsTruncated, fontString)
+        if ok then return res and true or false end
+    end
+
     local font, size, flags = fontString:GetFont()
     IMAGO_TOOLTIP_MEASURE:SetFont(font, size, flags or "")
     IMAGO_TOOLTIP_MEASURE:SetText(text)
@@ -205,10 +236,28 @@ local function StyleScrollBarInternal(sb, thumbColor, hoverColor)
     sb:SetWidth(w)
 
     local name = sb:GetName() or ""
-    local up = _G[name .. "ScrollUpButton"]
-    local dn = _G[name .. "ScrollDownButton"]
-    if up then up:Hide() end
-    if dn then dn:Hide() end
+    -- Up/down arrow buttons are re-shown by UIPanelScrollBarTemplate's own
+    -- scroll logic, so hiding once is not enough: they get alpha 0, lose
+    -- mouse input and re-hide themselves whenever the template shows them.
+    local function Grab(key)
+        local o = _G[name .. key]
+        if o and o.Hide then return o end
+        o = sb[key]
+        return (o and o.Hide) and o or nil
+    end
+    for _, b in pairs({ Grab("ScrollUpButton") or sb.Back,
+                        Grab("ScrollDownButton") or sb.Forward }) do
+        if b then
+            b:SetAlpha(0)
+            if b.EnableMouse then b:EnableMouse(false) end
+            b:SetScript("OnShow", function(s) s:Hide() end)
+            b:Hide()
+        end
+    end
+    for _, key in ipairs({ "ScrollBarTop", "ScrollBarBottom", "ScrollBarMiddle" }) do
+        local t = Grab(key)
+        if t and t.Hide then t:Hide() end
+    end
 
     local thumb = sb.GetThumbTexture and sb:GetThumbTexture()
     if not thumb then return end
@@ -258,17 +307,44 @@ end
 function IMAGO.UpdateScrollBarVisibility(scrollFrame)
     if not scrollFrame then return end
     local sb = scrollFrame.ScrollBar or _G[(scrollFrame:GetName() or "") .. "ScrollBar"]
-    if not sb then return end
     if not scrollFrame.__IMAGO_UpdatingScrollBar then
         scrollFrame.__IMAGO_UpdatingScrollBar = true
         scrollFrame:UpdateScrollChildRect()
         scrollFrame.__IMAGO_UpdatingScrollBar = nil
     end
     local range = scrollFrame:GetVerticalScrollRange() or 0
-    if range <= 0.5 then
-        sb:Hide()
-    else
-        sb:Show()
+    if sb then
+        if range <= 0.5 then
+            sb:Hide()
+        else
+            sb:Show()
+        end
+    end
+    -- optional bottom fade overlay owned by the scroll frame: only when
+    -- real content still sits below the viewport. The threshold is the
+    -- fade's own height plus the content's bottom margin — smaller
+    -- remainders are just padding or a sliver of the last line, and
+    -- dimming them makes the fade look like it triggers too early.
+    if scrollFrame.imagoBottomFade then
+        local minHidden = (scrollFrame.imagoBottomFade:GetHeight() or 24) + 20
+        local function updateFade()
+            local r = scrollFrame:GetVerticalScrollRange() or 0
+            local s = scrollFrame:GetVerticalScroll() or 0
+            scrollFrame.imagoBottomFade:SetShown(
+                scrollFrame:IsShown() and (r - s) > minHidden)
+        end
+        updateFade()
+        if not scrollFrame.__IMAGO_FadeHooked then
+            scrollFrame.__IMAGO_FadeHooked = true
+            scrollFrame:HookScript("OnVerticalScroll", updateFade)
+            -- Hiding the scroll frame must drop the fade immediately —
+            -- no scroll event fires on Hide, so without this the overlay
+            -- would float stale over whatever replaces the scroll area.
+            scrollFrame:HookScript("OnHide", function()
+                scrollFrame.imagoBottomFade:Hide()
+            end)
+            scrollFrame:HookScript("OnShow", updateFade)
+        end
     end
 end
 
@@ -293,75 +369,97 @@ function IMAGO.StyleAndAnchorScrollBar(name, scrollFrame, thumbColor, hoverColor
     end)
 end
 
---- Create a reusable progress/rank footer for Fates and Zones.
---- The footer contains a rank title, progress text and a gold status bar.
---- @param parent Frame
---- @param width number
---- @return table footer
-function IMAGO.CreateProgressFooter(parent, width)
-    local footer = CreateFrame("Frame", nil, parent)
-    footer:SetSize(width, 80)
-    footer:SetPoint("BOTTOM", parent, "BOTTOM", 0, 0)
+-- ============================================================
+-- Theme switching
+-- ============================================================
 
-    footer.hLine = footer:CreateTexture(nil, "ARTWORK")
-    footer.hLine:SetSize(width, 1)
-    footer.hLine:SetPoint("TOP", footer, "TOP", 0, 0)
-    footer.hLine:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
-    footer.hLine:SetGradient("HORIZONTAL",
-        CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0),
-        CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.5))
+-- Applies a theme: mutates IMAGO_COLORS sub-tables in place (references in
+-- TYPOGRAPHY and consumer files stay valid), replaces IMAGO_HEX entries and
+-- updates the font pair + typography font roles.
+function IMAGO.ApplyTheme(id)
+    local t = IMAGO.THEMES[id] or IMAGO.THEMES.obsidian
+    IMAGO.ACTIVE_THEME = t
+    IMAGO.ACTIVE_THEME_ID = (IMAGO.THEMES[id] and id) or "obsidian"
 
-    footer.rankText = footer:CreateFontString(nil, "OVERLAY")
-    IMAGO.ApplyTextStyle(footer.rankText, "NAV_ITEM", IMAGO_COLORS.GOLD_BRIGHT)
-    footer.rankText:SetPoint("TOP", footer, "TOP", 0, -15)
-
-    footer.progText = footer:CreateFontString(nil, "OVERLAY")
-    IMAGO.ApplyTextStyle(footer.progText, "NAV_ITEM")
-    footer.progText:SetTextColor(IMAGO_COLORS.TEXT_SECONDARY[1], IMAGO_COLORS.TEXT_SECONDARY[2], IMAGO_COLORS.TEXT_SECONDARY[3])
-    footer.progText:SetPoint("TOP", footer.rankText, "BOTTOM", 0, -2)
-
-    local barW = width - 40
-    footer.bar = CreateFrame("StatusBar", nil, footer, "BackdropTemplate")
-    footer.bar:SetSize(barW, 16)
-    footer.bar:SetPoint("BOTTOM", footer, "BOTTOM", 0, 15)
-    footer.bar:SetStatusBarTexture("Interface\\TargetingFrame\\UI-StatusBar")
-    footer.bar:GetStatusBarTexture():SetColorTexture(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.7)
-    footer.bar:SetMinMaxValues(0, 100)
-    footer.bar:SetValue(0)
-
-    footer.bar.bg = footer.bar:CreateTexture(nil, "BACKGROUND")
-    footer.bar.bg:SetAllPoints()
-    footer.bar.bg:SetColorTexture(IMAGO_COLORS.BG_RAISED[1], IMAGO_COLORS.BG_RAISED[2], IMAGO_COLORS.BG_RAISED[3], 0.9)
-
-    for i = 1, 9 do
-        local tick = footer.bar:CreateTexture(nil, "OVERLAY")
-        tick:SetColorTexture(0, 0, 0, 0.9)
-        tick:SetSize(2, 16)
-        tick:SetPoint("LEFT", footer.bar, "LEFT", barW * (i / 10), 0)
+    for key, src in pairs(t.colors or {}) do
+        local dst = IMAGO_COLORS[key]
+        if dst then
+            dst[1], dst[2], dst[3], dst[4] = src[1], src[2], src[3], src[4]
+        else
+            IMAGO_COLORS[key] = { src[1], src[2], src[3], src[4] }
+        end
     end
 
-    footer.bar.border = CreateFrame("Frame", nil, footer.bar, "BackdropTemplate")
-    footer.bar.border:SetPoint("TOPLEFT", footer.bar, "TOPLEFT", -4, 4)
-    footer.bar.border:SetPoint("BOTTOMRIGHT", footer.bar, "BOTTOMRIGHT", 4, -4)
-    footer.bar.border:SetBackdrop({
-        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-        edgeSize = 12,
-    })
-    footer.bar.border:SetBackdropBorderColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.5)
+    for key, v in pairs(t.hex or {}) do
+        IMAGO_HEX[key] = v
+    end
 
-    return footer
+    -- Theme font overrides only on Latin locales; other scripts keep their
+    -- required fonts (Cyrillic, Korean, Chinese).
+    local isLatin = (IMAGO.IS_LATIN_LOCALE == true)
+    local fontTitle = (isLatin and t.fontTitle) or IMAGO.DEFAULT_FONT_TITLE
+    local fontBody  = (isLatin and t.fontBody)  or IMAGO.DEFAULT_FONT_BODY
+
+    -- User-selected header font (Latin locales only). Falls back silently
+    -- when the font file is missing in this client.
+    if isLatin and IMAGOSaved and IMAGOSaved.titleFont then
+        local tf = IMAGO.TITLE_FONTS[IMAGOSaved.titleFont]
+        if tf and IMAGO.IsFontAvailable(tf.file) then
+            fontTitle = tf.file
+        end
+    end
+
+    IMAGO.FONT_TITLE = fontTitle
+    IMAGO.FONT_BODY  = fontBody
+
+    -- Rebind typography roles (colors may resolve after TYPOGRAPHY defined).
+    if IMAGO.TYPOGRAPHY then
+        local C = IMAGO_COLORS
+        IMAGO.TYPOGRAPHY.DISPLAY.color = C.GOLD
+        IMAGO.TYPOGRAPHY.SIDEBAR_HEADER.color = C.GOLD
+        IMAGO.TYPOGRAPHY.NAV_CATEGORY.color = C.TEXT_SECONDARY
+        IMAGO.TYPOGRAPHY.RANK_TITLE.color = C.GOLD_BRIGHT
+        IMAGO.TYPOGRAPHY.NAV_ITEM.color = C.TEXT_PRIMARY
+        IMAGO.TYPOGRAPHY.NAV_META.color = C.TEXT_MUTED
+        IMAGO.TYPOGRAPHY.ZONE_ITEM.color = C.TEXT_PRIMARY
+
+        IMAGO.TYPOGRAPHY.DISPLAY.font = fontTitle
+        IMAGO.TYPOGRAPHY.SIDEBAR_HEADER.font = fontTitle
+        IMAGO.TYPOGRAPHY.NAV_CATEGORY.font = fontBody
+        IMAGO.TYPOGRAPHY.RANK_TITLE.font = fontBody
+        IMAGO.TYPOGRAPHY.NAV_ITEM.font = fontBody
+        IMAGO.TYPOGRAPHY.NAV_META.font = fontBody
+        IMAGO.TYPOGRAPHY.ZONE_ITEM.font = fontBody
+    end
+
+    IMAGO.ApplyThemeSurfaces()
 end
 
---- Update a progress footer built with IMAGO.CreateProgressFooter.
---- @param footer table
---- @param value number
---- @param max number
---- @param rankTitle string
---- @param progressText string
-function IMAGO.UpdateProgressFooter(footer, value, max, rankTitle, progressText)
-    if not footer then return end
-    footer.bar:SetMinMaxValues(0, math.max(1, max or 1))
-    footer.bar:SetValue(value or 0)
-    if footer.rankText then footer.rankText:SetText(rankTitle or "") end
-    if footer.progText then footer.progText:SetText(progressText or "") end
+-- Re-tints already-created themed surfaces that do not refresh themselves.
+-- Currently: the Chronicle's bottom PanelTabButtonTemplate tabs.
+function IMAGO.ApplyThemeSurfaces()
+    local f = IMAGO.Chronicle and IMAGO.Chronicle.frame
+    if not f or not f.mainTabs then return end
+    local tint = IMAGO.ACTIVE_THEME and IMAGO.ACTIVE_THEME.tabTint
+    local activeIdx = f.activeTabIndex or 1
+    for i, tab in ipairs(f.mainTabs) do
+        for _, region in ipairs({ tab:GetRegions() }) do
+            if region:GetObjectType() == "Texture" then
+                if tint then
+                    region:SetVertexColor(tint[1], tint[2], tint[3])
+                else
+                    region:SetVertexColor(1, 1, 1)
+                end
+            end
+        end
+        -- Tab labels: gold like before, bright white when active.
+        local fs = tab.Text or (tab.GetFontString and tab:GetFontString())
+        if fs then
+            local c = (i == activeIdx) and IMAGO_COLORS.TEXT_PRIMARY or IMAGO_COLORS.GOLD
+            fs:SetTextColor(c[1], c[2], c[3])
+        end
+    end
 end
+
+-- Initial theme from saved settings (defaults to obsidian).
+IMAGO.ApplyTheme((IMAGOSaved and IMAGOSaved.uiTheme) or "obsidian")

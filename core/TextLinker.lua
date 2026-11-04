@@ -195,8 +195,8 @@ end
 -- Replaces the first occurrence of each known NPC name (or alias)
 -- and each known zone name in a lore string with a colored hyperlink.
 --
---   NPC  links → |cffffe34d  soft gold
---   Zone links → |cff83dbff  ice blue
+--   All link kinds (NPC, zone, codex, timeline) share one gold: gold means
+--   "clickable"; the kind is conveyed by the footer's type tag instead.
 --
 -- @param text       string   Raw lore text
 -- @param selfSlug   string?  NPC slug of the page being shown (skipped)
@@ -218,7 +218,7 @@ function IMAGO.TextLinker.LinkNames(text, selfSlug, selfMapID, sharedNPCLinks, s
     for _, entry in ipairs(npcList or {}) do
         local slug = entry.slug
         if slug ~= selfSlug and not linkedNPCSlugs[slug] then
-            local link = "|Himago-npc:" .. slug .. "|h|" .. "c" .. IMAGO_HEX.GOLD_BRIGHT .. entry.name .. "|r|h"
+            local link = "|Himago-npc:" .. slug .. "|h|" .. "c" .. IMAGO_HEX.GOLD .. entry.name .. "|r|h"
             local newText, ok = InjectFirstLink(text, entry.name, link)
             if ok then
                 text = newText
@@ -233,7 +233,7 @@ function IMAGO.TextLinker.LinkNames(text, selfSlug, selfMapID, sharedNPCLinks, s
     for _, entry in ipairs(zoneList or {}) do
         local mapID = entry.mapID
         if mapID ~= selfMapID and not linkedZoneIDs[mapID] then
-            local link = "|Himago-zone:" .. tostring(mapID) .. "|h|" .. "c" .. IMAGO_HEX.VOID .. entry.name .. "|r|h"
+            local link = "|Himago-zone:" .. tostring(mapID) .. "|h|" .. "c" .. IMAGO_HEX.GOLD .. entry.name .. "|r|h"
             local newText, ok = InjectFirstLink(text, entry.name, link)
             if ok then
                 text = newText
@@ -248,7 +248,7 @@ function IMAGO.TextLinker.LinkNames(text, selfSlug, selfMapID, sharedNPCLinks, s
     for _, entry in ipairs(codexList or {}) do
         local slug = entry.slug
         if slug ~= selfCodexSlug and not linkedCodexSlugs[slug] then
-            local link = "|Himago-codex:" .. slug .. "|h|" .. "c" .. IMAGO_HEX.CODEX .. entry.name .. "|r|h"
+            local link = "|Himago-codex:" .. slug .. "|h|" .. "c" .. IMAGO_HEX.GOLD .. entry.name .. "|r|h"
             local newText, ok = InjectFirstLink(text, entry.name, link)
             if ok then
                 text = newText
@@ -263,7 +263,7 @@ function IMAGO.TextLinker.LinkNames(text, selfSlug, selfMapID, sharedNPCLinks, s
     for _, entry in ipairs(timelineList or {}) do
         local slug = entry.slug
         if slug ~= selfTimelineSlug and not linkedTimelineSlugs[slug] then
-            local link = "|Himago-timeline:" .. slug .. "|h|" .. "c" .. IMAGO_HEX.TIMELINE .. entry.name .. "|r|h"
+            local link = "|Himago-timeline:" .. slug .. "|h|" .. "c" .. IMAGO_HEX.GOLD .. entry.name .. "|r|h"
             local newText, ok = InjectFirstLink(text, entry.name, link)
             if ok then
                 text = newText
@@ -273,6 +273,208 @@ function IMAGO.TextLinker.LinkNames(text, selfSlug, selfMapID, sharedNPCLinks, s
     end
 
     return text
+end
+
+--- Zone mapID for a zone name or alias (nil if the zone is not in the DB)
+function IMAGO.TextLinker.FindZoneID(name)
+    for _, entry in ipairs(zoneList or {}) do
+        if entry.name == name then return entry.mapID end
+    end
+end
+
+-- ============================================================
+-- FINDREFERENCES
+-- Same lookup lists and word-boundary rule as LinkNames, but
+-- instead of injecting links it returns every referenced entry,
+-- ordered by first appearance across `texts`:
+--   { { kind = "npc"|"zone"|"codex"|"timeline", id = ..., name = ... }, ... }
+-- Higher-priority kinds claim their text span first, so a zone
+-- name inside an NPC name is not counted twice.
+-- @param texts  table   Array of plain strings (lore, timeline lines)
+-- @param self   table?  { npc = slug, zone = mapID, codex = slug, timeline = slug }
+-- ============================================================
+local function FirstBoundaryMatch(text, name, claimed)
+    local pos = 1
+    while true do
+        local s, e = string.find(text, name, pos, true)
+        if not s then return nil end
+        local before = s > 1 and text:sub(s - 1, s - 1) or ""
+        local after  = e < #text and text:sub(e + 1, e + 1) or ""
+        local free = true
+        for _, c in ipairs(claimed) do
+            if s <= c[2] and e >= c[1] then free = false break end
+        end
+        if free and not before:match("%a") and not after:match("%a") then
+            return s, e
+        end
+        pos = s + 1
+    end
+end
+
+function IMAGO.TextLinker.FindReferences(texts, selfIds)
+    selfIds = selfIds or {}
+    local refs, seen = {}, {}
+    local passes = {
+        { kind = "npc",      list = npcList,      key = "slug"  },
+        { kind = "zone",     list = zoneList,     key = "mapID" },
+        { kind = "codex",    list = codexList,    key = "slug"  },
+        { kind = "timeline", list = timelineList, key = "slug"  },
+    }
+    for ti, text in ipairs(texts or {}) do
+        if type(text) == "string" and text ~= "" then
+            local claimed = {}
+            for _, pass in ipairs(passes) do
+                for _, entry in ipairs(pass.list or {}) do
+                    local id = entry[pass.key]
+                    local tag = pass.kind .. ":" .. tostring(id)
+                    local s, e = FirstBoundaryMatch(text, entry.name, claimed)
+                    if s then
+                        -- Claim the span even for self/known refs so nested
+                        -- names inside it are never counted separately
+                        claimed[#claimed + 1] = { s, e }
+                        if id ~= selfIds[pass.kind] and not seen[tag] then
+                            seen[tag] = true
+                            refs[#refs + 1] = { kind = pass.kind, id = id, name = entry.name,
+                                                order = ti * 1000000 + s }
+                        end
+                    end
+                end
+            end
+        end
+    end
+    table.sort(refs, function(a, b) return a.order < b.order end)
+    return refs
+end
+
+-- ============================================================
+-- BACKLINK INDEX
+-- The reverse direction of FindReferences: for every entry A
+-- whose texts reference B, A is stored under B's key. Detail
+-- views merge FindReferences (outgoing) with GetBacklinks
+-- (incoming), so chips always run both ways — automatically,
+-- without curated related lists.
+-- Built once at init, after all lookups and localized data.
+-- ============================================================
+local backlinkIndex = nil
+
+function IMAGO.TextLinker.BuildBacklinkIndex()
+    backlinkIndex = {}
+
+    local function scan(kind, id, order, texts)
+        for _, ref in ipairs(IMAGO.TextLinker.FindReferences(texts, { [kind] = id })) do
+            local tag = ref.kind .. ":" .. tostring(ref.id)
+            local list = backlinkIndex[tag]
+            if not list then
+                list = {}
+                backlinkIndex[tag] = list
+            end
+            list[#list + 1] = { kind = kind, id = id, order = order or 0 }
+        end
+    end
+
+    local codex = IMAGOdb and IMAGOdb.codex and IMAGOdb.codex.entries
+    if codex then
+        for slug, data in pairs(codex) do
+            if not data.stub and type(data.body) == "string" and data.body ~= "" then
+                scan("codex", slug, data.order, { data.body })
+            end
+        end
+    end
+
+    local timeline = IMAGOdb and IMAGOdb.timeline and IMAGOdb.timeline.events
+    if timeline then
+        for slug, data in pairs(timeline) do
+            if not data.stub and type(data.body) == "string" and data.body ~= "" then
+                scan("timeline", slug, data.order, { data.body })
+            end
+        end
+    end
+
+    if IMAGOdb and IMAGOdb.zones then
+        for mapID, data in pairs(IMAGOdb.zones) do
+            local texts = { data.lore }
+            for _, poi in ipairs(data.pointsOfInterest or {}) do
+                texts[#texts + 1] = poi.name
+                texts[#texts + 1] = poi.lore
+            end
+            scan("zone", mapID, mapID, texts)
+        end
+    end
+
+    if IMAGOdb and IMAGOdb.npcs then
+        for _, entries in pairs(IMAGOdb.npcs) do
+            if type(entries) == "table" then
+                for slug, data in pairs(entries) do
+                    if type(data) == "table" and type(data.lore) == "string" and data.lore ~= "" then
+                        scan("npc", slug, 0, { data.lore })
+                    end
+                end
+            end
+        end
+    end
+
+    -- Per-NPC era stories (IMAGOdb.timelines plural)
+    if IMAGOdb and IMAGOdb.timelines then
+        for slug, eras in pairs(IMAGOdb.timelines) do
+            local texts = {}
+            for _, era in ipairs(eras) do
+                if type(era) == "table" then texts[#texts + 1] = era.text end
+            end
+            if #texts > 0 then scan("npc", slug, 0, texts) end
+        end
+    end
+
+    -- Race dossiers: every localized field contributes, so mentions of
+    -- codex terms / zones / NPCs inside race lore backlink to the race
+    if IMAGOdb and IMAGOdb.races then
+        for slug, d in pairs(IMAGOdb.races) do
+            local texts = { d.overview, d.history, d.culture,
+                d.relationsIntro, d.groupsIntro, d.groupsFootnote }
+            for _, g in pairs(d.groups or {}) do
+                if type(g) == "table" then texts[#texts + 1] = g.lore end
+            end
+            for _, r in ipairs(d.relations or {}) do
+                texts[#texts + 1] = (r.name or "") .. " " .. (r.text or "")
+            end
+            for _, t in pairs(d.figureText or {}) do
+                if type(t) == "table" then texts[#texts + 1] = t.title end
+            end
+            scan("race", slug, 0, texts)
+        end
+    end
+
+    -- Class dossiers, same rule
+    if IMAGOdb and IMAGOdb.classes then
+        for slug, d in pairs(IMAGOdb.classes) do
+            local texts = { d.overview, d.history, d.racesIntro,
+                d.racesFoot, d.orgsIntro, d.orgsFoot, d.variants }
+            for _, e in ipairs(d.raceEntries or {}) do
+                texts[#texts + 1] = e.text
+            end
+            for _, g in pairs(d.groups or {}) do
+                if type(g) == "table" then texts[#texts + 1] = g.lore end
+            end
+            for _, t in pairs(d.figureText or {}) do
+                if type(t) == "table" then texts[#texts + 1] = t.title end
+            end
+            scan("class", slug, 0, texts)
+        end
+    end
+
+    for _, list in pairs(backlinkIndex) do
+        table.sort(list, function(a, b)
+            if a.order ~= b.order then return a.order < b.order end
+            return tostring(a.id) < tostring(b.id)
+        end)
+    end
+end
+
+--- Reverse refs for one entry: every entry whose texts link to
+--- `kind:id`, sorted by source order. Same { kind, id } shape
+--- as FindReferences results, so it can be merged into ref lists.
+function IMAGO.TextLinker.GetBacklinks(kind, id)
+    local list = backlinkIndex and backlinkIndex[kind .. ":" .. tostring(id)]
+    return list or {}
 end
 
 -- ============================================================
@@ -303,6 +505,16 @@ function IMAGO.TextLinker.OnHyperlinkClick(self, link, text, button)
     elseif linkType == "imago-timeline" then
         if IMAGO.Chronicle and IMAGO.Chronicle.OpenToTimeline then
             IMAGO.Chronicle.OpenToTimeline(payload)
+        end
+
+    elseif linkType == "imago-race" then
+        if IMAGO.Chronicle and IMAGO.Chronicle.OpenToRace then
+            IMAGO.Chronicle.OpenToRace(payload)
+        end
+
+    elseif linkType == "imago-class" then
+        if IMAGO.Chronicle and IMAGO.Chronicle.OpenToClass then
+            IMAGO.Chronicle.OpenToClass(payload)
         end
     end
 end

@@ -14,21 +14,3 @@ IMAGO.Chronicle.ranks = {
     {perc = 95,  title = "Grand Archivist of the Canon"},
     {perc = 100, title = "Perfected Imago"},
 }
-
-IMAGO.Chronicle.zoneRanks = {
-    {perc = 0,   title = "Wanderer"},
-    {perc = 20,  title = "Scout"},
-    {perc = 40,  title = "Cartographer"},
-    {perc = 60,  title = "Pathfinder"},
-    {perc = 80,  title = "Explorer"},
-    {perc = 100, title = "Worldwalker"},
-}
-
-IMAGO.Chronicle.raceRanks = {
-    {perc = 0,   title = "Outsider"},
-    {perc = 15,  title = "Wanderer"},
-    {perc = 35,  title = "Chronicler"},
-    {perc = 55,  title = "Loremaster"},
-    {perc = 75,  title = "Sage"},
-    {perc = 100, title = "Voice of Azeroth"},
-}

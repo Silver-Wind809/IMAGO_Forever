@@ -186,9 +186,65 @@ function IMAGO.Options.Init()
         end
     end)
 
+    -- Checkbox: Guild/party achievement broadcast
+    local cbSocial = CreateFrame("CheckButton", nil, content, "InterfaceOptionsCheckButtonTemplate")
+    cbSocial:SetPoint("TOPLEFT", cbMinimap, "BOTTOMLEFT", 0, -10)
+    cbSocial.Text:SetText(IMAGO.L["OPT_SOCIAL_BROADCAST"])
+    cbSocial:SetChecked(IMAGOSaved.socialBroadcast ~= false)
+    cbSocial:SetScript("OnClick", function(self)
+        IMAGOSaved.socialBroadcast = self:GetChecked() and true or false
+    end)
+
+    -- Title font selection (radio buttons; Latin locales only — other
+    -- scripts keep their required fonts, so hide the option there)
+    local fontAnchor = cbSocial
+    if IMAGO.IS_LATIN_LOCALE then
+        local fontHeader = CreateSectionHeader(IMAGO.L["SETTINGS_SEC_TITLEFONT"] or "Title Font", cbSocial, 0, -22)
+
+        local fontButtons = {}
+        local lastFontBtn = nil
+        local currentFont = "frizqt"
+        if IMAGO.TITLE_FONTS and IMAGO.TITLE_FONTS[IMAGOSaved.titleFont]
+            and (not IMAGO.IsFontAvailable or IMAGO.IsFontAvailable(IMAGO.TITLE_FONTS[IMAGOSaved.titleFont].file)) then
+            currentFont = IMAGOSaved.titleFont
+        end
+
+        local i = 0
+        for _, fontID in ipairs(IMAGO.TITLE_FONT_ORDER or {"morpheus"}) do
+            local font = IMAGO.TITLE_FONTS[fontID]
+            -- Only offer fonts that actually exist in this client.
+            if font and (fontID == "frizqt" or not IMAGO.IsFontAvailable or IMAGO.IsFontAvailable(font.file)) then
+            i = i + 1
+            local rb = CreateFrame("CheckButton", "IMAGOTitleFontRadio_" .. fontID, content, "UIRadioButtonTemplate")
+            if lastFontBtn then
+                rb:SetPoint("TOPLEFT", lastFontBtn, "BOTTOMLEFT", 0, -10)
+            else
+                rb:SetPoint("TOPLEFT", fontHeader, "BOTTOMLEFT", 0, -10)
+            end
+            rb.text:SetText(IMAGO.L[font.labelKey] or fontID)
+            rb:SetChecked(currentFont == fontID)
+            rb:SetScript("OnClick", function()
+                IMAGOSaved.titleFont = fontID
+                for _, btn in ipairs(fontButtons) do
+                    btn:SetChecked(btn.fontID == fontID)
+                end
+                IMAGO.ApplyTheme(IMAGO.ACTIVE_THEME_ID or "obsidian")
+            end)
+            rb.fontID = fontID
+            fontButtons[i] = rb
+            lastFontBtn = rb
+            end
+        end
+
+        local fontNote = content:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
+        fontNote:SetPoint("TOPLEFT", lastFontBtn, "BOTTOMLEFT", 0, -8)
+        fontNote:SetText("|cFFAAAAAA" .. (IMAGO.L["OPT_TITLEFONT_NOTE"] or "Applies fully after a UI reload.") .. "|r")
+        fontAnchor = fontNote
+    end
+
     -- Slider: Scale (localized)
     local sliderScale = CreateFrame("Slider", "IMAGOScaleSlider", content, "OptionsSliderTemplate")
-    sliderScale:SetPoint("TOPLEFT", cbMinimap, "BOTTOMLEFT", 0, -40)
+    sliderScale:SetPoint("TOPLEFT", fontAnchor, "BOTTOMLEFT", 0, -40)
     sliderScale:SetMinMaxValues(0.5, 2.0)
     sliderScale:SetValueStep(0.05)
     sliderScale:SetObeyStepOnDrag(true)
