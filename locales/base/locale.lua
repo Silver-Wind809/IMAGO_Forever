@@ -52,30 +52,30 @@ L["CMD_HELP_SETTINGS_DESC"]         = "Opens the addon settings"
 L["CMD_HELP_HELP_DESC"]             = "Shows this help message"
 
 -- Categories (Alliance)
-L["CAT_STORMWIND"]                  = "Kingdom of Stormwind"
-L["CAT_IRONFORGE"]                  = "Dwarves of Ironforge"
-L["CAT_GNOMEREGAN"]                 = "Gnomeregan Exiles"
-L["CAT_DARNASSUS"]                  = "Night Elves of Darnassus"
+L["CAT_KINGDOM_STORMWIND"]                  = "Kingdom of Stormwind"
+L["CAT_DWARVES_IRONFORGE"]                  = "Dwarves of Ironforge"
+L["CAT_GNOMEREGAN_EXILES"]                 = "Gnomeregan Exiles"
+L["CAT_NIGHT_ELVES_DARNASSUS"]                  = "Night Elves of Darnassus"
 L["CAT_THERAMORE"]                  = "Theramore"
-L["CAT_WILDHAMMER"]                 = "Wildhammer Clan"
+L["CAT_WILDHAMMER_CLAN"]                 = "Wildhammer Clan"
 
 -- Categories (Horde)
-L["CAT_ORCS"]                       = "Orcs of the Horde"
-L["CAT_DARKSPEAR"]                  = "Darkspear Trolls"
+L["CAT_ORCS_HORDE"]                       = "Orcs of the Horde"
+L["CAT_DARKSPEAR_TROLLS"]                  = "Darkspear Trolls"
 L["CAT_FORSAKEN"]                   = "The Forsaken"
-L["CAT_THUNDERBLUFF"]               = "Tauren of Thunder Bluff"
+L["CAT_TAUREN_THUNDER_BLUFF"]               = "Tauren of Thunder Bluff"
 
 -- Categories (Others)
 L["CAT_SKYBORNE"]                   = "Skyborne"
-L["CAT_CENARION"]                   = "Cenarion Circle"
+L["CAT_CENARION_CIRCLE_FOREVER"]                   = "Cenarion Circle"
 L["CAT_ARGENT"]                     = "Argent Dawn & Silver Hand"
 L["CAT_DALARAN"]                    = "Dalaran & the Kirin Tor"
-L["CAT_GOBLIN"]                     = "Goblin Cartels"
+L["CAT_GOBLIN_CARTELS_FOREVER"]                     = "Goblin Cartels"
 L["CAT_SHENDRALAR"]                 = "Shen'dralar"
 L["CAT_DRAGONFLIGHTS"]              = "Dragonflights"
 L["CAT_ELEMENTALS"]                 = "Elementals"
 L["CAT_CENTAUR"]                    = "Centaur Clans"
-L["CAT_NEUTRAL"]                    = "Neutral/Independent"
+L["CAT_NEUTRAL_INDEPENDENT"]                    = "Neutral/Independent"
 L["CAT_CUSTOM"]                     = "Custom"
 
 -- ============================================================

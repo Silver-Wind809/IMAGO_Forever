@@ -49,30 +49,30 @@ L["CMD_HELP_SETTINGS_DESC"]         = "Открывает настройки а�
 L["CMD_HELP_HELP_DESC"]             = "Показывает это сообщение"
 
 -- Категории (Альянс)
-L["CAT_STORMWIND"]                  = "Королевство Штормград"
-L["CAT_IRONFORGE"]                  = "Дворфы Стальгорна"
-L["CAT_GNOMEREGAN"]                 = "Изгнанники Гномрегана"
-L["CAT_DARNASSUS"]                  = "Ночные эльфы Дарнасса"
+L["CAT_KINGDOM_STORMWIND"]                  = "Королевство Штормград"
+L["CAT_DWARVES_IRONFORGE"]                  = "Дворфы Стальгорна"
+L["CAT_GNOMEREGAN_EXILES"]                 = "Изгнанники Гномрегана"
+L["CAT_NIGHT_ELVES_DARNASSUS"]                  = "Ночные эльфы Дарнасса"
 L["CAT_THERAMORE"]                  = "Терамор"
-L["CAT_WILDHAMMER"]                 = "Клан Громовара"
+L["CAT_WILDHAMMER_CLAN"]                 = "Клан Громовара"
 
 -- Категории (Орда)
-L["CAT_ORCS"]                       = "Орки Орды"
-L["CAT_DARKSPEAR"]                  = "Тролли Черного Копья"
+L["CAT_ORCS_HORDE"]                       = "Орки Орды"
+L["CAT_DARKSPEAR_TROLLS"]                  = "Тролли Черного Копья"
 L["CAT_FORSAKEN"]                   = "Отрекшиеся"
-L["CAT_THUNDERBLUFF"]               = "Таурены Громового Утёса"
+L["CAT_TAUREN_THUNDER_BLUFF"]               = "Таурены Громового Утёса"
 
 -- Категории (Прочие)
 L["CAT_SKYBORNE"]                   = "Неборождённые"
-L["CAT_CENARION"]                   = "Круг Кенария"
+L["CAT_CENARION_CIRCLE_FOREVER"]                   = "Круг Кенария"
 L["CAT_ARGENT"]                     = "Аргентумская заря и Серебряная Длань"
 L["CAT_DALARAN"]                    = "Даларан и Кирин-Тор"
-L["CAT_GOBLIN"]                     = "Гоблинские картели"
+L["CAT_GOBLIN_CARTELS_FOREVER"]                     = "Гоблинские картели"
 L["CAT_SHENDRALAR"]                 = "Шен'дралар"
 L["CAT_DRAGONFLIGHTS"]              = "Драконьи стаи"
 L["CAT_ELEMENTALS"]                 = "Элементали"
 L["CAT_CENTAUR"]                    = "Племена кентавров"
-L["CAT_NEUTRAL"]                    = "Нейтральные/Независимые"
+L["CAT_NEUTRAL_INDEPENDENT"]                    = "Нейтральные/Независимые"
 L["CAT_CUSTOM"]                     = "Пользовательские"
 
 -- ============================================================
