@@ -177,15 +177,21 @@ IMAGOdb.npcs.CAT_FORSAKEN["varimathras"].timeline = {
 -- CAT_THUNDERBLUFF — Tauren of Thunder Bluff
 IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].name = "Cairne Bloodhoof"
 IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].race = "Tauren"
+IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].role = "High Chieftain"
+IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].aliases = { "Cairne" }
 IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].lore =
 [[
-High Chieftain of the tauren, Cairne united the wandering tribes after generations of harassment by the centaur. When Thrall's orcs helped the tauren cross the Barrens to the safety of Mulgore, Cairne swore a blood debt to the Horde.
-From the mesas of Thunder Bluff he leads with the patience of a people who measure time in centuries. Wise, deliberate, and utterly unbending once his word is given, Cairne is the soul of Thrall's Horde.]]
+More than a century ago, Cairne was born to the Bloodhoof tribe. Back then, his people lived as nomads near the Great Sea in the Barrens, constantly harassed by centaurs and harpies. In the decades of strife that followed, Cairne became a hardened yet wise warrior, hoping to one day lead his people in times of peace.
+When the strange orcs came to Kalimdor, Cairne - now chieftain - was intrigued by their strength in battle and the honor they showed in their way of life. He formed a personal friendship with the young Warchief Thrall and swore allegiance to the Horde. United, they drove away the centaurs, the invading Kul Tirans, and played a crucial role in the defeat of the Burning Legion.
+Now, Cairne's dream of peace is finally fulfilled. Mulgore serves as an idyllic new home for all his people, and Thunder Bluff has become a sprawling yet tranquil capital. It took a lifetime, and he's nearing the end of his days, but he is proud to have helped his people flourish and relieved to see a worthy heir in his only son, Baine. And though he might be old, his prowess on the field of battle still surpasses that of many warriors in their prime.]]
 IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].zones = {"Thunder Bluff"}
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].source = "warcraft.wiki.gg/wiki/Cairne_Bloodhoof"
+IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].source = "@Cadash"
 IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].timeline = {
-    {era = "WC3", text = "Led his people across the Barrens with Thrall's aid, founded Thunder Bluff, and fought beside the Horde at Hyjal."},
-    {era = "Forever", text = "Governs the united tauren tribes and counsels the Warchief — while his son Baine's safety remains his one fear."},
+    {era = "Pre-WC1", text = "Led the Bloodhoof tribe, fighting to prevent his people from being wiped out year after year. Had a son with his lifemate Tamaala. She died sometime afterward."},
+    {era = "Pre-WC3", text = "Made the decision to lead his tribe to Mulgore in hopes of finding a better life."},
+    {era = "WC3", text = "Helped Thrall in his search for the Oracle. After the orcs helped them defeat marauding centaurs, Cairne and his people joined both the Horde and the fight against the Burning Legion. Remained close friends with Thrall after the Third War and established Mulgore as the new home of the tauren. Joined Horde forces against Daelin Proudmoore."},
+    {era = "Pre-Forever", text = "Built the first tauren city, Thunder Bluff, with the help of the Horde and officially abandoned the tauren's traditional nomadic lifestyle in favor of security and stability. Received Sylvanas Windrunner in Thunder Bluff and spoke up on her behalf to Thrall, eventually helping bring the Forsaken into the Horde."},
+    {era = "Forever", text = "Was recognized by the other tribes' leaders as the wisest and most accomplished of them all and was named High Chieftain. Was opposed only by Magatha Grimtotem, and the two butted heads frequently. Sent adventurers to aid his Horde allies in the Alterac Mountains after receiving their plea for help."},
 }
 
 -- CAT_CENARION — Cenarion Circle

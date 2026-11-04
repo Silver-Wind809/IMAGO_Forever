@@ -1,42 +1,34 @@
 IMAGO.UI = IMAGO.UI or {}
 
-local FONT_TITLE, FONT_BODY
-local locale = GetLocale()
-if locale == "ruRU" then
-    -- Cyrillic
-    FONT_TITLE = "Fonts\\FRIZQT___CYR.TTF"
-    FONT_BODY  = "Fonts\\FRIZQT___CYR.TTF"
-elseif locale == "koKR" then
-    FONT_TITLE = "Fonts\\2002.TTF"
-    FONT_BODY  = "Fonts\\2002.TTF"
-elseif locale == "zhCN" then
-    FONT_TITLE = "Fonts\\ARKai_T.TTF"
-    FONT_BODY  = "Fonts\\ARKai_C.TTF"
-elseif locale == "zhTW" then
-    FONT_TITLE = "Fonts\\blei00d.TTF"
-    FONT_BODY  = "Fonts\\blei00d.TTF"
-else
-    -- Default Latin (deDE, enUS, frFR, esES, etc.)
-    FONT_TITLE = "Fonts\\MORPHEUS.TTF"
-    FONT_BODY  = "Fonts\\FRIZQT__.TTF"
-end
+-- Fonts resolve via IMAGO.FONT_TITLE / IMAGO.FONT_BODY at call time —
+-- the saved titleFont is applied in Init, after saved vars load.
 local FADE_IN_SECONDS = 0.25
 local SNIPPET_AUTO_HIDE_SECONDS = 15
 local SNIPPET_FADE_OUT_SECONDS = 0.6
 
-local BACKDROP_DEFAULT = {
-    bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
-    edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-    tile = true, tileSize = 16, edgeSize = 16,
-    insets = { left = 4, right = 4, top = 4, bottom = 4 }
-}
-
-local BACKDROP_OPAQUE = {
+local CARD_BACKDROP = {
     bgFile = "Interface\\Buttons\\WHITE8X8",
     edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
     tile = true, tileSize = 16, edgeSize = 16,
     insets = { left = 4, right = 4, top = 4, bottom = 4 }
 }
+
+-- Stone/dark background candidates, tried in order. Same set as the
+-- discovery card so both popups share the anthracite look.
+local STONE_TEXTURES = {
+    "Interface\\FrameGeneral\\UI-Background-Rock",
+    "Interface\\FrameGeneral\\UI-Background-Marble",
+    "Interface\\DialogFrame\\UI-DialogBox-Background",
+    "Interface\\Tooltips\\UI-Tooltip-Background",
+}
+
+local function PickStoneTexture(tex)
+    for _, path in ipairs(STONE_TEXTURES) do
+        tex:SetTexture(path)
+        if not tex.GetTextureFilePath then return end -- old API: keep first guess
+        if tex:GetTextureFilePath() then return end
+    end
+end
 
 local function CancelSnippetTimers(f)
     if f._snippetAutoHideTimer then
@@ -49,11 +41,29 @@ local function CancelSnippetTimers(f)
     end
 end
 
-local function ApplyBackdrop(f, alpha)
+local function ApplyBackdrop(f)
     local opaque = IMAGOSaved and IMAGOSaved.opaqueUI
-    f:SetBackdrop(opaque and BACKDROP_OPAQUE or BACKDROP_DEFAULT)
-    f:SetBackdropColor(0.05, 0.05, 0.05, opaque and 1.0 or alpha)
-    f:SetBackdropBorderColor(1, 0.78, 0.1, 0.9)
+    local bg = IMAGO_COLORS.BG_MAIN
+    local border = IMAGO_COLORS.GOLD_MUTED
+    f:SetBackdrop(CARD_BACKDROP)
+    f:SetBackdropColor(bg[1], bg[2], bg[3], opaque and 1 or bg[4])
+    f:SetBackdropBorderColor(border[1], border[2], border[3], 1.0)
+
+    if not f.stoneTex then
+        f.stoneTex = f:CreateTexture(nil, "ARTWORK", nil, -7)
+        f.stoneTex:SetPoint("TOPLEFT", f, "TOPLEFT", 4, -4)
+        f.stoneTex:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -4, 4)
+        f.stoneTex:SetHorizTile(true)
+        f.stoneTex:SetVertTile(true)
+    end
+    local theme = IMAGO.ACTIVE_THEME
+    if theme and theme.stoneTex then
+        f.stoneTex:SetTexture(theme.stoneTex)
+    else
+        PickStoneTexture(f.stoneTex)
+    end
+    local tint = (theme and theme.stoneTint) or { 0.62, 0.62, 0.67, 0.85 }
+    f.stoneTex:SetVertexColor(tint[1], tint[2], tint[3], tint[4])
 end
 
 local function RegisterForEscapeDismiss(frame)
@@ -78,7 +88,7 @@ local function CreateMiniLorePopupFrame()
     if IMAGO.UI.MiniLorePopup then return IMAGO.UI.MiniLorePopup end
 
     local f = CreateFrame("Frame", "IMAGOMiniLorePopup", UIParent, "BackdropTemplate")
-    f:SetSize(520, 110)
+    f:SetSize(560, 110)
 
     if IMAGOSaved and IMAGOSaved.snippetPopupPoint then
         f:SetPoint(IMAGOSaved.snippetPopupPoint, UIParent, IMAGOSaved.snippetPopupRelative, IMAGOSaved.snippetPopupX, IMAGOSaved.snippetPopupY)
@@ -90,7 +100,7 @@ local function CreateMiniLorePopupFrame()
     f:SetAlpha(0)
     f:Hide()
 
-    ApplyBackdrop(f, 0.82)
+    ApplyBackdrop(f)
 
     f.lineTopLeft = f:CreateTexture(nil, "ARTWORK")
     f.lineTopLeft:SetSize(240, 1)
@@ -105,28 +115,57 @@ local function CreateMiniLorePopupFrame()
     f.lineTopRight:SetGradient("HORIZONTAL", CreateColor(1, 0.78, 0.1, 0.6), CreateColor(1, 0.78, 0.1, 0))
 
     f.title = f:CreateFontString(nil, "OVERLAY")
-    f.title:SetFont(FONT_TITLE, 18, "OUTLINE")
+    f.title:SetFont(IMAGO.FONT_TITLE, 18, "OUTLINE")
     f.title:SetPoint("TOP", f, "TOP", 0, -16)
-    f.title:SetTextColor(1, 0.78, 0.1, 0.95)
+    f.title:SetTextColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3])
     f.title:SetShadowColor(0, 0, 0, 1)
     f.title:SetShadowOffset(1, -1)
     f.title:SetJustifyH("CENTER")
 
     f.body = f:CreateFontString(nil, "OVERLAY")
-    f.body:SetFont(FONT_BODY, 13, "")
+    f.body:SetFont(IMAGO.FONT_BODY, 13, "")
     f.body:SetPoint("TOP", f.title, "BOTTOM", 0, -8)
-    f.body:SetWidth(480)
-    f.body:SetTextColor(0.95, 0.95, 0.95, 0.95)
+    f.body:SetWidth(504)
+    f.body:SetTextColor(IMAGO_COLORS.TEXT_PRIMARY[1], IMAGO_COLORS.TEXT_PRIMARY[2], IMAGO_COLORS.TEXT_PRIMARY[3], 0.95)
     f.body:SetShadowColor(0, 0, 0, 1)
     f.body:SetShadowOffset(1, -1)
     f.body:SetJustifyH("CENTER")
     f.body:SetWordWrap(true)
     f.body:SetSpacing(3)
 
-    f.nextButton = CreateFrame("Button", nil, f, "UIMenuButtonStretchTemplate")
-    f.nextButton:SetSize(120, 22)
+    -- Same brown/gold button style as the discovery card's "Read more".
+    local BTN_BG     = { 0.26, 0.18, 0.09, 1.00 }
+    local BTN_HOVER  = { 0.34, 0.24, 0.12, 1.00 }
+    local GOLD       = IMAGO_COLORS.GOLD
+    local GOLD_MUTED = IMAGO_COLORS.GOLD_MUTED
+    local GOLD_BRT   = IMAGO_COLORS.GOLD_BRIGHT
+
+    f.nextButton = CreateFrame("Button", nil, f, "BackdropTemplate")
+    f.nextButton:SetSize(140, 24)
     f.nextButton:SetPoint("BOTTOM", f, "BOTTOM", 0, 12)
-    f.nextButton:SetText((IMAGO.L and IMAGO.L["NEXT"]) or "Next")
+    f.nextButton:SetBackdrop({
+        bgFile = "Interface\\Buttons\\WHITE8X8",
+        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+        tile = true, tileSize = 16, edgeSize = 12,
+        insets = { left = 3, right = 3, top = 3, bottom = 3 }
+    })
+    f.nextButton:SetBackdropColor(BTN_BG[1], BTN_BG[2], BTN_BG[3], BTN_BG[4])
+    f.nextButton:SetBackdropBorderColor(GOLD_MUTED[1], GOLD_MUTED[2], GOLD_MUTED[3], 0.9)
+
+    f.nextButton.label = f.nextButton:CreateFontString(nil, "OVERLAY")
+    f.nextButton.label:SetFont(IMAGO.FONT_BODY, 12, "")
+    f.nextButton.label:SetPoint("CENTER", 0, 0)
+    f.nextButton.label:SetTextColor(GOLD_BRT[1], GOLD_BRT[2], GOLD_BRT[3])
+    f.nextButton.label:SetText((IMAGO.L and IMAGO.L["NEXT"]) or "Next")
+
+    f.nextButton:SetScript("OnEnter", function(self)
+        self:SetBackdropColor(BTN_HOVER[1], BTN_HOVER[2], BTN_HOVER[3], BTN_HOVER[4])
+        self:SetBackdropBorderColor(GOLD[1], GOLD[2], GOLD[3], 1)
+    end)
+    f.nextButton:SetScript("OnLeave", function(self)
+        self:SetBackdropColor(BTN_BG[1], BTN_BG[2], BTN_BG[3], BTN_BG[4])
+        self:SetBackdropBorderColor(GOLD_MUTED[1], GOLD_MUTED[2], GOLD_MUTED[3], 0.9)
+    end)
     f.nextButton:SetScript("OnClick", function()
         if IMAGO.Snippets and IMAGO.Snippets.ShowRandom then
             IMAGO.Snippets.ShowRandom(true)
@@ -139,17 +178,17 @@ local function CreateMiniLorePopupFrame()
     f.closeButton:RegisterForClicks("LeftButtonUp")
 
     local closeIcon = f.closeButton:CreateFontString(nil, "OVERLAY")
-    closeIcon:SetFont(FONT_TITLE, 20, "OUTLINE")
+    closeIcon:SetFont(IMAGO.FONT_BODY, 20, "OUTLINE")
     closeIcon:SetText("×")
     closeIcon:SetPoint("CENTER", 0, 0)
-    closeIcon:SetTextColor(1, 0.78, 0.1, 0.75)
+    closeIcon:SetTextColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.75)
     f.closeButton.closeIcon = closeIcon
 
     f.closeButton:SetScript("OnEnter", function(self)
-        if self.closeIcon then self.closeIcon:SetTextColor(1, 0.25, 0.25, 1) end
+        if self.closeIcon then self.closeIcon:SetTextColor(IMAGO_COLORS.DANGER[1], IMAGO_COLORS.DANGER[2], IMAGO_COLORS.DANGER[3], 1) end
     end)
     f.closeButton:SetScript("OnLeave", function(self)
-        if self.closeIcon then self.closeIcon:SetTextColor(1, 0.78, 0.1, 0.75) end
+        if self.closeIcon then self.closeIcon:SetTextColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.75) end
     end)
     f.closeButton:SetScript("OnClick", function()
         IMAGO.UI.HideSnippetPopup()
@@ -216,12 +255,12 @@ function IMAGO.UI.ShowSnippetPopup(text, categoryKey)
     CancelSnippetTimers(f)
     UIFrameFadeRemoveFrame(f)
 
-    ApplyBackdrop(f, 0.82)
+    ApplyBackdrop(f)
 
     local title = (IMAGO.L and categoryKey and IMAGO.L[categoryKey]) or (categoryKey or "IMAGO")
     f.title:SetText(title)
     f.body:SetText(text)
-    f.nextButton:SetText((IMAGO.L and IMAGO.L["NEXT"]) or "Next")
+    f.nextButton.label:SetText((IMAGO.L and IMAGO.L["NEXT"]) or "Next")
 
     local titleHeight = f.title:GetStringHeight()
     local bodyHeight = f.body:GetStringHeight()

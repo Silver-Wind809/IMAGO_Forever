@@ -16,21 +16,3 @@ IMAGO.Chronicle.ranks = {
     {perc = 95,  title = "Das Gedächtnis von Azeroth"},
     {perc = 100, title = "Vollendetes Imago"},
 }
-
-IMAGO.Chronicle.zoneRanks = {
-    {perc = 0,   title = "Wanderer"},
-    {perc = 20,  title = "Späher"},
-    {perc = 40,  title = "Kartograph"},
-    {perc = 60,  title = "Pfadfinder"},
-    {perc = 80,  title = "Entdecker"},
-    {perc = 100, title = "Weltenwanderer"},
-}
-
-IMAGO.Chronicle.raceRanks = {
-    {perc = 0,   title = "Außenseiter"},
-    {perc = 15,  title = "Wanderer"},
-    {perc = 35,  title = "Chronist"},
-    {perc = 55,  title = "Wissenshüter"},
-    {perc = 75,  title = "Weiser"},
-    {perc = 100, title = "Stimme Azeroths"},
-}
