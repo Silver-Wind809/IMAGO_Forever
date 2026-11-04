@@ -2,93 +2,142 @@
 -- IMAGO Forever — locales/base/data/npcs/forever_npcs.lua (enUS fallback)
 -- ============================================================
 
+-- =================================== --
 -- CAT_STORMWIND — Kingdom of Stormwind
-IMAGOdb.npcs.CAT_STORMWIND["bolvar_fordragon"].name = "Highlord Bolvar Fordragon"
-IMAGOdb.npcs.CAT_STORMWIND["bolvar_fordragon"].race = "Human"
-IMAGOdb.npcs.CAT_STORMWIND["bolvar_fordragon"].lore =
-[[
-A veteran paladin of the Silver Hand, Bolvar Fordragon served Stormwind with honor on countless battlefields. When King Varian Wrynn vanished at sea, Bolvar took up the burden of regency to rule in young Prince Anduin's name.
-Bound by duty and suspicion in equal measure, he guides the kingdom from the throne room while the machinations of Lady Katrana Prestor poison the court around him. Few in Stormwind realize how much of the realm's stability rests on his shoulders.]]
-IMAGOdb.npcs.CAT_STORMWIND["bolvar_fordragon"].zones = {"Stormwind City"}
-IMAGOdb.npcs.CAT_STORMWIND["bolvar_fordragon"].source = "warcraft.wiki.gg/wiki/Bolvar_Fordragon"
-IMAGOdb.npcs.CAT_STORMWIND["bolvar_fordragon"].timeline = {
-    {era = "WC2", text = "Fought as a paladin of the Silver Hand during the Second War and its aftermath."},
-    {era = "Pre-Forever", text = "Was appointed regent of Stormwind when King Varian Wrynn disappeared on his voyage to Theramore."},
-    {era = "Forever", text = "Rules Stormwind in Anduin's name while unknowingly being manipulated by Lady Katrana Prestor — the black dragon Onyxia in disguise."},
-}
+-- =================================== --
+-- BOLVAR FORDRAGON --
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].name = "Highlord Bolvar Fordragon"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].aliases = {"Regent Lord of Stormwind", "Highlord Bolvar", "Bolvar", "Bolvar Fordragon"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].race = "Human"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].lore = [[Highlord Bolvar was raised in the teachings of the Light and has honorably served his kingdom and the Alliance ever since he was able to hold a sword. Combating the Scourge in Lordaeron during the Third War, Bolvar returned to Stormwind after his homeland rose from the ashes once more. Dutifully, he served as Supreme Commander of the army under King Varian Wrynn... until his liege mysteriously disappeared.
 
-IMAGOdb.npcs.CAT_STORMWIND["anduin_wrynn"].name = "Anduin Wrynn"
-IMAGOdb.npcs.CAT_STORMWIND["anduin_wrynn"].race = "Human"
-IMAGOdb.npcs.CAT_STORMWIND["anduin_wrynn"].lore =
-[[
-The boy king of Stormwind. Anduin was crowned after his father Varian Wrynn disappeared on a diplomatic voyage to Theramore — a disappearance whispered to be no accident.
-Too young to rule alone, he relies on Regent Bolvar Fordragon and the counsel of Lady Katrana Prestor. Gentle-hearted and perceptive beyond his years, Anduin senses that something in his court is deeply wrong, even if he cannot yet name it.]]
-IMAGOdb.npcs.CAT_STORMWIND["anduin_wrynn"].zones = {"Stormwind City"}
-IMAGOdb.npcs.CAT_STORMWIND["anduin_wrynn"].source = "warcraft.wiki.gg/wiki/Anduin_Wrynn"
-IMAGOdb.npcs.CAT_STORMWIND["anduin_wrynn"].timeline = {
-    {era = "Pre-Forever", text = "Was crowned King of Stormwind after his father Varian vanished at sea."},
-    {era = "Forever", text = "Rules under the guidance of Bolvar Fordragon while Lady Prestor secretly steers the kingdom toward ruin."},
-}
+Bolvar has always held his king in the highest regard, but his relationship with Varian's son, Prince Anduin, has become something far more personal. Where Varian struggled to forge a close bond with his only child, Bolvar gradually became a father figure to the young prince. He wasn't surprised when he was appointed regent of Stormwind to Anduin in Varian's absence. 
 
+Now, placing the safety of his people above all else, Bolvar guides the young king-to-be through the burdens of leadership, knowing that Stormwind will be in good hands whether Varian returns or remains absent.]]
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].zones = {"Stormwind"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["bolvar_fordragon_forever"].timeline = IMAGOdb.timelines.BOLVAR_FORDRAGON
+
+-- MATHIAS SHAW --
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["mathias_shaw_forever"].name = "Mathias Shaw"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["mathias_shaw_forever"].aliases = {"Leader of SI:7", "Master Shaw", "Shaw"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["mathias_shaw_forever"].race = "Human"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["mathias_shaw_forever"].lore = [[Cynical, efficient, and discreet, Mathias Shaw commands SI:7. And who better to lead Stormwind's darker side of the law than a man trained to kill since childhood? Always working behind the scenes, Shaw is the one called upon when paladins are too noble or the army too blunt for a job the kingdom needs done. Any adventurer planning mischief in the capital will soon regret it, as Shaw has eyes and ears everywhere.
+
+His agents are expendable, as are his own personal beliefs – everything else has always come second to his unwavering duty to the crown, and always will. Edwin VanCleef, once a good friend, became one of Stormwind's most dangerous enemies when he incited a rebellion, but Shaw didn't hesitate to choose his kingdom over his own well-guarded feelings. Not much else is known about his past or personal life, and he presents a callous persona to anyone brave enough to ask about it.]]
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["mathias_shaw_forever"].zones = {"Stormwind"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["mathias_shaw_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["mathias_shaw_forever"].timeline = IMAGOdb.timelines.MATHIAS_SHAW
+
+-- LADY KATRANA PRESTOR --
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["lady_katrana_prestor_forever"].name = "Lady Katrana Prestor"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["lady_katrana_prestor_forever"].aliases = {"Katrana Prestor", "Lady Prestor", "Katrana"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["lady_katrana_prestor_forever"].race = "Human"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["lady_katrana_prestor_forever"].lore = [[The humans of Stormwind have always placed great importance on the House of Nobles. Its affluent members fill the royal coffers and, as is only just, help the king decide what to spend the kingdom's gold on.
+
+Lady Prestor rose to prominence during Stormwind's reconstruction, proving cunning and adaptable in securing the kingdom's military hold over the lands between Elwynn and Stranglethorn. She stood by King Varian's side as his most trusted ally after Queen Tiffin was murdered and proved a generous friend to Highlord Bolvar Fordragon.
+
+Unsurprisingly, it is she who now, in Varian's absence, advises Prince Anduin as royal councilor and de facto leader of the House of Nobles. With the kingdom's coffers running close to empty, she can't and won't answer every single cry for aid from the less fortunate corners of the land. Someone has to make the difficult choices, after all. Some would call it coldness, but Lady Prestor is, above all, a calculating and intelligent mind.]]
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["lady_katrana_prestor_forever"].zones = {"Stormwind"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["lady_katrana_prestor_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["lady_katrana_prestor_forever"].timeline = IMAGOdb.timelines.LADY_KATRANA_PRESTOR
+
+
+-- ANDUIN WRYNN --
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].name = "Anduin Wrynn"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].aliases = {"Anduin", "Prince Anduin", "Prince of Stormwind", "Anduin Llane Wrynn"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].race = "Human"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].lore = [[King Varian Wrynn of Stormwind named his only son and heir after two of the greatest men he knew: his own father, King Llane Wrynn I, and Sir Anduin Lothar, who saved young Varian's life during the First War and later led the Alliance to victory against the Horde. Varian hoped his son would take after his namesakes - a bold leader and a commanding warrior.
+
+Anduin is neither.
+He grew up without a mother and has always been a gentle child with a strong aversion to violence of any kind. The truth is, he isn't cut out to be a soldier, or much of a fighter in general. Where his path in life might lead, the boy himself doesn't yet know - but he is certain that he wants to see no more wars or suffering in this world. Suffice it to say that Varian and he don't see eye to eye, and while the love they share is strong, Anduin has grown quite distant from his father.
+
+When Varian went missing, the burden of leadership fell on the young prince. Despite possessing the wisdom of someone much older, it quickly became apparent that he was far too young to rule a kingdom alone, with no more than ten winters behind him. With Commander Bolvar Fordragon as regent of the kingdom and Lady Prestor as royal councilor, Anduin now strives to become as good a leader as his father.]]
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].zones = {"Stormwind"}
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_KINGDOM_STORMWIND["anduin_wrynn_forever"].timeline = IMAGOdb.timelines.ANDUIN_WRYNN
+
+-- =================================== --
 -- CAT_IRONFORGE — Dwarves of Ironforge
-IMAGOdb.npcs.CAT_IRONFORGE["magni_bronzebeard"].name = "King Magni Bronzebeard"
-IMAGOdb.npcs.CAT_IRONFORGE["magni_bronzebeard"].race = "Dwarf"
-IMAGOdb.npcs.CAT_IRONFORGE["magni_bronzebeard"].lore =
-[[
-King of Khaz Modan and eldest of the Bronzebeard brothers, Magni is the heart of Ironforge — a smith, a warrior, and a ruler bound by old grudges and older loyalties.
-He forged the great blade Ashbringer himself, in grief and fury over his brother Muradin's death. Gruff toward outsiders and strict toward his daughter Moira, Magni nonetheless holds the dwarven clans together in a world growing more dangerous by the day.]]
-IMAGOdb.npcs.CAT_IRONFORGE["magni_bronzebeard"].zones = {"Ironforge"}
-IMAGOdb.npcs.CAT_IRONFORGE["magni_bronzebeard"].source = "warcraft.wiki.gg/wiki/Magni_Bronzebeard"
-IMAGOdb.npcs.CAT_IRONFORGE["magni_bronzebeard"].timeline = {
-    {era = "WC2", text = "Led the dwarves of Khaz Modan in defense of their homeland against the Horde."},
-    {era = "WC3", text = "Believed his brother Muradin slain by Arthas, and forged Ashbringer in his grief."},
-    {era = "Forever", text = "Rules Ironforge while Dark Iron infiltrators stir unrest and his daughter Moira's fate divides the clan."},
-}
+-- =================================== --
+-- KING MAGNI BRONZEBEARD --
+IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].name = "King Magni Bronzebeard"
+IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].aliases = {"King Magni", "Lord of Ironforge", "Magni", "Magni Bronzebeard", "King Bronzebeard"}
+IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].race = "Dwarf"
+IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].lore = [[As the eldest of three brothers, Magni knew from a young age that he would one day rule over all the clans of the dwarves. Now, as the king he was born to be, he has shown not only great care for his own people, but also deep loyalty to the Alliance as a whole. When Stormwind was destroyed, Magni was the first to lend aid in its reconstruction. When Gnomeregan fell, he didn't hesitate to offer his neighbors refuge in his kingdom.
 
+His life beyond his royal duties has been marked by tragedy, however. He lost the love of his life, Queen Eimear, in a vicious troll attack before she could bear him a son. His brother Muradin fell in Northrend's icy wastelands, and his youngest brother, Brann, has recently gone missing during an expedition into the shifting sands of Silithus. As if all this weren't enough, word has arrived that his estranged yet beloved daughter, Moira, has been taken hostage by the Dark Iron Clan.]]
+IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].zones = {"Ironforge"}
+IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_DWARVES_IRONFORGE["king_magni_bronzebeard_forever"].timeline = IMAGOdb.timelines.KING_MAGNI_BRONZEBEARD
+
+-- =================================== --
 -- CAT_GNOMEREGAN — Gnomeregan Exiles
-IMAGOdb.npcs.CAT_GNOMEREGAN["mekkatorque"].name = "High Tinker Mekkatorque"
-IMAGOdb.npcs.CAT_GNOMEREGAN["mekkatorque"].race = "Gnome"
-IMAGOdb.npcs.CAT_GNOMEREGAN["mekkatorque"].lore =
-[[
-Gelbin Mekkatorque, High Tinker of the gnomes, led his people through the darkest day of their history. When troggs overran Gnomeregan, he followed Sicco Thermaplugg's counsel and flooded the city with radiation — a sacrifice that saved few and cursed many.
-Now exiled among the dwarves of Ironforge, Mekkatorque leads a people without a home, blamed by some for the very catastrophe he tried to prevent. He has never stopped planning the reclamation of Gnomeregan.]]
-IMAGOdb.npcs.CAT_GNOMEREGAN["mekkatorque"].zones = {"Ironforge"}
-IMAGOdb.npcs.CAT_GNOMEREGAN["mekkatorque"].source = "warcraft.wiki.gg/wiki/Gelbin_Mekkatorque"
-IMAGOdb.npcs.CAT_GNOMEREGAN["mekkatorque"].timeline = {
-    {era = "Pre-Forever", text = "Ordered the irradiation of Gnomeregan to stop the trogg invasion — a catastrophe that cost countless gnomes their lives and minds."},
-    {era = "Forever", text = "Leads the gnomish exiles from Tinker Town in Ironforge and quietly funds the war to retake his irradiated city."},
-}
+-- =================================== --
+-- HIGH TINKER MEKKATORQUE --
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].name = "High Tinker Mekkatorque"
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].aliases = {"Gelbin Mekkatorque", "King Mekkatorque", "Mekkatorque", "High Tinker"}
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].race = "Gnome"
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].lore = [[Other races choose their rulers based on bloodline or prowess in battle, but then again, to Gelbin Mekkatorque, many of the other races seem primitive. Gnomes place value only on intelligence and ingenuity, and the High Tinker should always be the brightest spark, leading their people into an inventive future. Mekkatorque has always been brilliant; from his mind came the mechanostriders, the repair bots, and the Deeprun Tram. Sometimes he loses himself for days tinkering away at a new invention, not even leaving his workshop to sleep.
 
+Despite all his intelligence, he couldn't predict the betrayal of his best friend, Sicco Thermaplugg.
+
+Maybe the rise to High Tinker got to his head, or maybe he just didn't want to see the truth, but it was Thermaplugg's jealousy that led to a horrible tragedy in the gnomish capital of Gnomeregan. Mekkatorque's people became refugees, and their home became a death trap. They have found shelter with their neighbors in Ironforge, but the guilt weighs heavily on the High Tinker.
+
+Has he been too arrogant, too focused on his inventions instead of his people and friends? Then again, he can't waste time pondering these questions. His people need a responsible leader, and he will do everything in his power to take back their home.]]
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].zones = {"Ironforge"}
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_GNOMEREGAN_EXILES["high_tinker_mekkatorque_forever"].timeline = IMAGOdb.timelines.HIGH_TINKER_MEKKATORQUE
+
+-- =================================== --
 -- CAT_DARNASSUS — Night Elves of Darnassus
-IMAGOdb.npcs.CAT_DARNASSUS["tyrande_whisperwind"].name = "Tyrande Whisperwind"
-IMAGOdb.npcs.CAT_DARNASSUS["tyrande_whisperwind"].race = "Night Elf"
-IMAGOdb.npcs.CAT_DARNASSUS["tyrande_whisperwind"].lore =
-[[
-High Priestess of Elune and sole leader of the night elves in Malfurion's absence, Tyrande has carried her people for ten thousand years — through the War of the Ancients, the sundering of the world, and the Battle of Mount Hyjal.
-From the Temple of the Moon in Darnassus she rules a diminished people: no longer immortal, their new World Tree unblessed. Tyrande's faith in Elune is absolute, and her patience for those who threaten her people is short.]]
-IMAGOdb.npcs.CAT_DARNASSUS["tyrande_whisperwind"].zones = {"Darnassus"}
-IMAGOdb.npcs.CAT_DARNASSUS["tyrande_whisperwind"].source = "warcraft.wiki.gg/wiki/Tyrande_Whisperwind"
-IMAGOdb.npcs.CAT_DARNASSUS["tyrande_whisperwind"].timeline = {
-    {era = "Ancient", text = "Rose to command the Sisterhood of Elune and fought in the War of the Ancients alongside Malfurion and Illidan."},
-    {era = "WC3", text = "Led the Sentinels against the Burning Legion's return, freed Illidan from his prison, and fought at the Battle of Mount Hyjal where Nordrassil was sacrificed."},
-    {era = "Forever", text = "Rules from Darnassus, newly grown as the World Tree Teldrassil — a tree she never asked for and does not fully trust."},
-}
+-- =================================== --
+-- TYRANDE WHISPERWIND --
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].name = "Tyrande Whisperwind"
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].aliases = {"Tyrande"}
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].race = "Night elf"
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].lore = [[Tyrande Whisperwind cares greatly for her people and has selflessly served them to the best of her ability ever since she was a mere novice priestess of Elune. The oath to protect all under her care became a daunting one when she was made not only High Priestess, but also leader of all the Kaldorei. Gentle and kind by nature, Tyrande has learned over the millennia to be fiercer and harsher than she used to be in order to defend her people. Even Elune can be wrathful, after all, and her High Priestess has adapted to become a perfect avatar of the goddess she adores.
 
-IMAGOdb.npcs.CAT_DARNASSUS["shandris_feathermoon"].name = "Shandris Feathermoon"
-IMAGOdb.npcs.CAT_DARNASSUS["shandris_feathermoon"].race = "Night Elf"
-IMAGOdb.npcs.CAT_DARNASSUS["shandris_feathermoon"].lore =
+It was she who rebuilt the Kaldorei not as an empire, but as a theocracy devoted to Elune, and it was Tyrande who led her people through several wars in the millennia that followed.
+
+Tyrande did not rule over the Kaldorei alone, however, and the man at her side made her burden ever lighter. Malfurion Stormrage, first and mightiest of the druids, has always given Tyrande the strength and support she needed. Malfurion lies dormant now, his body alive but his spirit lost, and the best healers and priests have been unsuccessful in waking him. As if fear for her beloved weren't enough of a hardship, the new leader of the druids, Fandral Staghelm, has already clashed with Tyrande more than once over matters of decision-making.]]
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].zones = {"Darnassus", "Moonglade"}
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["tyrande_whisperwind_forever"].timeline = IMAGOdb.timelines.TYRANDE_WHISPERWIND
+
+
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"].name = "Shandris Feathermoon"
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"].race = "Night Elf"
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"].lore =
 [[
 Orphaned by the Burning Legion's first invasion, Shandris was raised in the Sisterhood of Elune and became Tyrande's adopted daughter in all but name. Now she commands the Sentinel Army as its general.
 She rules the stronghold that bears her name in Feralas, watching over ruins older than memory and enemies older still — the naga rising from the sea, and whispers of the Emerald Nightmare stirring beneath the earth.]]
-IMAGOdb.npcs.CAT_DARNASSUS["shandris_feathermoon"].zones = {"Feralas"}
-IMAGOdb.npcs.CAT_DARNASSUS["shandris_feathermoon"].source = "warcraft.wiki.gg/wiki/Shandris_Feathermoon"
-IMAGOdb.npcs.CAT_DARNASSUS["shandris_feathermoon"].timeline = {
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"].zones = {"Feralas"}
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"].source = "warcraft.wiki.gg/wiki/Shandris_Feathermoon"
+IMAGOdb.npcs.CAT_NIGHT_ELVES_DARNASSUS["shandris_feathermoon"].timeline = {
     {era = "Ancient", text = "Survived the War of the Ancients as a child and was taken under Tyrande's wing."},
     {era = "WC3", text = "Commanded the Sentinels in Kalimdor's defense during the Legion's second invasion."},
     {era = "Forever", text = "Governs Feathermoon Stronghold in Feralas as general of the Sentinel Army."},
 }
 
+-- =================================== --
+-- CAT_WILDHAMMER — Wildhammer Clan
+-- =================================== --
+-- FALSTAD WILDHAMMER --
+IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].name = "Falstad Wildhammer"
+IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].aliases = {"High Thane of the Wildhammer Clan", "Falstad", "Falstad Dragonreaver"}
+IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].race = "Dwarf"
+IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].lore = [[The outspoken High Thane of the Wildhammer Clan rules over the Hinterlands as a longtime ally of the Alliance. A gryphon rider and hammer enthusiast at heart, he was forced to “settle down” and take on a leader's responsibilities after the former High Thane, Kurdran, was lost beyond the Dark Portal.
+
+Nicknamed Falstad Dragonreaver for his bravery against the Dragonmaw orcs and known to the red dragonflight and the Kirin Tor as a trusted ally for helping free Alexstrasza herself, one might think he has seen enough adventures to fill a lifetime. Were it not for his duties, however, nothing would stop this dwarf from leaping headfirst into battle once more.]]
+IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].zones = {"The Hinterlands"}
+IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_WILDHAMMER_CLAN["falstad_wildhammer_forever"].timeline = IMAGOdb.timelines.FALSTAD_WILDHAMMER
+
+
+-- =================================== --
 -- CAT_THERAMORE — Theramore
+-- =================================== --
 IMAGOdb.npcs.CAT_THERAMORE["jaina_proudmoore"].name = "Lady Jaina Proudmoore"
 IMAGOdb.npcs.CAT_THERAMORE["jaina_proudmoore"].race = "Human"
 IMAGOdb.npcs.CAT_THERAMORE["jaina_proudmoore"].lore =
@@ -103,137 +152,228 @@ IMAGOdb.npcs.CAT_THERAMORE["jaina_proudmoore"].timeline = {
     {era = "Forever", text = "Rules Theramore and brokers fragile peace between the factions, including the summit where Varian Wrynn vanished."},
 }
 
+-- =================================== --
 -- CAT_ORCS — Orcs of the Horde
-IMAGOdb.npcs.CAT_ORCS["thrall"].name = "Thrall"
-IMAGOdb.npcs.CAT_ORCS["thrall"].race = "Orc"
-IMAGOdb.npcs.CAT_ORCS["thrall"].lore =
-[[
-Raised as a slave in Durnholde Keep, Thrall — born Go'el, son of Durotan — escaped to unite the scattered orcish clans and free his people from the internment camps. He rebuilt the Horde on the shamanistic traditions of his ancestors.
-As Warchief he led the orcs across the sea to Kalimdor, founded Orgrimmar and Durotar, and made an ally of Jaina Proudmoore at Hyjal. Thrall carries the weight of proving that the Horde can be more than the monster the Alliance remembers.]]
-IMAGOdb.npcs.CAT_ORCS["thrall"].zones = {"Orgrimmar"}
-IMAGOdb.npcs.CAT_ORCS["thrall"].source = "warcraft.wiki.gg/wiki/Thrall"
-IMAGOdb.npcs.CAT_ORCS["thrall"].timeline = {
-    {era = "Pre-WC3", text = "Escaped Durnholde, learned shamanism from Drek'Thar's Frostwolves, and liberated the internment camps alongside Orgrim Doomhammer, whose armor and hammer he inherited."},
-    {era = "WC3", text = "Sailed to Kalimdor, allied with Cairne's tauren and the Darkspear trolls, and fought at Mount Hyjal against the Burning Legion."},
-    {era = "Forever", text = "Rules as Warchief from Orgrimmar, holding together a young Horde surrounded by enemies and old hatreds."},
-}
+-- =================================== --
+-- THRALL --
+IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].name = "Thrall"
+IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].aliases = {"Warchief of the Horde"}
+IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].race = "Orc"
+IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].lore = [[A warrior without a name, a slave to his human master - that might have been the fate awaiting Thrall, yet he chose his own destiny.
 
-IMAGOdb.npcs.CAT_ORCS["rexxar"].name = "Rexxar"
-IMAGOdb.npcs.CAT_ORCS["rexxar"].race = "Half-Ogre (Mok'Nathal)"
-IMAGOdb.npcs.CAT_ORCS["rexxar"].lore =
-[[
-Last son of the Mok'Nathal, the half-ogre clan of Blade's Edge, Rexxar is a beastmaster who trusts animals more than kingdoms. With his bear Misha at his side, he wanders Kalimdor's wilds rather than sit in any throne room.
-Yet the Horde owes him a debt few remember: when Admiral Proudmoore's fleet threatened to destroy Durotar, it was Rexxar who carried Thrall's plea to Jaina and turned the tide. The Warchief named him Champion of the Horde — a title he wears only when the Horde needs him.]]
-IMAGOdb.npcs.CAT_ORCS["rexxar"].zones = {"Feralas", "Desolace", "Stonetalon Mountains"}
-IMAGOdb.npcs.CAT_ORCS["rexxar"].source = "warcraft.wiki.gg/wiki/Rexxar"
-IMAGOdb.npcs.CAT_ORCS["rexxar"].timeline = {
-    {era = "WC3", text = "Joined Thrall's cause in Kalimdor, rallied ogres to the Horde's banner, and fought to save Durotar from Daelin Proudmoore's invasion."},
-    {era = "Pre-Forever", text = "Was named Champion of the Horde, then returned to the wilderness he calls home."},
-    {era = "Forever", text = "Wanders the wilds of Kalimdor with Misha, answering to no banner but his own — until the Horde calls again."},
-}
+Through sheer strength of will and heart, and a newfound shamanistic bond with the world itself, Thrall broke free from slavery. What began as a small act of defiance soon became an unstoppable movement, as orcs rose up, tore down the internment camps, and followed Thrall as their Warchief. No longer would he bow to any man.
 
+After leading the new Horde to Kalimdor and helping save the world from the Burning Legion, Thrall united a variety of proud, outcast races under his banner and founded a new homeland for his people in Durotar. Having been raised among the humans of the Alliance, he understands their culture and sees more similarities than differences between them and his own kind. He may be the Warchief, and his name may have originated in servitude - yet Thrall is a leader committed to peace.]]
+IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].zones = {"Orgrimmar"}
+IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_ORCS_HORDE["thrall_forever"].timeline = IMAGOdb.timelines.THRALL
+
+-- EITRIGG --
+IMAGOdb.npcs.CAT_ORCS_HORDE["eitrigg_forever"].name = "Eitrigg"
+IMAGOdb.npcs.CAT_ORCS_HORDE["eitrigg_forever"].aliases = {}
+IMAGOdb.npcs.CAT_ORCS_HORDE["eitrigg_forever"].race = "Orc"
+IMAGOdb.npcs.CAT_ORCS_HORDE["eitrigg_forever"].lore = [[More than five decades of a life marked by equal parts honor and shame are beginning to show on the accomplished warrior's face, but Eitrigg's ferocity in battle has not diminished with age. Even while slaughtering Alliance soldiers by the hundreds during the First and Second Wars, Eitrigg always managed to maintain some semblance of honor and restraint. Disgusted by the mindless slaughter, he eventually turned his back on the Horde.
+
+Thrall and the human paladin Tirion Fordring helped him realize that he need not die a lonely exile, that the Horde of old was gone and had been replaced by a new, more honorable one. Reinvigorated by a renewed sense of belonging and a hopeful glimpse of a future of fragile peace, Eitrigg once again serves the Warchief. He has sworn, however, that his loyalty to a single leader will never again overshadow his sense of honor.]]
+IMAGOdb.npcs.CAT_ORCS_HORDE["eitrigg_forever"].zones = {"Orgrimmar"}
+IMAGOdb.npcs.CAT_ORCS_HORDE["eitrigg_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_ORCS_HORDE["eitrigg_forever"].timeline = IMAGOdb.timelines.EITRIGG
+
+-- HIGH OVERLORD SAURFANG --
+IMAGOdb.npcs.CAT_ORCS_HORDE["high_overlord_saurfang_forever"].name = "High Overlord Saurfang"
+IMAGOdb.npcs.CAT_ORCS_HORDE["high_overlord_saurfang_forever"].aliases = {"Varok Saurfang", "Varok"}
+IMAGOdb.npcs.CAT_ORCS_HORDE["high_overlord_saurfang_forever"].race = "Orc"
+IMAGOdb.npcs.CAT_ORCS_HORDE["high_overlord_saurfang_forever"].lore = [[On Draenor, Varok Saurfang chose to drink the blood of Mannoroth and follow Warchief Blackhand into war and massacre. When the demonic haze lifted years later and the orcs were finally able to think clearly again, Varok realized with horror the full extent of the atrocities he had committed during three wars. The blood of children stained his hands, and he remembered burning cities crumbling around him as he mercilessly hunted down fleeing civilians.
+
+The orcs used to be a proud and honorable people, and Varok is adamant about helping them regain that honor. He will fight to defend his people and the new Horde, but he will do everything in his power to ensure they never start another needless war. His wife is dead, but he finds solace in knowing that their only son remains safe on Draenor. That is enough to keep him going. Enough to live with his past and fight for redemption in the future.]]
+IMAGOdb.npcs.CAT_ORCS_HORDE["high_overlord_saurfang_forever"].zones = {"Orgrimmar"}
+IMAGOdb.npcs.CAT_ORCS_HORDE["high_overlord_saurfang_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_ORCS_HORDE["high_overlord_saurfang_forever"].timeline = IMAGOdb.timelines.HIGH_OVERLORD_SAURFANG
+
+-- NAZGREL --
+IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"].name = "Nazgrel"
+IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"].aliases = {}
+IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"].race = "Orc"
+IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"].lore = [[Orgrimmar's citizens can thank Nazgrel for keeping them safe both inside and outside the city walls. As Thrall's right-hand man, he serves as chief of security, combating spies, evildoers, and threats to public order. While he is loyal to a fault to his warchief, Nazgrel doesn't always agree with his political decisions.
+
+Unlike most of the Horde's leaders, Nazgrel doesn't believe in peace with the Alliance - not after enduring years of horrific treatment in their internment camps. To say he is wary even of the Horde-aligned High Elves of Skywall would be an understatement. Nevertheless, he will follow orders and respect the ceasefire, even though deep down, he knows it will not last.]]
+IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"].zones = {"Orgrimmar"}
+IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_ORCS_HORDE["nazgrel_forever"].timeline = IMAGOdb.timelines.NAZGREL
+
+-- DREK THAR --
+IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].name = "Drek'Thar"
+IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].aliases = {}
+IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].race = "Orc"
+IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].lore = [[Farseer of the Frostwolf Clan and a trusted friend of Chieftain Durotan on Draenor, Drek'Thar once led an honorable and fulfilling life in harmony with the elements. Then he forsook the natural spirits of his home and turned to the path of a warlock, slaughtering innocent draenei.
+
+The old, blind orc has never forgiven himself for following Gul'dan so readily, even though decades have passed since then. After Durotan's death, it was Drek'Thar who led the Frostwolves into exile, guiding them through hardship until they not only survived but prospered.
+
+It was him who taught Thrall the ways of the shaman, him who convinced the wolves of Alterac to be companions and friends to his clan, and it was him who held the line against the Alliance in the valley. Clearly he has been more than redeemed in the eyes of all – except his own.]]
+IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].zones = {"Alterac Valley"}
+IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_ORCS_HORDE["drek_thar_forever"].timeline = IMAGOdb.timelines.DREK_THAR
+
+
+-- =================================== --
 -- CAT_DARKSPEAR — Darkspear Trolls
-IMAGOdb.npcs.CAT_DARKSPEAR["voljin"].name = "Vol'jin"
-IMAGOdb.npcs.CAT_DARKSPEAR["voljin"].race = "Troll"
-IMAGOdb.npcs.CAT_DARKSPEAR["voljin"].lore =
-[[
-Son of Sen'jin and leader of the Darkspear tribe, Vol'jin inherited a broken people — hounded from their island home by murlocs and sea witch alike, saved only by Thrall's arriving Horde.
-He swore the Darkspears to the Horde and serves as Thrall's most trusted counselor, though he watches his Warchief's new Horde with a shadow priest's patience and doubt. Vol'jin sees further than most; what he sees coming keeps him quiet, for now.]]
-IMAGOdb.npcs.CAT_DARKSPEAR["voljin"].zones = {"Orgrimmar"}
-IMAGOdb.npcs.CAT_DARKSPEAR["voljin"].source = "warcraft.wiki.gg/wiki/Vol'jin"
-IMAGOdb.npcs.CAT_DARKSPEAR["voljin"].timeline = {
-    {era = "WC3", text = "Pledged the Darkspear tribe to the Horde after Thrall saved them from the sea witch Zar'jira."},
-    {era = "Forever", text = "Advises Thrall from Grommash Hold, the quiet conscience of the Warchief's council."},
-}
+-- =================================== --
+-- VOL'JIN --
+IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].name = "Vol'jin"
+IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].aliases = {}
+IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].race = "Jungle Troll"
+IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].lore = [[One fateful night, a vision was granted to Sen'jin, chieftain of the Darkspear Tribe: doom would soon befall his people, and with it, his own end would come. Thus, he sent his only son to undergo the rigorous trials to become a shadow hunter. Despite his young age, Vol'jin succeeded in both the trials and his predestined role as chieftain, which he assumed when Sen'jin sacrificed himself to allow his people and Thrall's orcs to flee the Darkspear Islands.
 
+Grateful to Thrall for aiding his people, Vol'jin pledged the Darkspear to the Horde and accompanied the Warchief to Durotar. Wise beyond his years and sharing Thrall's appreciation for diplomacy, he serves the Warchief as both a friend and advisor. 
+The Darkspear have not had an easy lot in life, and even now, their existence is threatened by both the Alliance and betrayal from within. Vol'jin will not rest until he can ensure that their new home is safe.]]
+IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].zones = {"Orgrimmar"}
+IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_DARKSPEAR_TROLLS["vol_jin_forever"].timeline = IMAGOdb.timelines.VOL_JIN
+
+-- =================================== --
 -- CAT_FORSAKEN — The Forsaken
-IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner"].name = "Lady Sylvanas Windrunner"
-IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner"].race = "Undead"
-IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner"].lore =
-[[
-Once Ranger-General of Silvermoon, Sylvanas fell defending Quel'Thalas and was raised by Arthas as a banshee — a prize he made her suffer for. When the Lich King's grip weakened, she broke free, reclaimed her body, and gathered every undead who would follow.
-Now Banshee Queen of the Forsaken, she rules from the Undercity beneath Lordaeron's ruins. Her alliance with the Horde is one of convenience, and her hatred of Arthas is the engine of everything she does.]]
-IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner"].zones = {"Undercity"}
-IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner"].source = "warcraft.wiki.gg/wiki/Sylvanas_Windrunner"
-IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner"].timeline = {
-    {era = "WC3", text = "Fell to Arthas defending Quel'Thalas and was raised as a banshee. Later broke free, killed the dreadlord Balnazzar's rivals, and took Lordaeron's ruins for her Forsaken."},
-    {era = "Pre-Forever", text = "Secured the Undercity and forged an uneasy pact with the Horde."},
-    {era = "Forever", text = "Rules the Forsaken and arms them against the Scourge, the Scarlet Crusade — and, some whisper, against everyone else."},
-}
+-- =================================== --
+-- SYLVANAS WINDRUNNER --
+IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner_forever"].name = "Sylvanas Windrunner"
+IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner_forever"].aliases = {"Banshee Queen", "Dark Lady", "Sylvanas", "Lady Sylvanas"}
+IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner_forever"].race = "Darkfallen"
+IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner_forever"].lore = [[In a heroic last stand against Arthas Menethil and the Scourge, Ranger-General Sylvanas Windrunner gave her life for her people in Quel'Thalas. She awoke once more with a terrible scream when her murderer raised her as a monstrous banshee to join his undead army. Arthas made sure Sylvanas remained conscious as he forced her to lay waste to what remained of her home and slaughter the elves she had sworn to protect.
 
-IMAGOdb.npcs.CAT_FORSAKEN["varimathras"].name = "Varimathras"
-IMAGOdb.npcs.CAT_FORSAKEN["varimathras"].race = "Nathrezim"
-IMAGOdb.npcs.CAT_FORSAKEN["varimathras"].lore =
-[[
-A dreadlord of the Burning Legion, Varimathras was left to hold Lordaeron when the Legion's war in the north collapsed. When Sylvanas defeated him, he offered her his service in exchange for his life — and even murdered his own brother Balnazzar to prove it.
-He now serves as her lieutenant in the Undercity, ever the useful advisor. Whether a demon ever truly surrenders, or merely waits, is a question the Banshee Queen believes she can afford to ignore.]]
-IMAGOdb.npcs.CAT_FORSAKEN["varimathras"].zones = {"Undercity"}
-IMAGOdb.npcs.CAT_FORSAKEN["varimathras"].source = "warcraft.wiki.gg/wiki/Varimathras"
-IMAGOdb.npcs.CAT_FORSAKEN["varimathras"].timeline = {
-    {era = "WC3", text = "Ruled the Plaguelands with his dreadlord brothers until Sylvanas turned him, forcing him to kill Balnazzar."},
-    {era = "Forever", text = "Serves as Sylvanas' vizier in the Undercity, ostensibly loyal, eternally patient."},
-}
+Years have passed since that horrible day, yet Sylvanas relives it constantly. She has since broken free of her tormentor and rallied some of Arthas' other victims under her reign. In the fallen capital of Lordaeron, she rules as the Banshee Queen over her Forsaken Kingdom with only one goal remaining in her life – if one could call her miserable existence that: slay Arthas Menethil.
 
+Her former allies surround her kingdom, but Quel'Thalas and the Alliance see the Forsaken as nothing but monsters to be exterminated. In her desperation, the Dark Lady has allied herself with the Horde and given them a foothold in the Eastern Kingdoms in exchange for security. Her loyalty is born out of necessity, but for all the contempt she harbors for the living, her care for her new people cannot be denied.]]
+IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner_forever"].zones = {"Undercity"}
+IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_FORSAKEN["sylvanas_windrunner_forever"].timeline = IMAGOdb.timelines.SYLVANAS_WINDRUNNER
+
+-- VARIMATHRAS --
+IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].name = "Varimathras"
+IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].aliases = {}
+IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].race = "Nathrezim"
+IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].lore = [[As an agent of the Burning Legion, Varimathras came to Azeroth to act as one of the jailers to the demons' strongest unwilling asset - Ner'zhul, the Lich King. Driven by duty and fear of his master, Kil'jaeden, the dreadlord fulfilled his role without flaw. Everything went according to plan... until it didn't.
+
+Though the Lich King's plague of undeath severely weakened Azeroth's forces and paved the way for the Burning Legion's arrival, the united forces of Azeroth eventually triumphed against overwhelming odds. Varimathras and the remaining demons became cut off from the Legion, and the freed Lich King was out for revenge on his former tormentors.
+
+In an attempt to save his life, Varimathras struck a deal with a newly risen force in the Plaguelands: he joined forces with the Banshee Queen Sylvanas Windrunner, betraying and even killing his own brothers, Detheroc and Balnazzar, in the process. Spared and elevated to majordomo by the Dark Lady, Varimathras has now served and defended the Undercity for years. While his loyalty remains questionable, he is without a doubt a powerful asset to the Forsaken.]]
+IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].zones = {"Undercity"}
+IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_FORSAKEN["varimathras_forever"].timeline = IMAGOdb.timelines.VARIMATHRAS
+
+-- =================================== --
 -- CAT_THUNDERBLUFF — Tauren of Thunder Bluff
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].name = "Cairne Bloodhoof"
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].race = "Tauren"
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].role = "High Chieftain"
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].aliases = { "Cairne" }
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].lore =
-[[
-More than a century ago, Cairne was born to the Bloodhoof tribe. Back then, his people lived as nomads near the Great Sea in the Barrens, constantly harassed by centaurs and harpies. In the decades of strife that followed, Cairne became a hardened yet wise warrior, hoping to one day lead his people in times of peace.
+-- =================================== --
+-- CAIRNE BLOODHOOF --
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].name = "Cairne Bloodhoof"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].aliases = {"Cairne"}
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].race = "Tauren"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].lore = [[More than a century ago, Cairne was born to the Bloodhoof tribe. Back then, his people lived as nomads near the Great Sea in the Barrens, constantly harassed by centaurs and harpies. In the decades of strife that followed, Cairne became a hardened yet wise warrior, hoping to one day lead his people in times of peace.
+
 When the strange orcs came to Kalimdor, Cairne - now chieftain - was intrigued by their strength in battle and the honor they showed in their way of life. He formed a personal friendship with the young Warchief Thrall and swore allegiance to the Horde. United, they drove away the centaurs, the invading Kul Tirans, and played a crucial role in the defeat of the Burning Legion.
+
 Now, Cairne's dream of peace is finally fulfilled. Mulgore serves as an idyllic new home for all his people, and Thunder Bluff has become a sprawling yet tranquil capital. It took a lifetime, and he's nearing the end of his days, but he is proud to have helped his people flourish and relieved to see a worthy heir in his only son, Baine. And though he might be old, his prowess on the field of battle still surpasses that of many warriors in their prime.]]
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].zones = {"Thunder Bluff"}
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].source = "@Cadash"
-IMAGOdb.npcs.CAT_THUNDERBLUFF["cairne_bloodhoof"].timeline = {
-    {era = "Pre-WC1", text = "Led the Bloodhoof tribe, fighting to prevent his people from being wiped out year after year. Had a son with his lifemate Tamaala. She died sometime afterward."},
-    {era = "Pre-WC3", text = "Made the decision to lead his tribe to Mulgore in hopes of finding a better life."},
-    {era = "WC3", text = "Helped Thrall in his search for the Oracle. After the orcs helped them defeat marauding centaurs, Cairne and his people joined both the Horde and the fight against the Burning Legion. Remained close friends with Thrall after the Third War and established Mulgore as the new home of the tauren. Joined Horde forces against Daelin Proudmoore."},
-    {era = "Pre-Forever", text = "Built the first tauren city, Thunder Bluff, with the help of the Horde and officially abandoned the tauren's traditional nomadic lifestyle in favor of security and stability. Received Sylvanas Windrunner in Thunder Bluff and spoke up on her behalf to Thrall, eventually helping bring the Forsaken into the Horde."},
-    {era = "Forever", text = "Was recognized by the other tribes' leaders as the wisest and most accomplished of them all and was named High Chieftain. Was opposed only by Magatha Grimtotem, and the two butted heads frequently. Sent adventurers to aid his Horde allies in the Alterac Mountains after receiving their plea for help."},
-}
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].zones = {"Thunder Bluff"}
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["cairne_bloodhoof_forever"].timeline = IMAGOdb.timelines.CAIRNE_BLOODHOOF
 
+-- BAINE BLOODHOOF --
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["baine_bloodhoof_forever"].name = "Baine Bloodhoof"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["baine_bloodhoof_forever"].aliases = {"Baine"}
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["baine_bloodhoof_forever"].race = "Tauren"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["baine_bloodhoof_forever"].lore = [[The young gentle warrior is the only son of High Chieftain Cairne Bloodhoof. Having grown up without ever knowing a permanent home, he is all the more determined to keep Mulgore safe now that the tauren have finally made this valley theirs.
+Whether it is goblin miners, careless dwarven archaeologists, or the local wildlife encroaching on their settlements, Baine makes sure that any and all threats are kept in check. He always seeks peaceful solutions to disputes, but should diplomacy fail, he is more than capable of holding his own. After all, he was trained by the finest tauren warriors and has earned his place among them.
+
+Officially, he serves his father as an advisor, but over the years he has taken on more and more responsibilities. Cairne is not getting any younger, and nothing fills him with greater pride than seeing his son grow into the next High Chieftain.]]
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["baine_bloodhoof_forever"].zones = {"Mulgore"}
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["baine_bloodhoof_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["baine_bloodhoof_forever"].timeline = IMAGOdb.timelines.BAINE_BLOODHOOF
+
+-- MAGATHA GRIMTOTEM --
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["magatha_grimtotem_forever"].name = "Magatha Grimtotem"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["magatha_grimtotem_forever"].aliases = {"Magatha", "Elder Crone", "Matriarch of the Grimtotem Tribe", "Chieftain of the Grimtotem Tribe"}
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["magatha_grimtotem_forever"].race = "Tauren"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["magatha_grimtotem_forever"].lore = [[To be a shaman means to be chosen by the Earth Mother herself and granted power over her elements, and the cunning Magatha grew up knowing that her life would be one of purpose and ambition. So great was her mastery of the earth's magic that she was chosen as the mate of the chieftain of the powerful Grimtotem Tribe. She became matriarch when her husband died in an... unfortunate climbing accident, but she quickly recovered from her loss.
+
+Believing herself a better High Chieftain than Cairne, Magatha has often clashed with him since the tauren left behind their nomadic ways and settled in Mulgore. She juggles her responsibilities as Elder Crone and chieftain with ease, as she truly cares in equal measure about protecting the land and securing a prosperous future for her people.
+
+The tauren should reclaim the lands that were taken from them. They should eradicate the races she deems lesser. And afterward, they should live in spirituality and harmony with nature - and they should do so with her as their leader.]]
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["magatha_grimtotem_forever"].zones = {"Thunder Bluff"}
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["magatha_grimtotem_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_TAUREN_THUNDER_BLUFF["magatha_grimtotem_forever"].timeline = IMAGOdb.timelines.MAGATHA_GRIMTOTEM
+
+
+-- =================================== --
+-- CAT_SKYBORNE — Skyborne
+-- =================================== --
+-- HIGH PRIESTESS LORTHUNA --
+IMAGOdb.npcs.CAT_SKYBORNE["high_priestess_lorthuna_forever"].name = "High Priestess Lorthuna"
+IMAGOdb.npcs.CAT_SKYBORNE["high_priestess_lorthuna_forever"].aliases = {"Lorthuna"}
+IMAGOdb.npcs.CAT_SKYBORNE["high_priestess_lorthuna_forever"].race = "Skyborne"
+IMAGOdb.npcs.CAT_SKYBORNE["high_priestess_lorthuna_forever"].lore = [[The shen'dorei survived and became what they are today only because of their benefactors: the elementals of air who whisked them and Zephras Isle away to Skywall. Why, then, have they always remained so elusive? Why have they felt the need to hide Zephras from the rest of the Elemental Plane?
+
+Lorthuna leads the Cult of Al'Aketh, and she knows the answer. Al'Akir, ruler of this realm, remains unaware of their existence, and he would never approve of these highborne intruders. Having witnessed her people struggle and decline ever since their benefactors abandoned them, Lorthuna has come to believe that the shen'dorei deserve the doom that awaits them. Al'Akir will bring about the inevitable end, and she intends to be the one to summon him. Power and purpose await her, and the price of the Windlord's arrival is a small one. After all, the shen'dorei are merely reaping what they have sown.]]
+IMAGOdb.npcs.CAT_SKYBORNE["high_priestess_lorthuna_forever"].zones = {"Zephras Isle"}
+IMAGOdb.npcs.CAT_SKYBORNE["high_priestess_lorthuna_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_SKYBORNE["high_priestess_lorthuna_forever"].timeline = IMAGOdb.timelines.HIGH_PRIESTESS_LORTHUNA
+
+-- =================================== --
 -- CAT_CENARION — Cenarion Circle
-IMAGOdb.npcs.CAT_CENARION["fandral_staghelm"].name = "Arch Druid Fandral Staghelm"
-IMAGOdb.npcs.CAT_CENARION["fandral_staghelm"].race = "Night Elf"
-IMAGOdb.npcs.CAT_CENARION["fandral_staghelm"].lore =
-[[
-Archdruid of the Cenarion Circle and leader of the druids in Malfurion Stormrage's unexplained absence. It was Fandral who planted Teldrassil, the new World Tree — without the Dragon Aspects' blessing, and over Tyrande's objection.
-Brilliant, proud, and bitter beyond measure, Fandral has never recovered from losing his son Valstann in the War of the Shifting Sands. Some say his grief is a wound; others whisper it is a door.]]
-IMAGOdb.npcs.CAT_CENARION["fandral_staghelm"].zones = {"Darnassus"}
-IMAGOdb.npcs.CAT_CENARION["fandral_staghelm"].source = "warcraft.wiki.gg/wiki/Fandral_Staghelm"
-IMAGOdb.npcs.CAT_CENARION["fandral_staghelm"].timeline = {
-    {era = "Ancient", text = "Fought in the War of the Shifting Sands and lost his son Valstann to the qiraji — a grief he never set down."},
-    {era = "Pre-Forever", text = "Planted Teldrassil as the new World Tree and assumed leadership of the druids while Malfurion remained lost in the Emerald Dream."},
-    {era = "Forever", text = "Leads the Cenarion Circle from the Cenarion Enclave in Darnassus, at quiet odds with Tyrande."},
-}
+-- =================================== --
+-- FANDRAL STAGHELM --
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["fandral_staghelm_forever"].name = "Arch Druid Fandral Staghelm"
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["fandral_staghelm_forever"].aliases = {"Arch Druid Staghelm", "Fandral", "Kar'sis, Fandral Staghelm"}
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["fandral_staghelm_forever"].race = "Night Elf"
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["fandral_staghelm_forever"].lore = [[Fandral Staghelm is not known for being a soft and patient druid. He is brash, aggressive, and sometimes unyielding, but he gets results. These very traits helped in the War of the Shifting Sands as the night elves fought against the qiraji in Silithus, doing their best to keep the Old God, C'thun sealed away. Kar'sis, his enemies called him. "Hand of Earth", for even his foes recognized that he would do what he must to protect Azeroth.
 
--- CAT_ARGENT — Argent Dawn & Silver Hand
-IMAGOdb.npcs.CAT_ARGENT["tirion_fordring"].name = "Tirion Fordring"
-IMAGOdb.npcs.CAT_ARGENT["tirion_fordring"].race = "Human"
-IMAGOdb.npcs.CAT_ARGENT["tirion_fordring"].lore =
-[[
-Once Lord of Mardenholde Keep and a paladin of the Silver Hand, Tirion was excommunicated for defending the orc Eitrigg — a heretic's mercy in his people's eyes. He chose exile over abandoning his honor.
-He now lives as a hermit on the border of the Plaguelands, grieving a son raised to hate orcs and a world that forgot what honor means. When strangers seek him out, he asks only whether they remember that blood and honor are not the same thing.]]
-IMAGOdb.npcs.CAT_ARGENT["tirion_fordring"].zones = {"Eastern Plaguelands", "Western Plaguelands"}
-IMAGOdb.npcs.CAT_ARGENT["tirion_fordring"].source = "warcraft.wiki.gg/wiki/Tirion_Fordring"
-IMAGOdb.npcs.CAT_ARGENT["tirion_fordring"].timeline = {
-    {era = "WC2", text = "Served as a paladin of the Silver Hand in the Second War and became Lord of Mardenholde."},
-    {era = "Pre-Forever", text = "Was exiled from the Alliance and stripped of the Light's titles for saving the orc Eitrigg's life."},
-    {era = "Forever", text = "Lives in exile in the Eastern Plaguelands, still holding faith — and testing those who find him with the memory of what honor costs."},
-}
+Fandral takes his duty seriously, and thus secretely took branches of the World Tree and planted them across all continents, creating new Great Trees that would grow and flourish. Though initially displeased by his actions, the Cenarion Circle saw the results as good.
 
+When Malfurion fell into his endless slumber, Fandral was made Archdruid. Under his hand, Teldrassil was planted. The night elves made their home in Darnassus atop the roots of the new World Tree, and, alongside Tyrande Whisperwind, Fandral Staghelm continues to lead his people with strength.
+
+It was not his fault this tree too fell to corruption. Fandral will deal with it though. The might of the night elves will not be stopped by some simple nightmare. He will make his people strong.]]
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["fandral_staghelm_forever"].zones = {"Darnassus", "Silithus"}
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["fandral_staghelm_forever"].source = "Silver_Wind809"
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["fandral_staghelm_forever"].timeline = IMAGOdb.timelines.FANDRAL_STAGHELM
+
+-- HAMUUL RUNETOTEM --
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["hamuul_runetotem_forever"].name = "Hamuul Runetotem"
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["hamuul_runetotem_forever"].aliases = {"Hamuul", "Arch Druid Runetotem", "Archdruid Runetotem"}
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["hamuul_runetotem_forever"].race = "Tauren"
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["hamuul_runetotem_forever"].lore = [[At Mount Hyjal, Hamuul fought alongside the Horde for the survival of his world. During the battle, he witnessed the dedication and wisdom of the night elf druids and realized that, without them, Azeroth would surely have fallen to the Legion. One among them stood out above all others: Malfurion Stormrage. After the war, Hamuul sought him out and became his pupil, learning how to commune with nature itself and traverse the Emerald Dream. He became the first tauren druid in decades and the first to ascend to the rank of Archdruid within the Cenarion Circle.
+
+Though he may be the only prominent tauren in an order largely made up of elves, Hamuul's patient and trustworthy nature has earned him many friends among his night elf allies. Today, he resides at Elder Rise, teaching young adventurers the ways of nature and spirituality and serving as a wise mentor to all who seek his counsel.]]
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["hamuul_runetotem_forever"].zones = {"Thunder Bluff"}
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["hamuul_runetotem_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_CENARION_CIRCLE_FOREVER["hamuul_runetotem_forever"].timeline = IMAGOdb.timelines.HAMUUL_RUNETOTEM
+
+
+
+-- =================================== --
+-- CAT_NEUTRAL — Neutral / Independant
+-- =================================== --
+-- TIRION FORDRING --
+IMAGOdb.npcs.CAT_NEUTRAL_INDEPENDENT["tirion_fordring_forever"].name = "Tirion Fordring"
+IMAGOdb.npcs.CAT_NEUTRAL_INDEPENDENT["tirion_fordring_forever"].aliases = {"Highlord of the Silver Hand", "Tirion", "Highlord Fordring"}
+IMAGOdb.npcs.CAT_NEUTRAL_INDEPENDENT["tirion_fordring_forever"].race = "Human"
+IMAGOdb.npcs.CAT_NEUTRAL_INDEPENDENT["tirion_fordring_forever"].lore = [[His is a tale that shows how doing the right thing can mean to sacrifice everything for little in return. Tirion Fordring now lives as a hermit in solitude in the Plaguelands, but that hasn't always been the case.
+
+Once, he was a knight of Lordaeron whose faith and honor on the battlefield earned him a place among the first paladins of the Order of the Silver Hand. He brought victory and glory to his homeland and was rewarded with the town of Hearthglen, where he served as governor in peacetime. A loving wife and a bright son made his the most fulfilling of lives.
+
+A surviving orc would be his downfall, though not because he was another enemy. Tirion found an unlikely friend in the aging, repentant orc named Eitrigg and when he protected him against unjust execution, Tirion himself was punished. He was stripped of his title, his lands, the Light itself even – and his own family preferred to think of him as dead rather than accept what they saw as his betrayal.
+
+Years have passed, and Tirion has lived as an outcast ever since. Seeing his son come of age and join the ruthless Scarlet Crusade might prove to be the turning point for this old knight, however.]]
+IMAGOdb.npcs.CAT_NEUTRAL_INDEPENDENT["tirion_fordring_forever"].zones = {"Eastern Plaguelands", "Western Plaguelands"}
+IMAGOdb.npcs.CAT_NEUTRAL_INDEPENDENT["tirion_fordring_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_NEUTRAL_INDEPENDENT["tirion_fordring_forever"].timeline = IMAGOdb.timelines.TIRION_FORDRING
+
+-- =================================== --
 -- CAT_GOBLIN — Goblin Cartels
-IMAGOdb.npcs.CAT_GOBLIN["gazlowe"].name = "Gazlowe"
-IMAGOdb.npcs.CAT_GOBLIN["gazlowe"].race = "Goblin"
-IMAGOdb.npcs.CAT_GOBLIN["gazlowe"].lore =
-[[
-Chief engineer of the Steamwheedle Cartel and master of Ratchet, Gazlowe built Orgrimmar's walls and the zeppelin towers that connect the Horde's capitals — for a fair price, of course.
-Neutral by contract and opportunist by nature, Gazlowe sells to anyone and owes allegiance to no flag. In the Barrens, where Alliance ships and Horde blades both pass through his port, that neutrality is worth more than gold.]]
-IMAGOdb.npcs.CAT_GOBLIN["gazlowe"].zones = {"The Barrens"}
-IMAGOdb.npcs.CAT_GOBLIN["gazlowe"].source = "warcraft.wiki.gg/wiki/Gazlowe"
-IMAGOdb.npcs.CAT_GOBLIN["gazlowe"].timeline = {
-    {era = "WC3", text = "Contracted by Thrall to engineer the founding of Orgrimmar."},
-    {era = "Forever", text = "Runs Ratchet as a neutral free port, profiting from the tensions he helps others survive."},
-}
+-- =================================== --
+-- MONTE GAZLOWE --
+IMAGOdb.npcs.CAT_GOBLIN_CARTELS_FOREVER["monte_gazlowe_forever"].name = "Monte Gazlowe"
+IMAGOdb.npcs.CAT_GOBLIN_CARTELS_FOREVER["monte_gazlowe_forever"].aliases = {"Gazlowe"}
+IMAGOdb.npcs.CAT_GOBLIN_CARTELS_FOREVER["monte_gazlowe_forever"].race = "Goblin"
+IMAGOdb.npcs.CAT_GOBLIN_CARTELS_FOREVER["monte_gazlowe_forever"].lore = [[Orgrimmar wasn't constructed in a single day, but nobody could have done it faster or better than the Horde's favorite goblin. Gazlowe, of course, remains firmly neutral in the war, accepting coin from both factions and harboring no particular hatred for the Alliance. Does it really matter that he has become personal friends with Thrall, that he agrees with the Horde's values, or that he built his port town right next to Orgrimmar? No, of course not. After all, he is a goblin, and goblins value coin over loyalty – or so the stigma goes.
+
+Confirming clichés is not one of his strong suits, as his workers have come to realize. Rather than paying them poorly, risking their lives, and treating them as expendable, Gazlowe has allowed unions to form and invests in workplace safety. If he wants the best of the best, he needs to make sure they won't jump ship to the competition. It's just smart business, nothing else. After all, he is a goblin, and goblins value profit over the lives of their fellow people – right?]]
+IMAGOdb.npcs.CAT_GOBLIN_CARTELS_FOREVER["monte_gazlowe_forever"].zones = {"The Barrens"}
+IMAGOdb.npcs.CAT_GOBLIN_CARTELS_FOREVER["monte_gazlowe_forever"].source = "Cadash"
+IMAGOdb.npcs.CAT_GOBLIN_CARTELS_FOREVER["monte_gazlowe_forever"].timeline = IMAGOdb.timelines.MONTE_GAZLOWE
